@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "gatsby"
 
 import styled from '@emotion/styled'
-
+import { format, distanceInWords } from 'date-fns'
 import Card from './Card'
 
 const BlogCardStyle = styled.div`
@@ -16,18 +16,18 @@ const BlogCardStyle = styled.div`
     margin: 0;
     font-size: 17px;
   }
-  a {
-    color: #0a0a0a;
-  }
   .tags {
     font-size: 16px;
     a {
       margin-right: 8px;
     }
     text-overflow: ellipsis;
-    color: #0a0a0a;
+    color: #0366d6;
     overflow: hidden;
     white-space: nowrap;
+  }
+  .date {
+    display: "inline-block";
   }
   .article-engagement-count {
     font-family: 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed',
@@ -52,47 +52,30 @@ const BlogCardStyle = styled.div`
   }
 `
 
+const now = new Date;
+
 const BlogCard = ({ post }) => (
   <Card padding={30}>
     <BlogCardStyle>
-      <Link to={post.slug}>
-        <div className="content">
+      <div className="content">
+        <Link
+          to={`/posts/${post.slug}`}
+        >
           <h3>{post.title}</h3>
-        </div>
-      </Link>
-      <h4>
-        <Link to="/">{post.readable_publish_date}</Link>
-      </h4>
-      <div className="tags">
-        {post.tag_list_array.map((tag, key) => (
-          <a key={key} href="/">
-            <span className="tag">{`#${tag}`}</span>
-          </a>
-        ))}
-      </div>
-      <div className="article-engagement-count reactions-count">
-        <Link to={post.slug}>
-          <img src="/assets/reactions-stack.svg" alt="Reactions" />
-          <span
-            id={`engagement-count-number-${post.id}`}
-            className="engagement-count-number"
-          >
-            {post.positive_reactions_count}
-          </span>
         </Link>
       </div>
-      {post.comments_count ? (
-        <div className="article-engagement-count comments-count">
-          <Link to={post.slug}>
-            <img src="/assets/comments-bubble.svg" alt="chat" />
-            <span className="engagement-count-number">
-              {post.comments_count}
-            </span>
-          </Link>
-        </div>
-      ) : (
-        ''
-      )}
+      <div>
+        <h4 style={{ color: "gray", display: "inline" }}>
+          {distanceInWords(post.createdAt, now, {includeSeconds: true})}
+          {' '}
+          ago
+        </h4>
+        <h6 style={{ color: "lightgray", display: "inline" }}>
+          &nbsp;
+          {format(post.createdAt, "DD/MM/YYYY")}
+        </h6>
+      </div>
+
     </BlogCardStyle>
   </Card>
 )

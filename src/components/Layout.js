@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 
 import config from '../config'
 import './styles.scss'
@@ -25,9 +25,19 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title={config.siteMetadata.title} />
     <main>
       <Header>
-        <h3>
-          <Link to="/">{config.siteMetadata.header}</Link>
-        </h3>
+        <div style={{display: 'inline'}}>
+          <Link to="/">
+            <h2>
+              {config.siteMetadata.title}
+            </h2>
+          </Link>
+          <h3>
+            {config.siteMetadata.header}
+          </h3>
+          <div style={{display: 'inline'}}>
+            <Link to="/problems">Problems</Link>
+          </div>
+        </div>
       </Header>
       {children}
     </main>

@@ -54,32 +54,33 @@ const BlogPostStyle = styled.div`
 `
 const now = new Date;
 
-const BlogPost = ({ post }) => (
+const BlogProblem = ({ problem }) => (
   <Card>
     <BlogPostStyle>
-      <Link to="/"><strong>&larr; Posts</strong></Link>
+      <Link to="/problems"><strong>&larr; Problems</strong></Link>
       <br />
       <br />
-      <img src={post.cover.url} alt={post.title} />
       <h1 className="title">
-        {post.title}
+        {problem.title}
       </h1>
       <div>
         <h4 style={{ color: "gray", display: "inline" }}>
-          {distanceInWords(post.createdAt, now, {includeSeconds: true})}
+          {distanceInWords(problem.createdAt, now, {includeSeconds: true})}
           {' '}
         ago
         </h4>
         <h6 style={{ color: "lightgray", display: "inline" }}>
         &nbsp;
-          {format(post.createdAt, "DD/MM/YYYY")}
+          {format(problem.createdAt, "DD/MM/YYYY")}
         </h6>
       </div>
       <div className="body">
-        <ReactMarkdown source={post.body} renderers={{ code: CodeBlock }} />
+        <div>{problem.description}</div>
+        <hr />
+        <ReactMarkdown source={problem.solution} renderers={{ code: CodeBlock }} />
       </div>
     </BlogPostStyle>
   </Card>
   )
 
-export default BlogPost
+export default BlogProblem
