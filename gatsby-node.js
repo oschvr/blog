@@ -49,12 +49,24 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
     }
   `).then(result => {
 
     const allPosts = result.data.allPost.edges
     const postTemplate = path.resolve(`./src/templates/post.js`)
-    
+
     // Iterate over the array of posts
     allPosts.forEach(({ node }) => {
       
@@ -86,6 +98,14 @@ exports.createPages = ({ actions, graphql }) => {
       })
     });
 
+    const pageTemplate = path.resolve(`./src/templates/page.js`);
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: pageTemplate,
+        context: {}, // additional data can be passed via context
+      })
+    })
   })
 }
 

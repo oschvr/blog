@@ -75,7 +75,9 @@ const BlogProblem = ({ problem }) => (
         </h6>
       </div>
       <div className="body">
-        <div>{problem.description}</div>
+        <br />
+        <br />
+        <div><strong>{problem.description}</strong></div>
         <hr />
         <ReactMarkdown source={problem.solution} renderers={{ code: CodeBlock }} />
       </div>

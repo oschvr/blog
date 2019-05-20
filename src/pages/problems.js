@@ -4,40 +4,40 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogCard from '../components/BlogCard'
 
-const IndexPage = ({ data }) => (
+const ProblemsPage = ({ data }) => (
   <Layout>
-    {data.allPost.edges.map((node, key) => (
+    {data.allProblem.edges.map((node, key) => (
       <BlogCard
         key={key}
         post={{...node.node}}
-        type="posts"
+        type="problems"
       />
     ))}
   </Layout>
 )
 
-export default IndexPage
+export default ProblemsPage
 
 export const query = graphql`
-  query IndexPageQuery {
-    allPost(
+  query ProblemsPageQuery {
+    allProblem(
       sort: {
         fields: [createdAt],
-        order: DESC
+        order:DESC
       }
-    ) {
-      edges {
-        node {
+    ){
+      edges{
+        node{
           id,
           title,
-          lang,
           createdAt,
           author {
             username
-            email
           },
           slug,
-          body,
+          description,
+          solved,
+          solution,
         }
       }
     }

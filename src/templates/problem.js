@@ -1,15 +1,20 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogProblem from '../components/BlogProblem'
+import SEO from '../components/SEO'
 
 const Problem = ({ data }) => {
   const problem = data.allProblem.edges[0].node
   
   return (
     <Layout>
-      <Helmet title={`${problem.title} | Blog`} />
+      <SEO
+        title={problem.title}
+        description={problem.description}
+        pathname={`problems/${problem.slug}`}
+        article
+      />
       <BlogProblem problem={problem} />
     </Layout>
   )
@@ -17,26 +22,25 @@ const Problem = ({ data }) => {
 
 export default Problem
 
-export const pageQuery = graphql`
-  query PageQuery($id: String!) {
+export const problemQuery = graphql`
+  query ProblemQuery($id: String!) {
     allProblem(
-      sort: {
-        fields: [createdAt],
-        order:DESC
+      filter: {
+        id: { eq: $id }
       }
     ){
       edges{
         node{
-          id,
-          title,
-          createdAt,
-          author {
+          id
+          title
+          createdAt
+          author{
             username
-          },
-          slug,
-          description,
-          solved,
-          solution,
+          }
+          slug
+          description
+          solved
+          solution
         }
       }
     }

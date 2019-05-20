@@ -54,12 +54,12 @@ const BlogCardStyle = styled.div`
 
 const now = new Date;
 
-const BlogCard = ({ post }) => (
+const BlogCard = ({ post, type }) => (
   <Card padding={30}>
     <BlogCardStyle>
       <div className="content">
         <Link
-          to={`/posts/${post.slug}`}
+          to={`/${type}/${post.slug}`}
         >
           <h3>{post.title}</h3>
         </Link>
