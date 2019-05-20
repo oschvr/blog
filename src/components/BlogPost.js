@@ -60,7 +60,7 @@ const BlogPost = ({ post }) => (
       <Link to="/"><strong>&larr; Posts</strong></Link>
       <br />
       <br />
-      <img src={post.cover.url} alt={post.title} />
+      {post.cover ? <img src={post.cover.url} alt={post.title} /> : null}
       <h1 className="title">
         {post.title}
       </h1>
