@@ -28,6 +28,15 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allComment {
+        edges {
+          node {
+            id
+            name
+            comment
+          }
+        }
+      }
       allProblem(
         sort: {
           fields: [createdAt],
@@ -98,6 +107,9 @@ exports.createPages = ({ actions, graphql }) => {
       })
     });
 
+    const allComment = result.data.allComment.edges
+    console.log(allComment);
+    
     const pageTemplate = path.resolve(`./src/templates/page.js`);
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({

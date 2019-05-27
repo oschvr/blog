@@ -2,6 +2,7 @@ module.exports = {
   plugins: [
     'oschvr-posts',
     'oschvr-problems',
+    'oschvr-comments',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-emotion',

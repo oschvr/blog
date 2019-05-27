@@ -17,7 +17,9 @@ const PageStyle = styled.div`
     }
   }
   img {
-    max-width: 100%
+    max-width: 100%;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 0.25rem lightgray);
   }
 `
 

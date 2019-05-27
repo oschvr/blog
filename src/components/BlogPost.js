@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 import { format, distanceInWords } from 'date-fns'
 import CodeBlock from './CodeBlock'
 import Card from './Card'
+import BlogComment from './BlogComment';
 
 
 const BlogPostStyle = styled.div`
@@ -78,6 +79,7 @@ const BlogPost = ({ post }) => (
       <div className="body">
         <ReactMarkdown source={post.body} renderers={{ code: CodeBlock }} />
       </div>
+      <BlogComment />
     </BlogPostStyle>
   </Card>
   )
