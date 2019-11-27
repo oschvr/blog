@@ -79,7 +79,9 @@ const BlogPost = ({ post }) => (
       <div className="body">
         <ReactMarkdown source={post.body} renderers={{ code: CodeBlock }} />
       </div>
-      <BlogComment />
+      {/**
+        <BlogComment />
+      */}
     </BlogPostStyle>
   </Card>
   )

@@ -16,9 +16,16 @@ const PageStyle = styled.div`
       color: black;
     }
   }
+  date {
+    margin: 0;
+    font-size: calc(1.85vw + 25px);
+    line-height: calc(1.85vw + 35px);
+    font-weight: 400;
+    color: '#d3d3d3';
+  }
   img {
-    max-width: 100%;
-    border-radius: 3px;
+    max-width: 50%;
+    border-radius: 10px;
     filter: drop-shadow(0 0 0.25rem lightgray);
   }
 `
@@ -33,7 +40,7 @@ const Page = ({ data }) => {
           <SEO
             title={frontmatter.title}
             description={frontmatter.title}
-            image="https:/oschvr.s3.us-west-2.amazonaws.com/4cdc06830825484b9b265a00d0ccfed6.jpg"
+            image={frontmatter.image}
             pathname="/about"
             article
           />
@@ -42,6 +49,9 @@ const Page = ({ data }) => {
           <h1 className="title">
             {frontmatter.title}
           </h1>
+          <p className="date">
+            {frontmatter.date}
+          </p>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

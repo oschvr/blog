@@ -1,14 +1,17 @@
 ---
 path: "/about"
-date: "2019-05-15"
+date: "2019-11-20"
 title: "About"
+image: "https://oschvr.s3.us-west-2.amazonaws.com/12f236a2dc5c4f48b80ef1a671c1b804.png"
 ---
 
-![os](https://oschvr.s3.us-west-2.amazonaws.com/4cdc06830825484b9b265a00d0ccfed6.jpg)
+![os](https://oschvr.s3.us-west-2.amazonaws.com/12f236a2dc5c4f48b80ef1a671c1b804.png)
 
-I'm Oscar Chavez.
+I'm **Oscar Chavez**.
 
-I'm a web/mobile developer 📱, software engineer ⚙️, cloud architect ☁️ and project manager 📨.
+I'm a web/mobile developer 📱, software engineer ⚙️, reverse engineer 💥 and cloud architect ☁️.
+
+Recently, I did some Cybersecurity Research and Technical Sales at 🔼 [Delta Protect](https://deltaprotect.co/).
 
 Formerly, I was CTO at a software company I co-founded, 🔻[VR3.io](https://vr3.io/), where I did a lot of interesting work, met awesome people and had the chance to grow very quickly as an engineer, manager and entrepreneur.
 
@@ -62,5 +65,8 @@ I've added a couple more to the list:
 
 #### Currently learning:
 
-- _Go_
+- ~~Go~~
 - _Python (Pandas, NumPy, SciKit)_
+- _Java 8_
+- _Spring Boot_
+- _Hibernate_

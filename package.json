@@ -1,8 +1,8 @@
 {
   "name": "oschvr.com",
-  "description": "oschvr.com blog rewritten with gatsby",
+  "description": "oschvr.com blog",
   "version": "0.1.0",
-  "author": "Oscar Chavez",
+  "author": "Oscar Chavez <oscarchavezromero@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
