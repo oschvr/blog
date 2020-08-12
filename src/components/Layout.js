@@ -73,6 +73,9 @@ const TemplateWrapper = ({ children }) => (
             >
               <FontAwesomeIcon icon="stack-overflow" /> Stackoverflow
             </a>
+            <Link className="navLink" to="/about">
+              About
+            </Link>
           </div>
         </div>
       </Header>
