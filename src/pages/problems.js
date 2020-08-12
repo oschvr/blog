@@ -24,13 +24,9 @@ const ProblemStyle = styled.div`
 const ProblemsPage = ({ data }) => (
   <ProblemStyle>
     <Layout>
-      {data.allProblem.edges.map((node, key) => (
-        <BlogCard
-          key={key}
-          post={{...node.node}}
-          type="problems"
-        />
-    ))}
+      {data.allGhostPost.edges.map((node, key) => (
+        <BlogCard key={key} post={{ ...node.node }} type="problems" />
+      ))}
     </Layout>
   </ProblemStyle>
 )
@@ -39,24 +35,22 @@ export default ProblemsPage
 
 export const query = graphql`
   query ProblemsPageQuery {
-    allProblem(
-      sort: {
-        fields: [createdAt],
-        order:DESC
-      }
-    ){
-      edges{
-        node{
-          id,
-          title,
-          createdAt,
-          author {
-            username
-          },
-          slug,
-          description,
-          solved,
-          solution,
+    allGhostPost(
+      sort: { order: DESC, fields: [published_at] }
+      filter: { tags: { elemMatch: { slug: { eq: "problem" } } } }
+    ) {
+      edges {
+        node {
+          id
+          title
+          slug
+          url
+          canonical_url
+          plaintext
+          feature_image
+          excerpt
+          reading_time
+          created_at
         }
       }
     }

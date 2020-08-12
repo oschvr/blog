@@ -10,6 +10,11 @@ const Card = styled.div`
   max-width: 800px;
   width: auto;
   padding: 50px ${props => props.padding || 85}px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 6px 6px 0px #bababa;
+  }
 
   @media only screen and (max-width: 420px) {
     padding: 50px 20px;

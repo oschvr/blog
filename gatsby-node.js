@@ -4,83 +4,27 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   return graphql(`
-    {
-      allPost(
-        sort: {
-          fields: [createdAt],
-          order:DESC
-        }
-      ){
-        edges{
-          node{
-            id,
-            title,
-            lang,
-            cover {
-              url
-            },
-            createdAt,
-            author {
-              username
-            },
-            slug,
-            body
-          }
-        }
-      }
-      allComment {
-        edges {
-          node {
-            id
-            name
-            comment
-          }
-        }
-      }
-      allProblem(
-        sort: {
-          fields: [createdAt],
-          order:DESC
-        }
-      ){
-        edges{
-          node{
-            id,
-            title,
-            createdAt,
-            author {
-              username
-            },
-            slug,
-            description,
-            solved,
-            solution,
-          }
-        }
-      }
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+    query AllPostsQuery {
+      allGhostPost(
+        sort: { order: DESC, fields: [published_at] }
+        filter: { tags: { elemMatch: { slug: { eq: "post" } } } }
       ) {
         edges {
           node {
-            frontmatter {
-              path
-            }
+            id
+            slug
           }
         }
       }
     }
   `).then(result => {
-
-    const allPosts = result.data.allPost.edges
+    const allPosts = result.data.allGhostPost.edges
     const postTemplate = path.resolve(`./src/templates/post.js`)
 
     // Iterate over the array of posts
     allPosts.forEach(({ node }) => {
-      
       const post = node
-      // Create the Gatsby page for this Dev.to post
+      // Create the Gatsby page
       createPage({
         path: `/posts/${post.slug}/`,
         component: postTemplate,
@@ -88,34 +32,37 @@ exports.createPages = ({ actions, graphql }) => {
           id: post.id,
         },
       })
-    });
+    })
 
-
-    const allProblems = result.data.allProblem.edges
-    const problemTemplate = path.resolve(`./src/templates/problem.js`)
-    // Iterate over the array of problems
-    allProblems.forEach(({ node }) => {
-      
-      const problem = node
-      // Create the Gatsby page for this Dev.to post
-      createPage({
-        path: `/problems/${problem.slug}/`,
-        component: problemTemplate,
-        context: {
-          id: problem.id,
-        },
-      })
-    });
-
-    const allComment = result.data.allComment.edges
-    // console.log(allComment);
-    
-    const pageTemplate = path.resolve(`./src/templates/page.js`);
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: pageTemplate,
-        context: {}, // additional data can be passed via context
+    graphql(`
+      query AllProblemsQuery {
+        allGhostPost(
+          sort: { order: DESC, fields: [published_at] }
+          filter: { tags: { elemMatch: { slug: { eq: "problem" } } } }
+        ) {
+          edges {
+            node {
+              id
+              title
+              slug
+            }
+          }
+        }
+      }
+    `).then(result => {
+      const allProblems = result.data.allGhostPost.edges
+      const problemTemplate = path.resolve(`./src/templates/problem.js`)
+      // Iterate over the array of problems
+      allProblems.forEach(({ node }) => {
+        const problem = node
+        // Create the Gatsby page
+        createPage({
+          path: `/problems/${problem.slug}/`,
+          component: problemTemplate,
+          context: {
+            id: problem.id,
+          },
+        })
       })
     })
   })

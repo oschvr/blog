@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 
 const PostStyle = styled.div`
   h1.title {
@@ -24,8 +24,7 @@ const PostStyle = styled.div`
 `
 
 const Post = ({ data }) => {
-  const post = data.allPost.edges[0].node
-  
+  const post = data.ghostPost
   return (
     <PostStyle>
       <Layout>
@@ -47,26 +46,18 @@ export default Post
 
 export const postQuery = graphql`
   query PostQuery($id: String!) {
-    allPost(
-      filter: {
-        id: { eq: $id }
-      }
-    ) {
-      edges {
-        node {
-          title,
-          slug,
-          cover {
-            url
-          },
-          body,
-          createdAt
-          author {
-            username,
-            email
-          }
-        }
-      }
+    ghostPost(id: { eq: $id }) {
+      id
+      title
+      slug
+      url
+      canonical_url
+      html
+      plaintext
+      feature_image
+      excerpt
+      reading_time
+      created_at
     }
   }
 `

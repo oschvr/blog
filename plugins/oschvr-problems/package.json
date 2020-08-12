@@ -1,7 +1,0 @@
-{
-  "name": "oschvr-problems",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "crypto": "^1.0.1"
-  }
-}

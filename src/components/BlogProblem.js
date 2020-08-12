@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import ReactMarkdown from 'react-markdown'
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 import { format, distanceInWords } from 'date-fns'
 import CodeBlock from './CodeBlock'
 import Card from './Card'
-
 
 const BlogPostStyle = styled.div`
   h1.title {
@@ -52,37 +51,39 @@ const BlogPostStyle = styled.div`
     }
   }
 `
-const now = new Date;
+const now = new Date()
 
 const BlogProblem = ({ problem }) => (
   <Card>
     <BlogPostStyle>
-      <Link to="/problems"><strong>&larr; Problems</strong></Link>
+      <Link to="/problems">
+        <strong>&larr; Problems</strong>
+      </Link>
       <br />
       <br />
-      <h1 className="title">
-        {problem.title}
-      </h1>
+      <h1 className="title">{problem.title}</h1>
       <div>
-        <h4 style={{ color: "gray", display: "inline" }}>
-          {distanceInWords(problem.createdAt, now, {includeSeconds: true})}
-          {' '}
-        ago
+        <h4 style={{ color: 'gray', display: 'inline' }}>
+          {distanceInWords(problem.created_at, now, { includeSeconds: true })}{' '}
+          ago
         </h4>
-        <h6 style={{ color: "lightgray", display: "inline" }}>
-        &nbsp;
-          {format(problem.createdAt, "DD/MM/YYYY")}
+        <h6 style={{ color: 'lightgray', display: 'inline' }}>
+          &nbsp;
+          {format(problem.created_at, 'DD/MM/YYYY')}
         </h6>
       </div>
       <div className="body">
         <br />
         <br />
-        <div><strong>{problem.description}</strong></div>
+        <div>
+          <strong>{problem.description}</strong>
+        </div>
         <hr />
-        <ReactMarkdown source={problem.solution} renderers={{ code: CodeBlock }} />
+        {/* <ReactMarkdown source={problem.} renderers={{ code: CodeBlock }} /> */}
+        <div dangerouslySetInnerHTML={{ __html: problem.html }} />
       </div>
     </BlogPostStyle>
   </Card>
-  )
+)
 
 export default BlogProblem

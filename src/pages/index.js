@@ -6,12 +6,8 @@ import BlogCard from '../components/BlogCard'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    {data.allPost.edges.map((node, key) => (
-      <BlogCard
-        key={key}
-        post={{...node.node}}
-        type="posts"
-      />
+    {data.allGhostPost.edges.map((node, key) => (
+      <BlogCard key={key} post={{ ...node.node }} type="posts" />
     ))}
   </Layout>
 )
@@ -20,24 +16,21 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    allPost(
-      sort: {
-        fields: [createdAt],
-        order: DESC
-      }
+    allGhostPost(
+      sort: { order: DESC, fields: [published_at] }
+      filter: { tags: { elemMatch: { slug: { eq: "post" } } } }
     ) {
       edges {
         node {
-          id,
-          title,
-          lang,
-          createdAt,
-          author {
-            username
-            email
-          },
-          slug,
-          body,
+          id
+          slug
+          title
+          feature_image
+          html
+          page
+          created_at
+          excerpt
+          reading_time
         }
       }
     }

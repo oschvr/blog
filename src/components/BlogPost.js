@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import ReactMarkdown from 'react-markdown'
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 import { format, distanceInWords } from 'date-fns'
 import CodeBlock from './CodeBlock'
 import Card from './Card'
-import BlogComment from './BlogComment';
-
+import BlogComment from './BlogComment'
 
 const BlogPostStyle = styled.div`
   h1.title {
@@ -53,37 +52,44 @@ const BlogPostStyle = styled.div`
     }
   }
 `
-const now = new Date;
+const now = new Date()
 
 const BlogPost = ({ post }) => (
   <Card>
     <BlogPostStyle>
-      <Link to="/"><strong>&larr; Posts</strong></Link>
+      <Link to="/">
+        <strong>&larr; Posts</strong>
+      </Link>
       <br />
       <br />
-      {post.cover ? <img src={post.cover.url} alt={post.title} /> : null}
-      <h1 className="title">
-        {post.title}
-      </h1>
+      {post.cover ? <img src={post.feature_image} alt={post.title} /> : null}
+      <h1 className="title">{post.title}</h1>
       <div>
-        <h4 style={{ color: "gray", display: "inline" }}>
-          {distanceInWords(post.createdAt, now, {includeSeconds: true})}
-          {' '}
-        ago
+        <h4 style={{ color: 'black', display: 'inline' }}>
+          {post.reading_time}
+          mins &nbsp;
         </h4>
-        <h6 style={{ color: "lightgray", display: "inline" }}>
-        &nbsp;
-          {format(post.createdAt, "DD/MM/YYYY")}
+        <h4 style={{ color: 'gray', display: 'inline' }}>
+          {distanceInWords(post.created_at, now, { includeSeconds: true })} ago
+        </h4>
+        <h6 style={{ color: 'lightgray', display: 'inline' }}>
+          &nbsp;
+          {format(post.created_at, 'DD/MM/YYYY')}
+          &nbsp;
         </h6>
       </div>
       <div className="body">
-        <ReactMarkdown source={post.body} renderers={{ code: CodeBlock }} />
+        {/* <ReactMarkdown
+          source={post.plaintext}
+          renderers={{ code: CodeBlock }}
+        /> */}
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
       {/**
         <BlogComment />
       */}
     </BlogPostStyle>
   </Card>
-  )
+)
 
 export default BlogPost

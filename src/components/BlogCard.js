@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
 import styled from '@emotion/styled'
 import { format, distanceInWords } from 'date-fns'
@@ -27,7 +27,7 @@ const BlogCardStyle = styled.div`
     white-space: nowrap;
   }
   .date {
-    display: "inline-block";
+    display: 'inline-block';
   }
   .article-engagement-count {
     font-family: 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed',
@@ -52,30 +52,29 @@ const BlogCardStyle = styled.div`
   }
 `
 
-const now = new Date;
+const now = new Date()
 
 const BlogCard = ({ post, type }) => (
   <Card padding={30}>
     <BlogCardStyle>
+      {/* <img style={{ maxWidth: '100px' }} src={post.feature_image} /> */}
       <div className="content">
-        <Link
-          to={`/${type}/${post.slug}`}
-        >
+        <Link to={`/${type}/${post.slug}`}>
           <h3>{post.title}</h3>
         </Link>
       </div>
       <div>
-        <h4 style={{ color: "gray", display: "inline" }}>
-          {distanceInWords(post.createdAt, now, {includeSeconds: true})}
-          {' '}
-          ago
+        <h4 style={{ color: 'black', display: 'inline' }}>
+          {post.reading_time} mins &nbsp;
         </h4>
-        <h6 style={{ color: "lightgray", display: "inline" }}>
+        <h4 style={{ color: 'gray', display: 'inline' }}>
+          {distanceInWords(post.created_at, now, { includeSeconds: true })} ago
+        </h4>
+        <h6 style={{ color: 'lightgray', display: 'inline' }}>
           &nbsp;
-          {format(post.createdAt, "DD/MM/YYYY")}
+          {format(post.created_at, 'DD/MM/YYYY')}
         </h6>
       </div>
-
     </BlogCardStyle>
   </Card>
 )
