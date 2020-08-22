@@ -58,6 +58,7 @@ const BlogCard = ({ post, type }) => (
   <Card padding={30}>
     <BlogCardStyle>
       {/* <img style={{ maxWidth: '100px' }} src={post.feature_image} /> */}
+
       <div className="content">
         <Link to={`/${type}/${post.slug}`}>
           <h3>{post.title}</h3>

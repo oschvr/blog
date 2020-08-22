@@ -53,7 +53,7 @@ const TemplateWrapper = ({ children }) => (
               rel="noopener noreferrer"
               href={config.siteMetadata.github}
             >
-              <FontAwesomeIcon icon="github" /> Github
+              Github
             </a>
 
             <a
@@ -62,7 +62,7 @@ const TemplateWrapper = ({ children }) => (
               rel="noopener noreferrer"
               href={config.siteMetadata.twitter}
             >
-              <FontAwesomeIcon icon="twitter" /> Twitter
+              Twitter
             </a>
 
             <a
@@ -71,7 +71,7 @@ const TemplateWrapper = ({ children }) => (
               rel="noopener noreferrer"
               href={config.siteMetadata.stackoverflow}
             >
-              <FontAwesomeIcon icon="stack-overflow" /> Stackoverflow
+              Stackoverflow
             </a>
             <Link className="navLink" to="/about">
               About

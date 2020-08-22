@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 
 const BlogCommentStyle = styled.div`
   h1.title {
@@ -57,18 +57,22 @@ const BlogCommentStyle = styled.div`
     
   }
 `
-
 const BlogComment = () => (
   <BlogCommentStyle>
     <hr />
     <div>
-      <h4 style={{ color: "gray"}}>Comments</h4>
+      <h4 style={{ color: 'gray' }}>Comments</h4>
       <form method="post" action="">
-        <textarea className="comment" rows="6" cols="50" placeholder="Type your comment here." />
+        <textarea
+          className="comment"
+          rows="6"
+          cols="50"
+          placeholder="Type your comment here."
+        />
         <Link to="/#">Send</Link>
       </form>
     </div>
   </BlogCommentStyle>
-  )
+)
 
 export default BlogComment

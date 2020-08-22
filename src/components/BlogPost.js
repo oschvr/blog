@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import { format, distanceInWords } from 'date-fns'
 import CodeBlock from './CodeBlock'
 import Card from './Card'
+import Scene from './Scene'
 import BlogComment from './BlogComment'
 
 const BlogPostStyle = styled.div`
@@ -61,6 +62,8 @@ const BlogPost = ({ post }) => (
         <strong>&larr; Posts</strong>
       </Link>
       <br />
+      <br />
+      <Scene />
       <br />
       {post.cover ? <img src={post.feature_image} alt={post.title} /> : null}
       <h1 className="title">{post.title}</h1>
