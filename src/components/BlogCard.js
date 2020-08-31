@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
 import styled from '@emotion/styled'
 import { format, distanceInWords } from 'date-fns'
@@ -27,57 +27,68 @@ const BlogCardStyle = styled.div`
     white-space: nowrap;
   }
   .date {
-    display: "inline-block";
+    display: 'inline-block';
   }
-  .article-engagement-count {
-    font-family: 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed',
-      'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed',
-      'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold',
-      'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica',
-      'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif;
-    display: inline-block;
-    margin-right: 20px;
-    margin-top: 10px;
-    color: #666;
-    img {
-      height: 20px;
-      min-width: 26px;
-      vertical-align: -5px;
-      margin-right: 7px;
-    }
-    .engagement-count-number {
-      font-size: 15px;
-      font-weight: 400;
+  .image  {
+    display: 'flex';
+    align-items: 'flex-end';
+    justify-content: 'flex-end';
+    img  {
+      width: '100%';
     }
   }
 `
 
-const now = new Date;
+const Grid = styled.div``
 
-const BlogCard = ({ post, type }) => (
-  <Card padding={30}>
-    <BlogCardStyle>
-      <div className="content">
-        <Link
-          to={`/${type}/${post.slug}`}
-        >
-          <h3>{post.title}</h3>
-        </Link>
-      </div>
-      <div>
-        <h4 style={{ color: "gray", display: "inline" }}>
-          {distanceInWords(post.createdAt, now, {includeSeconds: true})}
-          {' '}
-          ago
-        </h4>
-        <h6 style={{ color: "lightgray", display: "inline" }}>
-          &nbsp;
-          {format(post.createdAt, "DD/MM/YYYY")}
-        </h6>
-      </div>
+const Row = styled.div`
+  display: 'flex';
+`
 
-    </BlogCardStyle>
-  </Card>
-)
+const Col = styled.div`
+  flex: ${props => props.size};
+`
+
+const Image = styled.img`
+  width: '150px';
+`
+
+const now = new Date()
+
+const BlogCard = node => {
+  const { frontmatter, slug, timeToRead } = node.post
+  return (
+    <Card padding={30}>
+      <Link to={`${node.type}/${slug}`}>
+        <BlogCardStyle>
+          <Row>
+            <Col size={1}>
+              <Link to={`${node.type}/${slug}`}>
+                <h3>{frontmatter.title}</h3>
+              </Link>
+
+              <h4 style={{ color: 'black', display: 'inline' }}>
+                {timeToRead} min{timeToRead > 1 && 's'} &nbsp;
+              </h4>
+              <h4 style={{ color: 'gray', display: 'inline' }}>
+                {distanceInWords(frontmatter.date, now, {
+                  includeSeconds: true,
+                })}{' '}
+                ago
+              </h4>
+              <h6 style={{ color: 'lightgray', display: 'inline' }}>
+                &nbsp;
+                {format(frontmatter.date, 'DD/MM/YYYY')}
+              </h6>
+            </Col>
+            <Col size={1}>
+              <Image src={frontmatter.image} />
+            </Col>
+          </Row>
+        </BlogCardStyle>
+      </Link>
+    </Card>
+  )
+}
 
 export default BlogCard

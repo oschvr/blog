@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'gatsby'
 import config from '../config'
-import './styles.scss'
+import '../style/styles.scss'
+import ScriptTag from 'react-script-tag'
 
 const Header = styled.div`
   max-width: 825px;
@@ -33,45 +33,55 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title={config.siteMetadata.title} />
     <main>
       <Header>
-        <div style={{display: 'inline'}}>
+        <div style={{ display: 'inline' }}>
           <Link to="/">
-            <h2>
-              {config.siteMetadata.title}
-            </h2>
+            <h2>{config.siteMetadata.title}</h2>
           </Link>
-          <h3>
-            {config.siteMetadata.header}
-          </h3>
+          <h3>{config.siteMetadata.header}</h3>
           <div className="nav">
-            <Link className="navLink" to="/">Posts</Link>
+            <Link className="navLink" to="/">
+              Posts
+            </Link>
 
-            <Link className="navLink" to="/problems">Problems</Link>
+            {/* <Link className="navLink" to="/problems">
+              Problems
+            </Link> */}
 
-            <Link className="navLink" to="/about">About</Link>
-
-            <a className="navLink" target="_blank" rel="noopener noreferrer" href={config.siteMetadata.github}>
-              <FontAwesomeIcon icon="github" />
-              {' '}
+            <a
+              className="navLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={config.siteMetadata.github}
+            >
               Github
             </a>
 
-            <a className="navLink" target="_blank" rel="noopener noreferrer" href={config.siteMetadata.twitter}>
-              <FontAwesomeIcon icon="twitter" />
-              {' '}
+            <a
+              className="navLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={config.siteMetadata.twitter}
+            >
               Twitter
             </a>
 
-            <a className="navLink" target="_blank" rel="noopener noreferrer" href={config.siteMetadata.stackoverflow}>
-              <FontAwesomeIcon icon="stack-overflow" />
-              {' '}
+            <a
+              className="navLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={config.siteMetadata.stackoverflow}
+            >
               Stackoverflow
             </a>
+            <Link className="navLink" to="/about">
+              About
+            </Link>
           </div>
-
         </div>
       </Header>
       {children}
     </main>
+    <ScriptTag type="text/javascript" src={'/assets/js/remark.js'} />
   </Fragment>
 )
 

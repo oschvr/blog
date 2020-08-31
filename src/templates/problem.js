@@ -5,8 +5,8 @@ import BlogProblem from '../components/BlogProblem'
 import SEO from '../components/SEO'
 
 const Problem = ({ data }) => {
-  const problem = data.allProblem.edges[0].node
-  
+  const problem = data
+
   return (
     <Layout>
       <SEO
@@ -23,26 +23,20 @@ const Problem = ({ data }) => {
 export default Problem
 
 export const problemQuery = graphql`
-  query ProblemQuery($id: String!) {
-    allProblem(
-      filter: {
-        id: { eq: $id }
+  query($id: String!) {
+    mdx(id: { eq: $id }) {
+      id
+      body
+      frontmatter {
+        date
+        title
+        path
+        image
+        type
+        collection
       }
-    ){
-      edges{
-        node{
-          id
-          title
-          createdAt
-          author{
-            username
-          }
-          slug
-          description
-          solved
-          solution
-        }
-      }
+      excerpt
+      timeToRead
     }
   }
 `

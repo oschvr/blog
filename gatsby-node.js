@@ -1,86 +1,29 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
-  return graphql(`
-    {
-      allPost(
-        sort: {
-          fields: [createdAt],
-          order:DESC
-        }
-      ){
-        edges{
-          node{
-            id,
-            title,
-            lang,
-            cover {
-              url
-            },
-            createdAt,
-            author {
-              username
-            },
-            slug,
-            body
-          }
-        }
-      }
-      allComment {
-        edges {
-          node {
-            id
-            name
-            comment
-          }
-        }
-      }
-      allProblem(
-        sort: {
-          fields: [createdAt],
-          order:DESC
-        }
-      ){
-        edges{
-          node{
-            id,
-            title,
-            createdAt,
-            author {
-              username
-            },
-            slug,
-            description,
-            solved,
-            solution,
-          }
-        }
-      }
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+
+  // Posts
+  await graphql(`
+    query AllPostsQuery {
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { type: { eq: "post" } } }
       ) {
-        edges {
-          node {
-            frontmatter {
-              path
-            }
-          }
+        nodes {
+          id
+          slug
         }
       }
     }
   `).then(result => {
-
-    const allPosts = result.data.allPost.edges
+    const allPosts = result.data.allMdx.nodes
     const postTemplate = path.resolve(`./src/templates/post.js`)
 
     // Iterate over the array of posts
-    allPosts.forEach(({ node }) => {
-      
-      const post = node
-      // Create the Gatsby page for this Dev.to post
+    allPosts.forEach(post => {
+      // Create the Gatsby page
       createPage({
         path: `/posts/${post.slug}/`,
         component: postTemplate,
@@ -88,16 +31,28 @@ exports.createPages = ({ actions, graphql }) => {
           id: post.id,
         },
       })
-    });
+    })
+  })
 
-
-    const allProblems = result.data.allProblem.edges
+  // Problems
+  await graphql(`
+    query AllProblemsQuery {
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { type: { eq: "problems" } } }
+      ) {
+        nodes {
+          id
+          slug
+        }
+      }
+    }
+  `).then(result => {
+    const allProblems = result.data.allMdx.nodes
     const problemTemplate = path.resolve(`./src/templates/problem.js`)
     // Iterate over the array of problems
-    allProblems.forEach(({ node }) => {
-      
-      const problem = node
-      // Create the Gatsby page for this Dev.to post
+    allProblems.forEach(problem => {
+      // Create the Gatsby page
       createPage({
         path: `/problems/${problem.slug}/`,
         component: problemTemplate,
@@ -105,17 +60,34 @@ exports.createPages = ({ actions, graphql }) => {
           id: problem.id,
         },
       })
-    });
+    })
+  })
 
-    const allComment = result.data.allComment.edges
-    // console.log(allComment);
-    
-    const pageTemplate = path.resolve(`./src/templates/page.js`);
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  // Pages
+  await graphql(`
+    query {
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { type: { eq: "page" } } }
+      ) {
+        nodes {
+          id
+          slug
+        }
+      }
+    }
+  `).then(result => {
+    const allPages = result.data.allMdx.nodes
+    const pageTemplate = path.resolve(`./src/templates/page.js`)
+    // Iterate over the array of problems
+    allPages.forEach(page => {
+      // Create the Gatsby page
       createPage({
-        path: node.frontmatter.path,
+        path: `/${page.slug}/`,
         component: pageTemplate,
-        context: {}, // additional data can be passed via context
+        context: {
+          id: page.id,
+        },
       })
     })
   })
@@ -124,7 +96,7 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
@@ -132,4 +104,36 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.(gltf)$/,
+          use: [
+            {
+              loader: 'gltf-webpack-loader',
+            },
+          ],
+        },
+        {
+          test: /\.(bin)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {},
+            },
+          ],
+        },
+      ],
+    },
+  })
 }

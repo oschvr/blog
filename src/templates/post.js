@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 
 const PostStyle = styled.div`
   h1.title {
@@ -24,20 +24,20 @@ const PostStyle = styled.div`
 `
 
 const Post = ({ data }) => {
-  const post = data.allPost.edges[0].node
-  
+  const { mdx } = data
+  const { frontmatter } = mdx
   return (
     <PostStyle>
       <Layout>
         <SEO
-          title={post.title}
-          description={post.title}
-          // image={post.cover.url}
+          title={frontmatter.title}
+          description={frontmatter.title}
+          image={frontmatter.image ?? frontmatter.image}
           image="https://oschvr.s3.us-west-2.amazonaws.com/697191910bb741cf8c74c4a3b1dd26da.jpg"
-          pathname={`posts/${post.slug}`}
+          pathname={`posts/${frontmatter.slug}`}
           article
         />
-        <BlogPost post={post} />
+        <BlogPost post={data} />
       </Layout>
     </PostStyle>
   )
@@ -46,27 +46,20 @@ const Post = ({ data }) => {
 export default Post
 
 export const postQuery = graphql`
-  query PostQuery($id: String!) {
-    allPost(
-      filter: {
-        id: { eq: $id }
+  query($id: String!) {
+    mdx(id: { eq: $id }) {
+      id
+      body
+      frontmatter {
+        date
+        title
+        path
+        image
+        type
+        collection
       }
-    ) {
-      edges {
-        node {
-          title,
-          slug,
-          cover {
-            url
-          },
-          body,
-          createdAt
-          author {
-            username,
-            email
-          }
-        }
-      }
+      excerpt
+      timeToRead
     }
   }
 `

@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { graphql, Link } from 'gatsby';
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 import Card from '../components/Card'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const PageStyle = styled.div`
   h1.title {
@@ -31,31 +32,25 @@ const PageStyle = styled.div`
 `
 
 const Page = ({ data }) => {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { mdx } = data
   return (
     <PageStyle>
       <Layout>
         <Card>
           <SEO
-            title={frontmatter.title}
-            description={frontmatter.title}
-            image={frontmatter.image}
+            title={mdx.frontmatter.title}
+            description={mdx.frontmatter.title}
+            image={mdx.frontmatter.image}
             pathname="/about"
             article
           />
-          <Link to="/"><strong>&larr; Posts</strong></Link>
+          <Link to="/">
+            <strong>&larr; Back</strong>
+          </Link>
           <br />
-          <h1 className="title">
-            {frontmatter.title}
-          </h1>
-          <p className="date">
-            {frontmatter.date}
-          </p>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <h1 className="title">{mdx.frontmatter.title}</h1>
+          <p className="date">{mdx.frontmatter.date}</p>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
         </Card>
       </Layout>
     </PageStyle>
@@ -65,14 +60,19 @@ const Page = ({ data }) => {
 export default Page
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+  query($id: String!) {
+    mdx(id: { eq: $id }) {
+      id
+      body
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
+        date
         title
+        path
+        image
+        type
+        collection
       }
+      excerpt
     }
   }
 `

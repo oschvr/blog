@@ -1,17 +1,12 @@
 import React from 'react'
-
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogCard from '../components/BlogCard'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    {data.allPost.edges.map((node, key) => (
-      <BlogCard
-        key={key}
-        post={{...node.node}}
-        type="posts"
-      />
+    {data.allMdx.nodes.map(post => (
+      <BlogCard key={post.id} post={post} type="posts" />
     ))}
   </Layout>
 )
@@ -20,25 +15,23 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    allPost(
-      sort: {
-        fields: [createdAt],
-        order: DESC
-      }
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "post" } } }
     ) {
-      edges {
-        node {
-          id,
-          title,
-          lang,
-          createdAt,
-          author {
-            username
-            email
-          },
-          slug,
-          body,
+      nodes {
+        id
+        frontmatter {
+          date
+          image
+          path
+          title
+          type
+          collection
         }
+        excerpt
+        slug
+        timeToRead
       }
     }
   }
