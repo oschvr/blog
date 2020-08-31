@@ -4,27 +4,25 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
+  // Posts
   await graphql(`
     query AllPostsQuery {
-      allGhostPost(
-        sort: { order: DESC, fields: [published_at] }
-        filter: { tags: { elemMatch: { slug: { eq: "post" } } } }
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { type: { eq: "post" } } }
       ) {
-        edges {
-          node {
-            id
-            slug
-          }
+        nodes {
+          id
+          slug
         }
       }
     }
   `).then(result => {
-    const allPosts = result.data.allGhostPost.edges
+    const allPosts = result.data.allMdx.nodes
     const postTemplate = path.resolve(`./src/templates/post.js`)
 
     // Iterate over the array of posts
-    allPosts.forEach(({ node }) => {
-      const post = node
+    allPosts.forEach(post => {
       // Create the Gatsby page
       createPage({
         path: `/posts/${post.slug}/`,
@@ -35,27 +33,25 @@ exports.createPages = async ({ actions, graphql }) => {
       })
     })
   })
+
+  // Problems
   await graphql(`
     query AllProblemsQuery {
-      allGhostPost(
-        sort: { order: DESC, fields: [published_at] }
-        filter: { tags: { elemMatch: { slug: { eq: "problem" } } } }
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { type: { eq: "problems" } } }
       ) {
-        edges {
-          node {
-            id
-            title
-            slug
-          }
+        nodes {
+          id
+          slug
         }
       }
     }
   `).then(result => {
-    const allProblems = result.data.allGhostPost.edges
+    const allProblems = result.data.allMdx.nodes
     const problemTemplate = path.resolve(`./src/templates/problem.js`)
     // Iterate over the array of problems
-    allProblems.forEach(({ node }) => {
-      const problem = node
+    allProblems.forEach(problem => {
       // Create the Gatsby page
       createPage({
         path: `/problems/${problem.slug}/`,
@@ -67,18 +63,15 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
+  // Pages
   await graphql(`
     query {
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { type: { eq: "page" } } }
+      ) {
         nodes {
           id
-          frontmatter {
-            date(fromNow: true)
-            image
-            path
-            title
-          }
-          excerpt
           slug
         }
       }

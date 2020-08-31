@@ -5,7 +5,7 @@ import BlogProblem from '../components/BlogProblem'
 import SEO from '../components/SEO'
 
 const Problem = ({ data }) => {
-  const problem = data.ghostPost
+  const problem = data
 
   return (
     <Layout>
@@ -23,19 +23,20 @@ const Problem = ({ data }) => {
 export default Problem
 
 export const problemQuery = graphql`
-  query ProblemQuery($id: String!) {
-    ghostPost(id: { eq: $id }) {
+  query($id: String!) {
+    mdx(id: { eq: $id }) {
       id
-      title
-      slug
-      url
-      canonical_url
-      html
-      plaintext
-      feature_image
+      body
+      frontmatter {
+        date
+        title
+        path
+        image
+        type
+        collection
+      }
       excerpt
-      reading_time
-      created_at
+      timeToRead
     }
   }
 `

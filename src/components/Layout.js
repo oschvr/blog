@@ -2,9 +2,9 @@ import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import config from '../config'
-import './styles.scss'
+import '../style/styles.scss'
+import ScriptTag from 'react-script-tag'
 
 const Header = styled.div`
   max-width: 825px;
@@ -43,9 +43,9 @@ const TemplateWrapper = ({ children }) => (
               Posts
             </Link>
 
-            <Link className="navLink" to="/problems">
+            {/* <Link className="navLink" to="/problems">
               Problems
-            </Link>
+            </Link> */}
 
             <a
               className="navLink"
@@ -81,6 +81,7 @@ const TemplateWrapper = ({ children }) => (
       </Header>
       {children}
     </main>
+    <ScriptTag type="text/javascript" src={'/assets/js/remark.js'} />
   </Fragment>
 )
 

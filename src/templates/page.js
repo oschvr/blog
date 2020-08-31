@@ -69,6 +69,8 @@ export const pageQuery = graphql`
         title
         path
         image
+        type
+        collection
       }
       excerpt
     }

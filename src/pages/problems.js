@@ -24,9 +24,9 @@ const ProblemStyle = styled.div`
 const ProblemsPage = ({ data }) => (
   <ProblemStyle>
     <Layout>
-      {data.allGhostPost.edges.map((node, key) => (
+      {/* {data.allGhostPost.edges.map((node, key) => (
         <BlogCard key={key} post={{ ...node.node }} type="problems" />
-      ))}
+      ))} */}
     </Layout>
   </ProblemStyle>
 )
@@ -34,24 +34,24 @@ const ProblemsPage = ({ data }) => (
 export default ProblemsPage
 
 export const query = graphql`
-  query ProblemsPageQuery {
-    allGhostPost(
-      sort: { order: DESC, fields: [published_at] }
-      filter: { tags: { elemMatch: { slug: { eq: "problem" } } } }
+  query AllProblemsPageQuery {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "problem" } } }
     ) {
-      edges {
-        node {
-          id
+      nodes {
+        id
+        frontmatter {
+          date
+          image
+          path
           title
-          slug
-          url
-          canonical_url
-          plaintext
-          feature_image
-          excerpt
-          reading_time
-          created_at
+          type
+          collection
         }
+        excerpt
+        slug
+        timeToRead
       }
     }
   }
