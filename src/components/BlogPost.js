@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import { format, distanceInWords } from 'date-fns'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Card from './Card'
-import Scene from './Scene'
 
 const BlogPostStyle = styled.div`
   h1.title {
