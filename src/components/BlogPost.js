@@ -30,7 +30,7 @@ const BlogPostStyle = styled.div`
       overflow-x: auto;
     }
     img {
-      max-width: 100%;
+      max-width: 10%;
     }
     iframe {
       margin: 0 auto;
@@ -61,12 +61,11 @@ const BlogPost = ({ post }) => {
           <strong>&larr; Posts</strong>
         </Link>
         <br />
-        {/* <br />
-      <Scene />
-      <br /> */}
+        <br />
         {mdx.frontmatter.image && (
           <img src={mdx.frontmatter.image} alt={mdx.frontmatter.title} />
         )}
+        <br />
         <h1 className="title">{mdx.frontmatter.title}</h1>
         <div>
           <h4 style={{ color: 'black', display: 'inline' }}>

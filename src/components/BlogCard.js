@@ -29,14 +29,6 @@ const BlogCardStyle = styled.div`
   .date {
     display: 'inline-block';
   }
-  .image  {
-    display: 'flex';
-    align-items: 'flex-end';
-    justify-content: 'flex-end';
-    img  {
-      width: '100%';
-    }
-  }
 `
 
 const Grid = styled.div``
@@ -44,28 +36,21 @@ const Grid = styled.div``
 const Row = styled.div`
   display: 'flex';
 `
-
 const Col = styled.div`
   flex: ${props => props.size};
 `
 
-const Image = styled.img`
-  width: '150px';
-`
-
 const now = new Date()
 
-const BlogCard = node => {
-  const { frontmatter, slug, timeToRead } = node.post
+const BlogCard = ({ post }) => {
+  const { frontmatter, slug, timeToRead, type } = post
   return (
     <Card padding={30}>
-      <Link to={`${node.type}/${slug}`}>
+      <Link to={`${type}/${slug}`}>
         <BlogCardStyle>
           <Row>
             <Col size={1}>
-              <Link to={`${node.type}/${slug}`}>
-                <h3>{frontmatter.title}</h3>
-              </Link>
+              <h3>{frontmatter.title}</h3>
 
               <h4 style={{ color: 'black', display: 'inline' }}>
                 {timeToRead} min{timeToRead > 1 && 's'} &nbsp;
@@ -80,9 +65,6 @@ const BlogCard = node => {
                 &nbsp;
                 {format(frontmatter.date, 'DD/MM/YYYY')}
               </h6>
-            </Col>
-            <Col size={1}>
-              <Image src={frontmatter.image} />
             </Col>
           </Row>
         </BlogCardStyle>

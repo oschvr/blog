@@ -23,7 +23,6 @@ export const query = graphql`
         id
         frontmatter {
           date
-          image
           path
           title
           type
