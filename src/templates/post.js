@@ -19,7 +19,7 @@ const PostStyle = styled.div`
   img {
     max-width: 100%;
     border-radius: 3px;
-    filter: drop-shadow(0 0 0.25rem lightgray);
+    filter: drop-shadow(0 0 0.05rem lightgray);
   }
 `
 

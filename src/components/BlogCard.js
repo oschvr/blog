@@ -35,6 +35,7 @@ const Grid = styled.div``
 
 const Row = styled.div`
   display: 'flex';
+  flex-wrap: 'auto';
 `
 const Col = styled.div`
   flex: ${props => props.size};
@@ -43,10 +44,10 @@ const Col = styled.div`
 const now = new Date()
 
 const BlogCard = ({ post }) => {
-  const { frontmatter, slug, timeToRead, type } = post
+  const { frontmatter, slug, timeToRead } = post
   return (
     <Card padding={30}>
-      <Link to={`${type}/${slug}`}>
+      <Link to={`${frontmatter.collection}/${slug}`}>
         <BlogCardStyle>
           <Row>
             <Col size={1}>
@@ -65,6 +66,27 @@ const BlogCard = ({ post }) => {
                 &nbsp;
                 {format(frontmatter.date, 'DD/MM/YYYY')}
               </h6>
+              {/* {frontmatter.image && (
+                <div
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    position: 'absolute',
+
+                    justifyContent: 'flex-end',
+                    alignItems: 'center',
+                  }}
+                >
+                  <img
+                    style={{
+                      alignSelf: 'center',
+                      objectFit: 'contain',
+                      maxWidth: '150px',
+                    }}
+                    src={frontmatter.image}
+                  ></img>
+                </div>
+              )} */}
             </Col>
           </Row>
         </BlogCardStyle>

@@ -4,7 +4,13 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import config from '../config'
 import '../style/styles.scss'
-import ScriptTag from 'react-script-tag'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+  faStackOverflow,
+} from '@fortawesome/free-brands-svg-icons'
 
 const Header = styled.div`
   max-width: 825px;
@@ -17,14 +23,17 @@ const Header = styled.div`
   h3 {
     margin: 0;
     color: #0a0a0a;
+    width: 100%;
+    font-size: 0.85rem;
   }
   .navLink {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 25px;
   }
   .nav {
-    display: 'inline';
     padding-top: 10px;
+  }
+  a {
+    font-size: 0.75rem;
   }
 `
 
@@ -42,6 +51,9 @@ const TemplateWrapper = ({ children }) => (
             <Link className="navLink" to="/">
               Posts
             </Link>
+            <Link className="navLink" to="/about">
+              About
+            </Link>
 
             {/* <Link className="navLink" to="/problems">
               Problems
@@ -53,7 +65,7 @@ const TemplateWrapper = ({ children }) => (
               rel="noopener noreferrer"
               href={config.siteMetadata.github}
             >
-              Github
+              <FontAwesomeIcon icon={faGithub} />
             </a>
 
             <a
@@ -62,7 +74,16 @@ const TemplateWrapper = ({ children }) => (
               rel="noopener noreferrer"
               href={config.siteMetadata.twitter}
             >
-              Twitter
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+
+            <a
+              className="navLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={config.siteMetadata.linkedin}
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
             </a>
 
             <a
@@ -71,17 +92,13 @@ const TemplateWrapper = ({ children }) => (
               rel="noopener noreferrer"
               href={config.siteMetadata.stackoverflow}
             >
-              Stackoverflow
+              <FontAwesomeIcon icon={faStackOverflow} />
             </a>
-            <Link className="navLink" to="/about">
-              About
-            </Link>
           </div>
         </div>
       </Header>
       {children}
     </main>
-    <ScriptTag type="text/javascript" src={'/assets/js/remark.js'} />
   </Fragment>
 )
 

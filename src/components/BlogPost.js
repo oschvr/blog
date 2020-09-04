@@ -30,7 +30,7 @@ const BlogPostStyle = styled.div`
       overflow-x: auto;
     }
     img {
-      max-width: 10%;
+      max-width: 100%;
     }
     iframe {
       margin: 0 auto;

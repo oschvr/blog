@@ -6,7 +6,7 @@ import BlogCard from '../components/BlogCard'
 const IndexPage = ({ data }) => (
   <Layout>
     {data.allMdx.nodes.map(post => (
-      <BlogCard key={post.id} post={post} type="posts" />
+      <BlogCard key={post.id} post={post} />
     ))}
   </Layout>
 )
@@ -26,6 +26,7 @@ export const query = graphql`
           path
           title
           type
+          image
           collection
         }
         excerpt
