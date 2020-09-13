@@ -23,30 +23,13 @@ const BlogPostStyle = styled.div`
       line-height: 1.14em;
       font-weight: 400;
     }
-    div.highlight pre {
-      padding: 5% 5% 5% 85px;
-      margin: 20px -85px;
-      overflow-wrap: normal;
-      overflow-x: auto;
-    }
+
     img {
       max-width: 100%;
     }
     iframe {
       margin: 0 auto;
       display: block;
-    }
-  }
-
-  @media only screen and (max-width: 420px) {
-    div.body {
-      div.highlight pre {
-        padding: 5% 5% 5% 20px;
-        margin: 20px -20px;
-      }
-      iframe {
-        width: 100%;
-      }
     }
   }
 `
