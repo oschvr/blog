@@ -51,13 +51,12 @@ const TemplateWrapper = ({ children }) => (
             <Link className="navLink" to="/">
               Posts
             </Link>
+            <Link className="navLink" to="/problems">
+              Problems
+            </Link>
             <Link className="navLink" to="/about">
               About
             </Link>
-
-            {/* <Link className="navLink" to="/problems">
-              Problems
-            </Link> */}
 
             <a
               className="navLink"

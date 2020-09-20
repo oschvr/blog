@@ -37,7 +37,7 @@
     "gatsby-remark-smartypants": "^2.3.10",
     "gatsby-source-dev": "^0.1.2",
     "gatsby-source-filesystem": "^2.0.36",
-    "gatsby-transformer-remark": "^2.8.32",
+    "gatsby-transformer-remark": "^2.8.35",
     "gatsby-transformer-sharp": "^2.1.1",
     "gltf-webpack-loader": "^1.0.6",
     "node-sass": "^4.14.1",

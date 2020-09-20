@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import ReactMarkdown from 'react-markdown'
 import { Link } from 'gatsby'
 import { format, distanceInWords } from 'date-fns'
-import CodeBlock from './CodeBlock'
 import Card from './Card'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const BlogPostStyle = styled.div`
   h1.title {
@@ -53,37 +52,39 @@ const BlogPostStyle = styled.div`
 `
 const now = new Date()
 
-const BlogProblem = ({ problem }) => (
-  <Card>
-    <BlogPostStyle>
-      <Link to="/problems">
-        <strong>&larr; Problems</strong>
-      </Link>
-      <br />
-      <br />
-      <h1 className="title">{problem.title}</h1>
-      <div>
-        <h4 style={{ color: 'gray', display: 'inline' }}>
-          {distanceInWords(problem.created_at, now, { includeSeconds: true })}{' '}
-          ago
-        </h4>
-        <h6 style={{ color: 'lightgray', display: 'inline' }}>
-          &nbsp;
-          {format(problem.created_at, 'DD/MM/YYYY')}
-        </h6>
-      </div>
-      <div className="body">
+const BlogProblem = ({ problem }) => {
+  const { mdx } = problem
+  return (
+    <Card>
+      <BlogPostStyle>
+        <Link to={`/problems`}>
+          <strong>&larr; Problems</strong>
+        </Link>
         <br />
         <br />
+        <h1 className="title">{mdx.frontmatter.title}</h1>
         <div>
-          <strong>{problem.description}</strong>
+          <h4 style={{ color: 'black', display: 'inline' }}>
+            {mdx.timeToRead} min{mdx.timeToRead > 1 && 's'} &nbsp;
+          </h4>
+          <h4 style={{ color: 'gray', display: 'inline' }}>
+            {distanceInWords(mdx.frontmatter.date, now, {
+              includeSeconds: true,
+            })}{' '}
+            ago
+          </h4>
+          <h6 style={{ color: 'lightgray', display: 'inline' }}>
+            &nbsp;
+            {format(mdx.frontmatter.date, 'DD/MM/YYYY')}
+            &nbsp;
+          </h6>
         </div>
-        <hr />
-        {/* <ReactMarkdown source={problem.} renderers={{ code: CodeBlock }} /> */}
-        <div dangerouslySetInnerHTML={{ __html: problem.html }} />
-      </div>
-    </BlogPostStyle>
-  </Card>
-)
+        <div className="body">
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </div>
+      </BlogPostStyle>
+    </Card>
+  )
+}
 
 export default BlogProblem

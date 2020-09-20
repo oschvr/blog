@@ -5,17 +5,20 @@ import BlogProblem from '../components/BlogProblem'
 import SEO from '../components/SEO'
 
 const Problem = ({ data }) => {
-  const problem = data
+  const { mdx } = data
+  const { frontmatter } = mdx
 
   return (
     <Layout>
       <SEO
-        title={problem.title}
-        description={problem.description}
-        pathname={`problems/${problem.slug}`}
+        title={frontmatter.title}
+        description={frontmatter.title}
+        image={frontmatter.image ?? frontmatter.image}
+        image="https://oschvr.s3.us-west-2.amazonaws.com/697191910bb741cf8c74c4a3b1dd26da.jpg"
+        pathname={`problems/${frontmatter.slug}`}
         article
       />
-      <BlogProblem problem={problem} />
+      <BlogProblem problem={data} />
     </Layout>
   )
 }

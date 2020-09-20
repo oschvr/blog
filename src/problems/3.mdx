@@ -1,0 +1,90 @@
+---
+path: '/3'
+date: '2019-05-02'
+title: 'Largest prime factor'
+type: 'problem'
+collection: 'problems'
+image: 'https://oschvr.s3.us-west-2.amazonaws.com/12d9e3fcd54041d486136750b703202a.jpg'
+---
+
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+> What is the largest prime factor of the number 600851475143 ?
+
+We neeed to find the largest prime factor of **600851475143**.
+
+We know that the largest prime factor of a number, its the number itself.
+
+As a concept refresher, any **prime number** is only divisible by 1 ant itself, thus, when dividing by a certain number, there should not be a reminder.
+
+2 is the first prime number, and holds the honor of being the only even prime numnber.
+
+We'll start by making a function to return a `bool` if the former condition holds.
+
+```go
+func isPrime(x
+  int64) bool {
+  var i int64 = 2 // We start with 2 as it is the first prime number
+
+   for ; i < x; i++ {
+      if x % i == 0 {
+        return false
+      }
+  }
+
+   return true
+}
+
+```
+
+Next, we need to test factors and see if they are prime numbers. Let's state:
+
+$$ab = N space where space 1 < a  leq b leq N$$
+
+$$
+N = ab geq a^2 Leftrightarrow  a^2 leq N Rightarrow sqrt[]{N}
+$$
+
+This means that in order to test the [primality](https://math.stackexchange.com/a/1343391) of a composite number N, you check if this number is a product of two numbers. Thus we use square root.
+
+```go
+package main
+
+import (
+  "fmt"
+  "math"
+  "time"
+)
+
+const n int64 = 600851475143
+
+func isPrime(x int64) bool {
+  var i int64 = 2
+  for i < x; i++ {
+    if x%i == 0 {
+      return false
+    }
+  }
+  return true
+}
+
+func
+  main() {
+  start := time.Now()
+  var i = int64(math.Sqrt(float64(n)))
+  for ;
+  i > 1; i-- {
+    if n % i == 0 && isPrime(i) {
+      fmt.Println("Execution time: ", time.Since(start))
+      fmt.Println("Largest Prime Factor: ", i)
+      break
+    }
+  }
+}
+
+```
+
+Execution time: _7.990898ms_
+
+Answer:
+Largest Prime Factor: **6857**

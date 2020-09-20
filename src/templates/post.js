@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
 import SEO from '../components/SEO'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const PostStyle = styled.div`
   h1.title {

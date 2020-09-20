@@ -26,6 +26,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-mathjax`,
         ],
       },
     },
@@ -41,6 +42,13 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `problems`,
+        path: `${__dirname}/src/problems/`,
       },
     },
   ],

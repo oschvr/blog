@@ -39,7 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
     query AllProblemsQuery {
       allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { type: { eq: "problems" } } }
+        filter: { frontmatter: { type: { eq: "problem" } } }
       ) {
         nodes {
           id
@@ -54,7 +54,7 @@ exports.createPages = async ({ actions, graphql }) => {
     allProblems.forEach(problem => {
       // Create the Gatsby page
       createPage({
-        path: `/problems/${problem.slug}/`,
+        path: `/problems/${problem.slug}`,
         component: problemTemplate,
         context: {
           id: problem.id,

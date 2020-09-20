@@ -1,0 +1,125 @@
+---
+path: '/6'
+date: '2019-05-09'
+title: 'Sum square difference'
+type: 'problem'
+collection: 'problems'
+image: 'https://oschvr.s3.us-west-2.amazonaws.com/12d9e3fcd54041d486136750b703202a.jpg'
+---
+
+The sum of the squares of the first ten natural numbers is,
+
+$$1^x1D2 + 2^2 + ... + 10^2 = 385$$
+
+The square of the sum of the first ten natural numbers is,
+
+$$(1 + 2 + ... + 10)^2 = 552 = 3025$$
+
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+
+> Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum
+
+Clearly there are two parts needed to solve the problem. Let's take a look to each one:
+
+#### Sum of the squares of N
+
+We will create a function that accepts parameter N, and calculates the sum of squares.
+
+```go
+func sumSquares(N
+  int64) int64 {
+  var i int64 = 1
+  var sum int64
+  for ; i <= N; i++ {
+    sum += i * i
+  }
+  return sum
+}
+```
+
+I ran this alone with **N = 10** and the results were:
+
+> Sum of Squares: 385
+> Execution Time: 43.542µs
+
+Pretty fast!
+
+With **N = 100**, the results were:
+
+> Sum of Squares: 338350
+> Execution Time: 29.438µs
+
+It was even faster...
+
+#### Square of the sum of N
+
+For the second part we'll do more or less the same but instead we'll first sum everything and then elevate it.
+
+```go
+func squareSum(N int64) int64
+  {
+  var i int64 = 1
+  var sum int64
+  for ; i <= N; i++ {
+    sum += i
+  }
+  return sum * sum
+}
+```
+
+With **N = 10**:
+
+> Square of Sum of N: 3025
+> Execution Time: 38.978µs
+
+And with **N = 100**
+
+> Square of Sum of N: 25502500
+> Execution Time: 39.731µs
+
+_~1.3µs_ of difference... I really like Go.
+
+Finally we'll substract the later with the former.
+
+```go
+package main
+
+import (
+  "fmt"
+  "time"
+)
+
+func
+  sumSquares(N int64) int64 {
+  var i int64 = 1
+  var sum int64
+  for ; i <= N;
+  i++ {
+    sum += i * i
+  }
+  return sum
+}
+
+func squareSum(N int64) int64 {
+  var
+  i int64 = 1
+  var sum int64
+  for ; i <= N; i++ {
+    sum += i
+  }
+  return
+  sum * sum
+}
+
+func main() {
+  start := time.Now()
+  const N = 100
+  fmt.Println("Execution Time:", time.Since(start))
+  fmt.Println("Sum of Squares of N minus Square of Sum of N: ", squareSum(N)-sumSquares(N))
+}
+```
+
+Execution Time: _31.696µs_
+
+Answer
+Sum of Squares of N minus Square of Sum of N: **25164150**"

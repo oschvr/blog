@@ -1,0 +1,122 @@
+---
+path: '/5'
+date: '2019-05-07'
+title: 'Smallest multiple'
+type: 'problem'
+collection: 'problems'
+image: 'https://oschvr.s3.us-west-2.amazonaws.com/12d9e3fcd54041d486136750b703202a.jpg'
+---
+
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+> What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+At first glance, and as a concept refresher, we'll have to use **GCD\* and **LCM\*\*.
+
+- **[GCD](https://en.wikipedia.org/wiki/Greatest_common_divisor)**
+  stands for _Greatest Common Divisor_. **GCD** is the largest number that divides
+  the given numbers.
+- **[LCM](https://en.wikipedia.org/wiki/Least_common_multiple)**
+  stands for _Lowest Common Multiple_. **LCM** is the smallest number that is multiple
+  of _a_ and _b_.
+
+To find the **LCM**, we can use the following formula:
+
+$$
+lcm(a,b) =  frac{ | ab | }{gcd(a, b)}
+$$
+
+But before that, we must find the _GCD_.
+For that, we'll use the [Euclid's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm),
+which consists of an efficient way to calculate the greatest common divisor. The
+algorithm is described:
+
+$$gcd(a,0) = a$$
+
+$$
+  space b)$$
+
+And converting it to a recursive function:
+
+`go
+func gcd(a, b int64) int64 {
+ c := a % b
+ if c == 0 {
+ return b
+ }
+ return gcd(b, c)
+}
+`
+
+Then, we can write our simple function to get the **LCM**:
+
+`go
+func lcm(a, b int64) int64 {
+ return a * b /gcd(a, b)
+}
+`
+
+Finally, we'll iterate
+from 1 ... 20 starting with 2, and we'll calculate the Lowest Common Multiplier
+of every digit.
+
+`go
+package main
+
+import (
+  "fmt"
+  "time"
+)
+
+func main() {
+  start := time.Now()
+  var a, i int64 = 1, 2
+  for ; i <= 20; i++ {
+    a = lcm(a, i)
+  }
+  fmt.Println("Execution time: ", time.Since(start))
+  fmt.Println("Smallest Multiple: ", a)
+}
+
+func lcm(a, b int64) int64 {
+  return a * b / gcd(a, b)
+}
+
+func gcd(a, b int64) int64 {
+  c := a % b
+  if c == 0 {
+    return b
+  }
+  return gcd(b, c)
+}
+`
+
+Execution time: 1.416µs
+
+#### Answer
+
+Smallest Multiple:
+ **232792560**"
+solved: true
+createdAt: '2019-05-02T21:47:33.982Z'
+updatedAt: '2019-05-07T03:42:09.085Z'
+**v: 0
+author:
+confirmed: true
+blocked: false
+_id: 5cc7985342b5fe0017b09ce8
+username: oschvr
+email: oscarchavezromero@gmail.com
+provider: local
+role: 5cc798104a90ac0017615186
+**v: 0
+posts:
+problems:
+id: 5cc7985342b5fe0017b09ce8
+id: 5ccb6575f0f375001725b0ed
+images: []
+permalink: "/problems/5.html"
+layout: problem
+
+---
+$$
