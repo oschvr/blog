@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { format, distanceInWords } from 'date-fns'
 import Card from './Card'
-import { log } from 'three'
 
 const BlogCardStyle = styled.div`
   margin: -20px 0;
