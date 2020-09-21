@@ -38,7 +38,7 @@ $$
 
 And converting it to a recursive function:
 
-`go
+```go
 func gcd(a, b int64) int64 {
  c := a % b
  if c == 0 {
@@ -46,21 +46,19 @@ func gcd(a, b int64) int64 {
  }
  return gcd(b, c)
 }
-`
+```
 
 Then, we can write our simple function to get the **LCM**:
 
-`go
+```go
 func lcm(a, b int64) int64 {
  return a * b /gcd(a, b)
 }
-`
+```
 
-Finally, we'll iterate
-from 1 ... 20 starting with 2, and we'll calculate the Lowest Common Multiplier
-of every digit.
+Finally, we'll iterate from 1 ... 20 starting with 2, and we'll calculate the _Lowest Common Multiplier_ of every digit.
 
-`go
+```go
 package main
 
 import (
@@ -89,34 +87,10 @@ func gcd(a, b int64) int64 {
   }
   return gcd(b, c)
 }
-`
+```
 
 Execution time: 1.416µs
 
-#### Answer
-
-Smallest Multiple:
- **232792560**"
-solved: true
-createdAt: '2019-05-02T21:47:33.982Z'
-updatedAt: '2019-05-07T03:42:09.085Z'
-**v: 0
-author:
-confirmed: true
-blocked: false
-_id: 5cc7985342b5fe0017b09ce8
-username: oschvr
-email: oscarchavezromero@gmail.com
-provider: local
-role: 5cc798104a90ac0017615186
-**v: 0
-posts:
-problems:
-id: 5cc7985342b5fe0017b09ce8
-id: 5ccb6575f0f375001725b0ed
-images: []
-permalink: "/problems/5.html"
-layout: problem
-
----
+Answer:
+Smallest Multiple: **232792560**
 $$
