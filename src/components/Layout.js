@@ -1,9 +1,8 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
-import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import config from '../config'
-import '../style/styles.scss'
+import Header from './Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faGithub,
@@ -12,30 +11,7 @@ import {
   faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons'
 
-const Header = styled.div`
-  max-width: 825px;
-  margin: 10px auto;
-  padding: 20px;
-  width: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  h3 {
-    margin: 0;
-    color: #0a0a0a;
-    width: 100%;
-    font-size: 0.85rem;
-  }
-  .navLink {
-    padding-right: 25px;
-  }
-  .nav {
-    padding-top: 10px;
-  }
-  a {
-    font-size: 0.75rem;
-  }
-`
+import '../style/styles.scss'
 
 const TemplateWrapper = ({ children }) => (
   <Fragment>

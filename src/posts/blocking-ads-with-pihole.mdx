@@ -95,7 +95,7 @@ This next step is very important when you first boot a headless Raspberry Pi (No
 
 All you have to do is run the following line in your Terminal
 
-```
+```bash
 touch /Volumes/boot/ssh
 ```
 
@@ -107,7 +107,7 @@ It will create an empty file called `ssh`, which will instruct Raspbian to open 
 
 Using your notepad or code editor, create a file called `wpa_supplicant` and enter the following
 
-```
+```shell
 country=gb
 update_config=1
 ctrl_interface=/var/run/wpa_supplicant
@@ -124,7 +124,7 @@ Then move it to `/Volumes/boot`
 
 Or you can use the terminal to paste the following:
 
-```
+```bash
 cat >/Volumes/boot/wpa_supplicant <<EOL
     country=gb
     update_config=1

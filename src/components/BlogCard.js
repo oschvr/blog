@@ -31,8 +31,6 @@ const BlogCardStyle = styled.div`
   }
 `
 
-const Grid = styled.div``
-
 const Row = styled.div`
   display: 'flex';
   flex-wrap: 'auto';
@@ -40,7 +38,6 @@ const Row = styled.div`
 const Col = styled.div`
   flex: ${props => props.size};
 `
-
 const now = new Date()
 
 const BlogCard = ({ post }) => {
