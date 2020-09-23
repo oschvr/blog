@@ -3,7 +3,7 @@ html {
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 137.5%;
   -webkit-font-smoothing: antialiased;
-  background: #efeeee;
+  background: #efeeee !important;
   box-sizing: border-box;
   overflow-y: scroll;
   background: transparent;
@@ -11,8 +11,8 @@ html {
 
 p {
   line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 ul,
@@ -60,14 +60,19 @@ table th {
 
 code {
   vertical-align: middle;
-  font-size: 0.75rem !important;
   border-radius: 6px;
+  padding: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #d4d4d4;
+  background: #242d33 !important;
 }
 
 pre {
   border-radius: 6px;
   padding: 20px;
   background-color: #242d33;
+  box-shadow: 10px 10px 20px #c9c8c8, -10px -10px 20px #ffffff;
 }
 
 a {
@@ -77,4 +82,13 @@ a {
 
 body {
   margin: 0;
+}
+
+blockquote {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background: #efeeee;
+  box-shadow: 10px 10px 20px #c9c8c8, -10px -10px 20px #ffffff;
+  border-left: 10px solid #242d33;
 }

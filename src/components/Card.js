@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
 
 const Card = styled.div`
-  border-radius: 15px;
+  border-radius: 10px;
   background: #efeeee;
-  box-shadow: 35px 35px 70px #d1cdc7, -35px -35px 70px #ffffff;
+  box-shadow: 10px 10px 20px #c9c8c8, -10px -10px 20px #ffffff;
 
-  margin: 25px auto;
+  margin: 45px auto;
   text-align: left;
   max-width: 800px;
   width: auto;
