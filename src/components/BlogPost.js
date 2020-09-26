@@ -6,6 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Card from './Card'
 
 const BlogPostStyle = styled.div`
+  padding: 20px;
   h1.title {
     margin: 0;
     font-size: calc(1.85vw + 25px);
@@ -16,6 +17,9 @@ const BlogPostStyle = styled.div`
       color: black;
     }
   }
+  img {
+    width: 100%;
+  }
 
   div.body {
     h1 {
@@ -24,9 +28,6 @@ const BlogPostStyle = styled.div`
       font-weight: 400;
     }
 
-    img {
-      max-width: 100%;
-    }
     iframe {
       margin: 0 auto;
       display: block;
@@ -45,9 +46,9 @@ const BlogPost = ({ post }) => {
         </Link>
         <br />
         <br />
-        {mdx.frontmatter.image && (
+        {/* {mdx.frontmatter.image && (
           <img src={mdx.frontmatter.image} alt={mdx.frontmatter.title} />
-        )}
+        )} */}
         <br />
         <h1 className="title">{mdx.frontmatter.title}</h1>
         <div>
