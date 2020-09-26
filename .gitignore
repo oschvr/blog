@@ -10,4 +10,3 @@ yarn-error.log
 .sonarlint
 
 static/assets/models
-static
