@@ -6,7 +6,7 @@ import BlogCard from '../components/BlogCard'
 const IndexPage = ({ data }) => (
   <Layout>
     {data.allMdx.nodes.map(post => (
-      <BlogCard key={post.id} post={post} />
+      <BlogCard key={post.id} post={post} className="hover" />
     ))}
   </Layout>
 )

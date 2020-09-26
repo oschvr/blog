@@ -7,7 +7,7 @@ import BlogCard from '../components/BlogCard'
 const ProblemsPage = ({ data }) => (
   <Layout>
     {data.allMdx.nodes.map(problem => (
-      <BlogCard key={problem.id} post={problem} />
+      <BlogCard key={problem.id} post={problem} className="hover" />
     ))}
   </Layout>
 )
