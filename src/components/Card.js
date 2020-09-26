@@ -4,7 +4,6 @@ const Card = styled.div`
   border-radius: 10px;
   background: #efeeee;
   box-shadow: 10px 10px 20px #c9c8c8, -10px -10px 20px #ffffff;
-
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 45px auto;
   text-align: left;
