@@ -1,49 +1,5 @@
 module.exports = {
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: { sh: 'bash' },
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: ['.mdx', '.md'],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -65,5 +21,46 @@ module.exports = {
         path: `${__dirname}/src/problems/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+            },
+          },
+        ],
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name:
+          'a blog about software, cloud computing, security, money, business, travelling and life.',
+        short_name: 'oschvr',
+        start_url: '/',
+        background_color: '#fff',
+        theme_color: '#242d33',
+        display: 'standalone',
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 }

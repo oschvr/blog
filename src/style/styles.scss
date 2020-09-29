@@ -74,20 +74,23 @@ table th {
   background-color: #242d33 !important;
   font-family: 'Victor Mono';
   font-size: 18px;
+  padding: 0 0.2rem !important;
 }
+
 code {
   font-family: 'Victor Mono';
+  background-color: #242d33 !important;
   vertical-align: middle;
   border-radius: 6px;
   padding: 6px;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin: 0 2px;
+  padding: 0 4px;
 }
 
 pre {
   border-radius: 6px;
   padding: 30px;
-  background-color: #242d33;
+  background-color: #242d33 !important;
   box-shadow: 10px 10px 20px #c9c8c8, -10px -10px 20px #ffffff;
 }
 
@@ -108,5 +111,5 @@ blockquote {
   margin-right: 0px;
   border-radius: 6px;
   background: #e3e3e3;
-  border-left: 10px solid #242d33;
+  border: 10px solid #242d33;
 }
