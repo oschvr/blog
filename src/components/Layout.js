@@ -15,7 +15,12 @@ import '../style/styles.scss'
 
 const TemplateWrapper = ({ children }) => (
   <Fragment>
-    <Helmet title={config.siteMetadata.title} />
+    <Helmet title={config.siteMetadata.title}>
+      <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+      />
+    </Helmet>
     <main>
       <Header>
         <div style={{ display: 'inline' }}>

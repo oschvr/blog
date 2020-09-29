@@ -11,7 +11,7 @@ image: 'https://oschvr.s3.us-west-2.amazonaws.com/12d9e3fcd54041d486136750b70320
 
 > What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
-At first glance, and as a concept refresher, we'll have to use **GCD\* and **LCM\*\*.
+At first glance, and as a concept refresher, we'll have to use **GCD* and **LCM**.
 
 - **[GCD](https://en.wikipedia.org/wiki/Greatest_common_divisor)**
   stands for _Greatest Common Divisor_. **GCD** is the largest number that divides
@@ -31,14 +31,17 @@ For that, we'll use the [Euclid's algorithm](https://en.wikipedia.org/wiki/Eucli
 which consists of an efficient way to calculate the greatest common divisor. The
 algorithm is described:
 
-$$gcd(a,0) = a$$
+$$
+gcd(a,0) = a
+$$
 
 $$
-  space b)$$
+space b)
+$$
 
 And converting it to a recursive function:
 
-```go
+```go{numberLines: true}
 func gcd(a, b int64) int64 {
  c := a % b
  if c == 0 {
@@ -94,4 +97,3 @@ Execution time: 1.416µs
 #### Answer
 
 Smallest Multiple: **232792560**
-$$

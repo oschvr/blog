@@ -6,48 +6,20 @@ import Card from './Card'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const BlogPostStyle = styled.div`
-  h1.title {
+  padding: 20px;
+  max-width: 800px;
+  margin: 45px auto;
+  h1 {
     margin: 0;
     font-size: calc(1.85vw + 25px);
     line-height: calc(1.85vw + 35px);
     font-weight: 500;
-    a {
-      text-decoration: none;
-      color: black;
-    }
   }
-
-  div.body {
-    h1 {
-      font-size: 1.85em;
-      line-height: 1.14em;
-      font-weight: 400;
-    }
-    div.highlight pre {
-      padding: 5% 5% 5% 85px;
-      margin: 20px -85px;
-      overflow-wrap: normal;
-      overflow-x: auto;
-    }
-    img {
-      max-width: 100%;
-    }
-    iframe {
-      margin: 0 auto;
-      display: block;
-    }
+  img {
+    width: 100%;
   }
-
-  @media only screen and (max-width: 420px) {
-    div.body {
-      div.highlight pre {
-        padding: 5% 5% 5% 20px;
-        margin: 20px -20px;
-      }
-      iframe {
-        width: 100%;
-      }
-    }
+  a {
+    text-decoration: underline;
   }
 `
 const now = new Date()
@@ -55,35 +27,33 @@ const now = new Date()
 const BlogProblem = ({ problem }) => {
   const { mdx } = problem
   return (
-    <Card>
-      <BlogPostStyle>
-        <Link to={`/problems`}>
-          <strong>&larr; Problems</strong>
-        </Link>
-        <br />
-        <br />
-        <h1 className="title">{mdx.frontmatter.title}</h1>
-        <div>
-          <h4 style={{ color: 'black', display: 'inline' }}>
-            {mdx.timeToRead} min{mdx.timeToRead > 1 && 's'} &nbsp;
-          </h4>
-          <h4 style={{ color: 'gray', display: 'inline' }}>
-            {distanceInWords(mdx.frontmatter.date, now, {
-              includeSeconds: true,
-            })}{' '}
-            ago
-          </h4>
-          <h6 style={{ color: 'lightgray', display: 'inline' }}>
-            &nbsp;
-            {format(mdx.frontmatter.date, 'DD/MM/YYYY')}
-            &nbsp;
-          </h6>
-        </div>
-        <div className="body">
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </div>
-      </BlogPostStyle>
-    </Card>
+    <BlogPostStyle>
+      <Link to={`/problems`}>
+        <strong>&larr; Problems</strong>
+      </Link>
+      <br />
+      <br />
+      <h1 className="title">{mdx.frontmatter.title}</h1>
+      <div>
+        <h4 style={{ color: 'black', display: 'inline' }}>
+          {mdx.timeToRead} min{mdx.timeToRead > 1 && 's'} &nbsp;
+        </h4>
+        <h4 style={{ color: 'gray', display: 'inline' }}>
+          {distanceInWords(mdx.frontmatter.date, now, {
+            includeSeconds: true,
+          })}{' '}
+          ago
+        </h4>
+        <h6 style={{ color: 'lightgray', display: 'inline' }}>
+          &nbsp;
+          {format(mdx.frontmatter.date, 'DD/MM/YYYY')}
+          &nbsp;
+        </h6>
+      </div>
+      <div className="body">
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </div>
+    </BlogPostStyle>
   )
 }
 

@@ -37,11 +37,18 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: 'language-',
-              inlineCodeMarker: null,
+              inlineCodeMarker: '>',
               aliases: {},
+              showLineNumbers: true,
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-mathjax`],
       },
     },
     'gatsby-plugin-sharp',

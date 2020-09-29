@@ -23,9 +23,6 @@ const BlogCardStyle = styled.div`
     margin: 0;
     transition-property: all;
     transition-delay: 200ms;
-    &:hover {
-      font-weight: 900;
-    }
   }
 `
 const now = new Date()
