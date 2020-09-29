@@ -1,1 +1,5 @@
-require('./static/assets/css/shades-of-purple.css')
+//require('./static/assets/css/shades-of-purple.css')
+require('./static/assets/css/prism-vsc-dark-plus.css')
+require('prismjs/plugins/line-highlight/prism-line-highlight.css')
+require('prismjs/plugins/show-invisibles/prism-show-invisibles.css')
+require('prismjs/plugins/show-language/prism-show-language.js')

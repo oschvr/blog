@@ -43,11 +43,11 @@ And converting it to a recursive function:
 
 ```go{numberLines: true}
 func gcd(a, b int64) int64 {
- c := a % b
- if c == 0 {
- return b
- }
- return gcd(b, c)
+  c := a % b
+  if c == 0 {
+    return b
+  }
+  return gcd(b, c)
 }
 ```
 
@@ -55,13 +55,13 @@ Then, we can write our simple function to get the **LCM**:
 
 ```go
 func lcm(a, b int64) int64 {
- return a * b /gcd(a, b)
+  return a * b /gcd(a, b)
 }
 ```
 
 Finally, we'll iterate from 1 ... 20 starting with 2, and we'll calculate the _Lowest Common Multiplier_ of every digit.
 
-```go
+```go{numberLines: 3}
 package main
 
 import (
