@@ -10,7 +10,7 @@ const Header = styled.div`
   align-items: center;
   h3 {
     margin: 0;
-    color: #0a0a0a;
+    color: ${props => (props.dark ? '#fff' : '#0a0a0a')};
     width: 100%;
     font-size: 0.85rem;
   }
@@ -19,6 +19,7 @@ const Header = styled.div`
   }
   .nav {
     padding-top: 10px;
+    display: flex;
   }
   a {
     font-size: 0.75rem;

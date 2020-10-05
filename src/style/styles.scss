@@ -1,3 +1,6 @@
+// * {
+//   border: 1px solid purple;
+// }
 @font-face {
   font-family: 'Victor Mono';
   font-style: normal;
@@ -14,10 +17,38 @@ html {
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 137.5%;
   -webkit-font-smoothing: antialiased;
-  background: #efeeee !important;
   box-sizing: border-box;
   overflow-y: scroll;
   background: transparent;
+  margin: 0;
+  .dark-mode {
+    background-color: #212121 !important;
+  }
+}
+
+body.light-mode {
+  background: #efeeee !important;
+  transition: background-color 0.3s ease;
+  a {
+    color: #0e1114;
+    text-decoration: none;
+  }
+}
+body.dark-mode {
+  background-color: #212121;
+  color: #fff;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  blockquote {
+    padding: 20px;
+    margin: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 8px;
+    background: #0e1114;
+  }
 }
 
 p {
@@ -90,15 +121,6 @@ code {
 pre {
   border-radius: 8px;
   background-color: #242d33 !important;
-}
-
-a {
-  color: #0e1114;
-  text-decoration: none;
-}
-
-body {
-  margin: 0;
 }
 
 blockquote {

@@ -31,15 +31,14 @@ const BlogPost = ({ post }) => {
         <strong>&larr; Posts</strong>
       </Link>
       <br />
-      <br />
 
       <br />
       <h1 className="title">{mdx.frontmatter.title}</h1>
       <div>
-        <h4 style={{ color: 'black', display: 'inline' }}>
+        <h4 style={{ display: 'inline', paddingRight: '8px' }}>
           {mdx.timeToRead} min{mdx.timeToRead > 1 && 's'} &nbsp;
         </h4>
-        <h4 style={{ color: 'gray', display: 'inline' }}>
+        <h4 style={{ display: 'inline', paddingRight: '8px' }}>
           {distanceInWords(mdx.frontmatter.date, now, {
             includeSeconds: true,
           })}{' '}

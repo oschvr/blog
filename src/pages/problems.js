@@ -17,7 +17,7 @@ export default ProblemsPage
 export const query = graphql`
   query AllProblemsPageQuery {
     allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [slug], order: DESC }
       filter: { frontmatter: { type: { eq: "problem" } } }
     ) {
       nodes {

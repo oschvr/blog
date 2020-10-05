@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { format, distanceInWords } from 'date-fns'
 import Card from './Card'
+import useDarkMode from 'use-dark-mode'
 
 const BlogCardStyle = styled.div`
   margin: -20px 0;
@@ -29,8 +30,9 @@ const now = new Date()
 
 const BlogCard = ({ post }) => {
   const { frontmatter, slug, timeToRead } = post
+  const darkMode = useDarkMode()
   return (
-    <Card padding={30}>
+    <Card padding={30} dark={darkMode.value}>
       <Link
         to={`${frontmatter.collection === 'posts' ? `posts/${slug}` : slug}`}
       >
@@ -45,7 +47,7 @@ const BlogCard = ({ post }) => {
             })}{' '}
             ago
           </h4>
-          <h5>
+          <h5 style={{ paddingLeft: '8px' }}>
             &nbsp;
             {format(frontmatter.date, 'DD/MM/YYYY')}
           </h5>

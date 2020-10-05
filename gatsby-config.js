@@ -55,7 +55,8 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-sass`,
+    'gatsby-plugin-sass',
+    'gatsby-plugin-use-dark-mode',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
