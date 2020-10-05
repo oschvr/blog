@@ -35,7 +35,7 @@ const ToggleWrapper = styled.div`
   }
 `
 const Toggle = () => {
-  const darkMode = useDarkMode(false)
+  const darkMode = useDarkMode(true)
   return (
     <ToggleWrapper>
       <input
