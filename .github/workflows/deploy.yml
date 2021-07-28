@@ -1,0 +1,35 @@
+name: Build & deploy oschvr.ccom
+on: [push]
+jobs:
+  run:
+    runs-on: ubuntu-20.04
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    steps:
+      # Checkout gh
+      - uses: actions/checkout@v2
+
+      # Setup hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.86.0"
+          extended: true
+
+      # Build
+      - name: Build
+        run: hugo --minify
+
+      # Deploy to S3 & Cloudfront
+      - name: Deploy
+        uses: reggionick/s3-deploy@v3
+        with:
+          folder: public
+          bucket: ${{ secrets.S3_BUCKET }}
+          bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          invalidation: /
+          delete-removed: true
+          no-cache: true
+          private: true
