@@ -23,7 +23,7 @@ jobs:
 
       # Deploy to S3 & Cloudfront
       - name: Deploy
-        uses: reggionick/s3-deploy@v3
+        uses: Reggionick/s3-deploy@v3.1.1
         with:
           folder: public
           bucket: ${{ secrets.S3_BUCKET }}
