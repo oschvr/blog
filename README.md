@@ -1,4 +1,4 @@
-# ooschvr.com
+# oschvr.com
 Personal Blog build with Hugo
 
 ## Serve
