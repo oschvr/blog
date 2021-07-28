@@ -2,7 +2,9 @@
 Personal Blog build with Hugo
 
 ## Serve
-hugo server
+
+`hugo server`
 
 ## Build
-hugo --minify
+
+`hugo --minify
