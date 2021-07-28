@@ -23,7 +23,7 @@ jobs:
         run: hugo --minify
 
       # Deploy to S3
-      - name: Deploy
+      - name: Deploy to bucket
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
@@ -32,7 +32,7 @@ jobs:
           SOURCE_DIR: 'public'
        
       # Invalidate Cloudfront
-      - name: invalidate
+      - name: Invalidate CDN cachee
         uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
