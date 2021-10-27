@@ -18,8 +18,13 @@ jobs:
           hugo-version: "0.86.0"
           extended: true
 
+      # List Root Folder
       - name: List Root
         run: ls -lah .
+
+      # Describe confi.toml
+      - name: Describe confi.toml
+        run: cat config.toml
 
       # Build
       - name: Build
