@@ -20,7 +20,9 @@ Meetups, events and conferences are something I'm always looking to assist or pa
 
 Also I love (to win) hackathons 🏆!
 
-Interested in working with me? [Hit me up ✉️](mailto:oscarchavezromero@gmail.com)
+~~Interested in working with me? [Hit me up ✉️](mailto:oscarchavezromero@gmail.com)~~ Currently busy ! ⏰
+
+![oschvr](https://oschvr.s3.us-west-2.amazonaws.com/202593321_220367036681294_7432749683814182763_n.jpg)
 
 #### **Here's a list of the main tools I use to work (2017):**
 
