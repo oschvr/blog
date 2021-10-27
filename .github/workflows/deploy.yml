@@ -18,6 +18,9 @@ jobs:
           hugo-version: "0.86.0"
           extended: true
 
+      - name: List Root
+        run: ls -lah .
+
       # Build
       - name: Build
         run: hugo --minify
