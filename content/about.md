@@ -1,6 +1,6 @@
 +++
-path =  '/about'
-date =  '2020-09-20'
+path = '/about'
+date = '2020-09-20'
 title = 'About'
 +++
 

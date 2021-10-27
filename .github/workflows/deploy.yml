@@ -23,13 +23,22 @@ jobs:
         run: ls -lah .
 
       # Describe confi.toml
-      - name: Describe confi.toml
+      - name: Describe config.toml
         run: cat config.toml
+
+      # Cleanup themes
+      - name: Cleanup themes
+        run: rm -rf themes/terminal
+
+      # Download theme
+      - name: Download & Setup Terminal theme
+        run: git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
 
       # Build
       - name: Build
         run: hugo --minify
 
+      # List Public Folder
       - name: List Public Folder
         run: ls -lah public/
 
