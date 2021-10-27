@@ -7,4 +7,4 @@ Personal Blog build with Hugo
 
 ## Build
 
-`hugo --minify
+`hugo --minify`
