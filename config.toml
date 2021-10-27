@@ -8,6 +8,9 @@ paginate = 20
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
 
+  # Disqus
+  disqusShortname = "oschvr-1"
+
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "green"
 
