@@ -1,9 +1,9 @@
 +++
 path =  '/stroke'
-date = '2021-05-15'
+date = '2021-10-27'
 title =  'Stroke'
 
-cover = ''
+cover = 'https://oschvr.s3.us-west-2.amazonaws.com/20210909_080333.jpg'
 +++
 
 I had a TIA (Transient Ischemic Attack) or as people know it, Brain Stroke on August 9. After 2 months of recovery, I'm back to normal and I feel great :)
@@ -22,7 +22,7 @@ So I did what I know best to do: _**I forced myself to remain positive**_ throug
 
 A funny thing to note is that this happened to me in Brussels, while on time off, so Doctors and Nurses spoke French to me... My French is not very good so you can imagine how extreme was my immersive linguistic experience.
 
-Here while I had time to reflect, I learned to appreciate and respect modern medicine. Machines and processes are so advanced and from my perspective, more lives are being saved than before thanks in majority to the hard work of the health sector workforce, but also thanks to the technological advances applied there.
+During this period where I had time to reflect, I learned to appreciate and respect modern medicine. Machines and processes are so advanced and from my perspective, more lives are being saved than before thanks in majority to the hard work of the health sector workforce, but also thanks to the technological advances applied there.
 
 Once in London, I started the painful recovery process which consisted of attempting to go back to my normal routine. Because I couldn't move or speak as fast as before, I discovered myself living and applying an advice I used to give people. "**To go fast, you must go slow**". Since I had no other choice than to move slowly, I found that things like cooking or cleaning where more satisfactory to me and I could do them better if I was slower and more meticulous.
 
