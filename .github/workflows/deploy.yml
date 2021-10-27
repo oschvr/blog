@@ -9,7 +9,7 @@ jobs:
       AWS_REGION: ${{ secrets.S3_BUCKET_REGION }}
     steps:
       # Checkout gh
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
 
       # Setup hugo
       - name: Setup Hugo
@@ -22,6 +22,9 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: List Public Folder
+        run: ls -lah public/
+
       # Deploy to S3
       - name: Deploy to bucket
         uses: jakejarvis/s3-sync-action@master
@@ -29,11 +32,12 @@ jobs:
           args: --acl public-read --follow-symlinks --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          SOURCE_DIR: 'public'
-       
+          SOURCE_DIR: "public"
+          AWS_REGION: "us-west-2"
+
       # Invalidate Cloudfront
-      - name: Invalidate CDN cachee
+      - name: Invalidate CDN cache
         uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          PATHS: '/*'
+          PATHS: "/*"

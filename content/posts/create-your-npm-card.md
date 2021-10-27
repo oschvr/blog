@@ -160,25 +160,26 @@ personal information
 
 ```javascript
 const newline = "\n";
-nconst twitter = `${data.twitter.label} ${data.twitter.url}`;
-nconst github = `${data.github.label} ${data.github.url}`;
-nconst email = `${data.email.label} ${data.email.url}`;
-nconst web = `${data.web.label} ${data.web.url}`;
-nconst card =
-    boxen(data.name +
-        newline +
-        newline +
-        data.role +
-        newline +
-        newline +
-        twitter +
-        newline +
-        github +
-        newline +
-        email +
-        newline +
-        web, options);
-
+const twitter = `${data.twitter.label} ${data.twitter.url}`;
+const github = `${data.github.label} ${data.github.url}`;
+const email = `${data.email.label} ${data.email.url}`;
+const web = `${data.web.label} ${data.web.url}`;
+const card = boxen(
+  data.name +
+    newline +
+    newline +
+    data.role +
+    newline +
+    newline +
+    twitter +
+    newline +
+    github +
+    newline +
+    email +
+    newline +
+    web,
+  options
+);
 ```
 
 There are a lot of ways you can achieve something you like. I found that in my case, this is where I was tweaking the most.
@@ -197,52 +198,53 @@ const boxen = require("boxen");
 const chalk = require("chalk");
 
 const options = {
-    padding: 1,
-    margin: 1,
-    borderStyle: "round",
+  padding: 1,
+  margin: 1,
+  borderStyle: "round",
 };
 
 const data = {
-    name: chalk.white.bold(" Oscar Chavez / oschvr"),
-    role: chalk.white.bold(" Cloud 🌥 & Software 🛠 Engineer"),
-    twitter: {
-        label: chalk.white.bold("Twitter 🐦:"),
-        url: chalk.blue.underline("https://twitter.com/oschvr"),
-    },
-    github: {
-        label: chalk.white.bold("Github 🐙:"),
-        url: chalk.blue.underline("https://github.com/oschvr"),
-    },
-    email: {
-        label: chalk.white.bold("Email 📧:"),
-        url: chalk.blue.underline("oschvr@protonmail.com"),
-    },
-    web: {
-        label: chalk.white.bold("Web 💻:"),
-        url: chalk.blue.underline("https://oschvr.com"),
-    },
+  name: chalk.white.bold(" Oscar Chavez / oschvr"),
+  role: chalk.white.bold(" Cloud 🌥 & Software 🛠 Engineer"),
+  twitter: {
+    label: chalk.white.bold("Twitter 🐦:"),
+    url: chalk.blue.underline("https://twitter.com/oschvr"),
+  },
+  github: {
+    label: chalk.white.bold("Github 🐙:"),
+    url: chalk.blue.underline("https://github.com/oschvr"),
+  },
+  email: {
+    label: chalk.white.bold("Email 📧:"),
+    url: chalk.blue.underline("oschvr@protonmail.com"),
+  },
+  web: {
+    label: chalk.white.bold("Web 💻:"),
+    url: chalk.blue.underline("https://oschvr.com"),
+  },
 };
 
 const newline = "\n";
-nconst twitter = `${data.twitter.label} ${data.twitter.url}`;
-nconst github = `${data.github.label} ${data.github.url}`;
-nconst email = `${data.email.label} ${data.email.url}`;
-nconst web = `${data.web.label} ${data.web.url}`;
-nconst card =
-    boxen(data.name +
-        newline +
-        newline +
-        data.role +
-        newline +
-        newline +
-        twitter +
-        newline +
-        github +
-        newline +
-        email +
-        newline +
-        web, options);
-
+const twitter = `${data.twitter.label} ${data.twitter.url}`;
+const github = `${data.github.label} ${data.github.url}`;
+const email = `${data.email.label} ${data.email.url}`;
+const web = `${data.web.label} ${data.web.url}`;
+const card = boxen(
+  data.name +
+    newline +
+    newline +
+    data.role +
+    newline +
+    newline +
+    twitter +
+    newline +
+    github +
+    newline +
+    email +
+    newline +
+    web,
+  options
+);
 ```
 
 To test your newly created node program,
