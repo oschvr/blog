@@ -10,12 +10,14 @@ title = 'Uses'
 
 #### Currently learning:
 
-- Go
-- Kubernetes
-- Terraform
 - More on UNIX Shell scripting
 - More on AWS (Amazon Web Services)
 - OCI (Oracle Cloud Infrastructure)
+
+### UPDATE (2021-2022)
+
+- **Terraform**: Infrastructure as Code provisioning
+- **Ansible** Infrastructure as Code configuration
 
 ### UPDATE (2020)
 
@@ -35,7 +37,6 @@ I've added a couple more to the list:
 - **AWS** Amazon Web Services for Cloud
 - **GCP** Google Cloud services
 - **Docker** Container platform
-- ~~**Ansible** Infrastructure as Code~~
 - **Jenkins** CI/CD Server
 - **Kubernetes** Container Orchestration
 
