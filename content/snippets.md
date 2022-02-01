@@ -28,3 +28,14 @@ rm kubectl_aliases
 
 source ~/.bashrc
 ```
+
+
+_*Added: 01-02-2022*_
+
+Alias to delete all but master branches (I use zsh, change `~/.zshrc` to `~/.bashrc` if you use bash)
+
+```
+echo 'alias gdb="git branch | grep -v "master" | xargs git branch -D"' >> ~/.zshrc
+```
+
+> I read it as *gbd* (git branches delete)
