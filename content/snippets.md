@@ -43,3 +43,19 @@ echo 'alias gdb="git branch | grep -v "master" | xargs git branch -D"' >> ~/.zsh
 > I read it as *gbd* (git branches delete)
 
 ---
+
+### Delete corrupted pods
+
+_*Added: 02-02-2022*_
+
+Deletes all pods from all namespaces marked as `Failed, Evicted` or `Pending`
+
+```
+kubectl get pods -A | grep Evicted | awk '{print $1}' | xargs kubectl delete pod
+
+kubectl get pods -A | grep Failed | awk '{print $1}' | xargs kubectl delete pod
+
+kubectl get pods -A | grep Pending | awk '{print $1}' | xargs kubectl delete pod
+```
+
+---
