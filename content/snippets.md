@@ -59,3 +59,29 @@ kubectl get pods -A | grep Pending | awk '{print $1}' | xargs kubectl delete pod
 ```
 
 ---
+
+### Find Large files in Linux
+
+_*Added: 12-02-2022*_
+
+Find large files in Linux
+
+```
+sudo find / -xdev -type f -size +100M
+```
+
+---
+
+### Clean systemd journal logs 
+
+_*Added: 12-02-2022*_
+
+Clean (vacuum) /var/log/journal logs (produced by systemd)
+
+```
+# Check space used
+du -hs /var/log/journal/
+
+# Clean logs older than 1 day
+sudo journalctl --vacuum-time=1d
+```
