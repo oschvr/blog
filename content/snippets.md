@@ -86,7 +86,6 @@ du -hs /var/log/journal/
 sudo journalctl --vacuum-time=1d
 ```
 
-
 ### Download SSL cert from website with openssl
 
 _*Added: 14-02-2022*_
@@ -96,4 +95,5 @@ Save leaf/server cert to `/tmp/$SERVERNAME.cert`. Use `-showcerts` to download a
 ```
 echo -n | openssl s_client -connect $HOST:$PORTNUMBER -servername $SERVERNAME | openssl x509 > /tmp/$SERVERNAME.cert
 ```
+
 ---
