@@ -85,3 +85,15 @@ du -hs /var/log/journal/
 # Clean logs older than 1 day
 sudo journalctl --vacuum-time=1d
 ```
+
+
+### Download SSL cert from website with openssl
+
+_*Added: 14-02-2022*_
+
+Save leaf/server cert to `/tmp/$SERVERNAME.cert`. Use `-showcerts` to download all certs in the chain. `echo -n` gives a response to the server so that connection is released
+
+```
+echo -n | openssl s_client -connect $HOST:$PORTNUMBER -servername $SERVERNAME | openssl x509 > /tmp/$SERVERNAME.cert
+```
+---
