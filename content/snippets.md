@@ -97,3 +97,15 @@ echo -n | openssl s_client -connect $HOST:$PORTNUMBER -servername $SERVERNAME | 
 ```
 
 ---
+### Configure git cache 
+
+_*Added: 17-02-2022*_
+
+To avoid having to type your password/PAT all the time for HTTPS
+
+```
+# After you've entered the user password/PAT
+git config --global credential.helper cache
+```
+
+---
