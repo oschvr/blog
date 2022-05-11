@@ -7,7 +7,7 @@ cover = 'https://oschvr.s3.us-west-2.amazonaws.com/whatip.jpg'
 +++
 
 
-Introducing (whatip.info)[https://whatip.info]. A very very simple Go program behind an NGINX server to resolve and return the remote IPv4 (and soon IPv6) address.
+Introducing [whatip.info](https://whatip.info). A very very simple Go program behind an NGINX server to resolve and return the remote IPv4 (and soon IPv6) address.
 
 My motivation behind it is dead simple: I need that exact functionality from something I know I control. Prior to this, I was using several alternatives:
 
@@ -81,10 +81,10 @@ func main() {
 
 As you can see, it is dead simple. The program runs a webserver with a powerful http router, and it attempts to get the IPv4 address from headers or request object.
 
-This is running it in an Oracle Cloud Infrastructure (_"Always Free"_)[https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm] VM. Which means, I'm using a *VM.Standard.E2.1.Micro* (1/8 vCPUs and 1Gb of Ram Memory, 480 Mbps i/o and 1 VNIC)
+This is running it in an Oracle Cloud Infrastructure [_"Always Free"_](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm) VM. Which means, I'm using a *VM.Standard.E2.1.Micro* (1/8 vCPUs and 1Gb of Ram Memory, 480 Mbps i/o and 1 VNIC)
 
 
-For https traffic, I'm using (Let's Encrypt free ssl with Nginx via certbot)[https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04]. My NGINX configuration looks like the following
+For https traffic, I'm using [Let's Encrypt free ssl with Nginx via certbot](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04). My NGINX configuration looks like the following
 
 ```shell
 # Another block for http/80 traffic
