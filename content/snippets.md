@@ -109,3 +109,13 @@ git config --global credential.helper cache
 ```
 
 ---
+
+### Convert squid proxy logs to timestamps
+
+_*Added: 02-06-2022*_
+
+To convert unix.centiseconds timestamp to a more readable format
+
+```
+cat access.log | perl -p -e 's/^([0-9]*)/"[".localtime($1)."]"/e'
+```
