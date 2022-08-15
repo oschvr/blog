@@ -119,3 +119,12 @@ To convert unix.centiseconds timestamp to a more readable format
 ```
 cat access.log | perl -p -e 's/^([0-9]*)/"[".localtime($1)."]"/e'
 ```
+
+### Aliases to get kubernetes resources
+_*Added: 15-08-2022*_
+
+To get CPU/Mem requests/limits from the Kubernetes nodes
+
+```
+alias k8sresources='kubectl get nodes --no-headers | awk '\''{print $1}'\'' | xargs -I {} sh -c '\''echo {} ; kubectl describe node {} | grep Allocated -A 5 | grep -ve Event -ve Allocated -ve percent -ve -- ; echo '\'''
+```
