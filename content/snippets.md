@@ -120,11 +120,20 @@ To convert unix.centiseconds timestamp to a more readable format
 cat access.log | perl -p -e 's/^([0-9]*)/"[".localtime($1)."]"/e'
 ```
 
-### Aliases to get kubernetes resources
+### Aliases to get kubernetes resources (nodes)
 _*Added: 15-08-2022*_
 
 To get CPU/Mem requests/limits from the Kubernetes nodes
 
 ```
-alias k8sresources='kubectl get nodes --no-headers | awk '\''{print $1}'\'' | xargs -I {} sh -c '\''echo {} ; kubectl describe node {} | grep Allocated -A 5 | grep -ve Event -ve Allocated -ve percent -ve -- ; echo '\'''
+alias k8snoderesources='kubectl get nodes --no-headers | awk '\''{print $1}'\'' | xargs -I {} sh -c '\''echo {} ; kubectl describe node {} | grep Allocated -A 5 | grep -ve Event -ve Allocated -ve percent -ve -- ; echo '\'''
+```
+
+#### Alias to get kubernetes resources (cpu/mem)
+_*Added: 15-08-2022*_
+
+To get CPU/Mem requests/limits from the Kubernetes pods
+
+```
+alias k8spodresources='kubectl get po --all-namespaces -o=jsonpath="{range .items[*]}{.metadata.namespace}:{.metadata.name}{'\n'}{range .spec.containers[*]}  {.name}:{.resources.requests}{'\n'}{end}{'\n'}{end}"'
 ```
