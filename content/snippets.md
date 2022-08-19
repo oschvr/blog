@@ -137,3 +137,14 @@ To get CPU/Mem requests/limits from the Kubernetes pods
 ```
 alias k8spodresources='kubectl get po --all-namespaces -o=jsonpath="{range .items[*]}{.metadata.namespace}:{.metadata.name}{'\n'}{range .spec.containers[*]}  {.name}:{.resources.requests}{'\n'}{end}{'\n'}{end}"'
 ```
+
+#### Interactive debug pod for Kubernetes
+_*Added: 19-08-2022*_
+
+Creates an ephemeral pod based on busybox (image can be anything) that will die on exit
+
+```
+kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
+```
+
+
