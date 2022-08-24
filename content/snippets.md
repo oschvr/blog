@@ -148,3 +148,18 @@ kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
 ```
 
 
+### SSH Tunnel
+_*Added: 24-08-2022*_
+
+Create a ssh tunnel through a jump box / bastion host
+
+On terminal 1
+```
+ ssh -i <BASTION_KEY> -N -L <PORT_TO_BIND_LOCALLY>:<HOST_ACCESSIBLE_FROM_BASTION>:<PORT_TO_LISTEN_FROM_BASTION> <USER>@<BASTION_HOST_IP_OR_DNS>
+```
+Keep this one open. This will tunnel the service at the specified port through SSH
+
+On terminal 2 (check connection)
+```
+nc -vz localhost <PORT_TO_BIND_LOCALLY>
+```
