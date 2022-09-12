@@ -163,3 +163,13 @@ On terminal 2 (check connection)
 ```
 nc -vz localhost <PORT_TO_BIND_LOCALLY>
 ```
+
+### Get K8s resources from multiple namespaces
+_*Added: 12-09-2022*_
+
+Get kubernetes resources from multiple namespaces
+
+```
+eval 'kubectl --namespace='{ns1, ns2}' get pod;'
+```
+
