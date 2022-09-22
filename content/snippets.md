@@ -173,3 +173,11 @@ Get kubernetes resources from multiple namespaces
 eval 'kubectl --namespace='{ns1, ns2}' get pod;'
 ```
 
+### Remove finalizers from CRDs and K8s resources
+_*Added: 22-09-2022*_
+
+Remove all finalizer objects that block CRDs and K8s native resources from being terminanted
+
+```
+kubectl patch <RESOURCE> <NAME>  --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]';
+```
