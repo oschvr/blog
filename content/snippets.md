@@ -181,3 +181,18 @@ Remove all finalizer objects that block CRDs and K8s native resources from being
 ```
 kubectl patch <RESOURCE> <NAME>  --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]';
 ```
+
+### Use ProxyJump with SSH/SCP
+_*Added: 05-10-2022*_
+
+Use a Jump machine (bastion host) to copy a file or connect
+
+```
+# Copy locally using JumpHost
+scp -o 'ProxyJump <JUMP_HOST_USER>@<JUMP_HOST>' -i <END_HOST_KEY> <END_HOST_USER>@<END_HOST>:~/file .
+
+
+# Connect using JumpHost
+ssh -J <JUMP_HOST_USER>@<JUMP_HOST> -i <END_HOST_KEY> <END_HOST_USER>@<END_HOST>
+```
+
