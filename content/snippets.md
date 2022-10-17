@@ -120,6 +120,8 @@ To convert unix.centiseconds timestamp to a more readable format
 cat access.log | perl -p -e 's/^([0-9]*)/"[".localtime($1)."]"/e'
 ```
 
+---
+
 ### Aliases to get kubernetes resources (nodes)
 _*Added: 15-08-2022*_
 
@@ -128,6 +130,8 @@ To get CPU/Mem requests/limits from the Kubernetes nodes
 ```
 alias k8snoderesources='kubectl get nodes --no-headers | awk '\''{print $1}'\'' | xargs -I {} sh -c '\''echo {} ; kubectl describe node {} | grep Allocated -A 5 | grep -ve Event -ve Allocated -ve percent -ve -- ; echo '\'''
 ```
+
+---
 
 #### Alias to get kubernetes resources (cpu/mem)
 _*Added: 15-08-2022*_
@@ -138,6 +142,8 @@ To get CPU/Mem requests/limits from the Kubernetes pods
 alias k8spodresources='kubectl get po --all-namespaces -o=jsonpath="{range .items[*]}{.metadata.namespace}:{.metadata.name}{'\n'}{range .spec.containers[*]}  {.name}:{.resources.requests}{'\n'}{end}{'\n'}{end}"'
 ```
 
+---
+
 #### Interactive debug pod for Kubernetes
 _*Added: 19-08-2022*_
 
@@ -147,6 +153,7 @@ Creates an ephemeral pod based on busybox (image can be anything) that will die 
 kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
 ```
 
+---
 
 ### SSH Tunnel
 _*Added: 24-08-2022*_
@@ -157,12 +164,15 @@ On terminal 1
 ```
  ssh -i <BASTION_KEY> -N -L <PORT_TO_BIND_LOCALLY>:<HOST_ACCESSIBLE_FROM_BASTION>:<PORT_TO_LISTEN_FROM_BASTION> <USER>@<BASTION_HOST_IP_OR_DNS>
 ```
+
 Keep this one open. This will tunnel the service at the specified port through SSH
 
 On terminal 2 (check connection)
 ```
 nc -vz localhost <PORT_TO_BIND_LOCALLY>
 ```
+
+---
 
 ### Get K8s resources from multiple namespaces
 _*Added: 12-09-2022*_
@@ -173,6 +183,8 @@ Get kubernetes resources from multiple namespaces
 eval 'kubectl --namespace='{ns1, ns2}' get pod;'
 ```
 
+---
+
 ### Remove finalizers from CRDs and K8s resources
 _*Added: 22-09-2022*_
 
@@ -181,6 +193,8 @@ Remove all finalizer objects that block CRDs and K8s native resources from being
 ```
 kubectl patch <RESOURCE> <NAME>  --type json -p='[{"op": "remove", "path": "/metadata/finalizers"}]';
 ```
+
+---
 
 ### Use ProxyJump with SSH/SCP
 _*Added: 05-10-2022*_
@@ -196,6 +210,8 @@ scp -o 'ProxyJump <JUMP_HOST_USER>@<JUMP_HOST>' -i <END_HOST_KEY> <END_HOST_USER
 ssh -J <JUMP_HOST_USER>@<JUMP_HOST> -i <END_HOST_KEY> <END_HOST_USER>@<END_HOST>
 ```
 
+---
+
 ### Re-tag an existing AWS ECR Image using AWS cli
 _*Added: 17-10-2022*_
 
@@ -208,4 +224,6 @@ MANIFEST=$(aws ecr batch-get-image --repository-name <REPO_NAME> --image-ids ima
 # Put new manifest (new tag)
 aws ecr put-image --repository-name <REPO_NAME> --image-tag <NEW_TAG> --image-manifest "$MANIFEST" 
 ```
+
+---
 
