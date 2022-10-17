@@ -196,3 +196,16 @@ scp -o 'ProxyJump <JUMP_HOST_USER>@<JUMP_HOST>' -i <END_HOST_KEY> <END_HOST_USER
 ssh -J <JUMP_HOST_USER>@<JUMP_HOST> -i <END_HOST_KEY> <END_HOST_USER>@<END_HOST>
 ```
 
+### Re-tag an existing AWS ECR Image using AWS cli
+_*Added: 17-10-2022*_
+
+Use a different tag on the same AWS ECR Docker image using AWS cli
+
+```
+# Get ECR Image manifest
+MANIFEST=$(aws ecr batch-get-image --repository-name <REPO_NAME> --image-ids imageTag=<OLD_TAG> --query 'images[].imageManifest' --output text)
+
+# Put new manifest (new tag)
+aws ecr put-image --repository-name <REPO_NAME> --image-tag <NEW_TAG> --image-manifest "$MANIFEST" 
+```
+
