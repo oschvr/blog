@@ -156,6 +156,7 @@ kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
 ---
 
 ### SSH Tunnel
+
 _*Added: 24-08-2022*_
 
 Create a ssh tunnel through a jump box / bastion host
@@ -174,7 +175,8 @@ nc -vz localhost <PORT_TO_BIND_LOCALLY>
 
 ---
 
-### Get K8s resources from multiple namespaces
+### Get K8s resources from multiple namespaces
+
 _*Added: 12-09-2022*_
 
 Get kubernetes resources from multiple namespaces
@@ -185,7 +187,8 @@ eval 'kubectl --namespace='{ns1, ns2}' get pod;'
 
 ---
 
-### Remove finalizers from CRDs and K8s resources
+### Remove finalizers from CRDs and K8s resources
+
 _*Added: 22-09-2022*_
 
 Remove all finalizer objects that block CRDs and K8s native resources from being terminanted
@@ -196,7 +199,8 @@ kubectl patch <RESOURCE> <NAME>  --type json -p='[{"op": "remove", "path": "/met
 
 ---
 
-### Use ProxyJump with SSH/SCP
+### Use ProxyJump with SSH/SCP
+
 _*Added: 05-10-2022*_
 
 Use a Jump machine (bastion host) to copy a file or connect
@@ -212,7 +216,8 @@ ssh -J <JUMP_HOST_USER>@<JUMP_HOST> -i <END_HOST_KEY> <END_HOST_USER>@<END_HOST>
 
 ---
 
-### Re-tag an existing AWS ECR Image using AWS cli
+### Re-tag an existing AWS ECR Image using AWS cli
+
 _*Added: 17-10-2022*_
 
 Use a different tag on the same AWS ECR Docker image using AWS cli
@@ -278,4 +283,12 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO username;
 ```
 
 ---
+
+### Restart ALL deployments in a namespace in K8s
+
+_*Added: 17-11-2022*_
+
+```
+for svc in $(k get deploy --no-headers | awk '{print $1}'); do kubectl rollout restart deploy $svc; done
+```
 
