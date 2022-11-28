@@ -151,6 +151,9 @@ Creates an ephemeral pod based on busybox (image can be anything) that will die 
 
 ```
 kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
+# curl in busybox
+kubectl run -i --tty --rm debug --image=yauritux/busybox-curl --restart=Never -- sh
+
 ```
 
 ---
