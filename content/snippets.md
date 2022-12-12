@@ -299,3 +299,19 @@ _*Added: 17-11-2022*_
 for svc in $(k get deploy --no-headers | awk '{print $1}'); do kubectl rollout restart deploy $svc; done
 ```
 
+---
+
+### Terraform: Destroy all but desired module
+
+_*Added: 12-12-2022*_
+
+```
+# Create destroy.plan without desired module
+terraform plan -destroy $(for r in `terraform state list | fgrep -v module.save_me_from_obliteration` ; do printf " -target ${r} "; done) -out destroy.plan
+
+# Apply destruction
+terraform apply "destroy.plan"
+```
+
+Credit to [cmacrae](https://github.com/hashicorp/terraform/issues/2253#issuecomment-318665739)
+
