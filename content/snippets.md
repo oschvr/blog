@@ -315,3 +315,35 @@ terraform apply "destroy.plan"
 
 Credit to [cmacrae](https://github.com/hashicorp/terraform/issues/2253#issuecomment-318665739)
 
+### Install various Java versions with Homebrew in macOS
+
+_*Added: 13-12-2022*_
+
+Install homebrew
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Use AdoptOpenJDK
+
+```
+brew tap adoptopenjdk/openjdk
+
+brew install --cask adoptopenjdk8
+brew install --cask adoptopenjdk11
+```
+
+Modify your ~/.zshrc or ~/.bashrc
+
+```
+alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`"
+alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`"
+```
+
+Reload 
+```
+source ~/.zshrc
+```
+
+Switch easily typing `j8` or `j11` 
