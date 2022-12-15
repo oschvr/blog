@@ -1,3 +1,5 @@
 .env*
 public
 .DS_Store
+themes/
+resources/

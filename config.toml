@@ -31,7 +31,7 @@ paginate = 20
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
+  showLastUpdated = true
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
 
@@ -112,8 +112,14 @@ paginate = 20
         url = "https://twitter.com/oschvr"
         weight = 8
       [[languages.en.menu.main]]
+        identifier = "mastodon"
+        name = "mastodon"
+        pre = "<i class='fa fa-heart'></i>"
+        url = "https://mastodon.online/@oschvr"
+        weight = 9
+      [[languages.en.menu.main]]
         identifier = "linkedin"
         name = "linkedin"
         pre = "<i class='fa fa-heart'></i>"
         url = "https://www.linkedin.com/in/oscarchavezromero/"
-        weight = 9
+        weight = 10

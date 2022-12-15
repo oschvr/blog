@@ -6,9 +6,9 @@ title = 'About'
 
 I'm **Oscar Chavez**.
 
-I'm a software engineer ⚙️ and cloud architect ☁️.
+I'm a senior software engineer ⚙️ and cloud architect ☁️.
 
-I'm currently working as a Founding Engineer, in charge of the **Frontend and DevOps** efforts at ⚙️ [Lean](https://leantech.me/).
+I'm currently working as a Founding Engineer, in the **DevOps/SRE/Platform Engineering** department at ⚙️ [Lean](https://leantech.me/).
 
 Before, I did some **Cybersecurity Research and Technical Sales** at 🔼 [Delta Protect](https://deltaprotect.co/).
 
