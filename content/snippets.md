@@ -347,3 +347,23 @@ source ~/.zshrc
 ```
 
 Switch easily typing `j8` or `j11` 
+
+
+---
+
+### Get size of top docker storage layers 
+
+_*Added: 04-01-2023*_
+
+Get in a k8s worker node.
+
+
+```
+# Find top storage layers
+TOP_STORAGE=$(du -hs /var/lib/docker/overlay2/* | grep -Ee '^[0-9]{3}[M]+|[0-9]G' | sort -h |tail -n 10 |tee -a /dev/stderr |awk '{print $2}'|xargs|sed 's/ /|/g')
+
+# See which containers they belong to
+docker inspect $(docker ps -q) | jq '.[]|.Config.Hostname,.Config.Labels."io.kubernetes.pod.name",.GraphDriver.Data.MergedDir,.hovno' | egrep -B2 "$TOP_STORAGE"
+```
+
+Credit to [rharshad.com](https://rharshad.com/eks-troubleshooting-disk-pressure/)
