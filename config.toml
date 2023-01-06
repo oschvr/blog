@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://oschvr.com/"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 20
@@ -9,7 +9,7 @@ paginate = 20
   contentTypeName = "posts"
 
   # Disqus
-  disqusShortname = "oschvr-1"
+  disqusShortname = 'oschvr-1'
 
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "green"
@@ -38,6 +38,9 @@ paginate = 20
   # set all headings to their default size (depending on browser settings)
   # it's set to `true` by default
   # oneHeadingSize = false
+  
+  # google analytics
+  googleAnalytics = 'G-7GN1HB5CWJ'
 
 [params.twitter]
   # set Twitter handles for Twitter cards
