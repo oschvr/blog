@@ -3,7 +3,7 @@ path =  '/merge-sort-go-javascript'
 date = '2019-05-26'
 title =  'Merge Sort in Go and Javascript'
 
-cover ='https://oschvr.s3.us-west-2.amazonaws.com/aab2b0d5852e49a188717d019a5da5e8.png'
+cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/aab2b0d5852e49a188717d019a5da5e8.png'
 +++
 
 Here's my implementation of the _Mergesort_ algorithm in **Golang**

@@ -3,7 +3,7 @@ path =  '/understanding-recursion'
 date = '2019-05-17'
 title =  'Understanding Recursion'
 
-cover ='https://oschvr.s3.us-west-2.amazonaws.com/89a0363f136c4d2aa692efd9d96f300c.png'
+cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/89a0363f136c4d2aa692efd9d96f300c.png'
 +++
 
 Rather than using the popular joke about **recursion** _(see bottom)_, I'll reference a very peculiar adage which makes use of this particular mental model:

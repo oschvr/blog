@@ -3,7 +3,7 @@ path =  '/whatip'
 date = '2022-05-10'
 title =  'whatip.info'
 
-cover = 'https://oschvr.s3.us-west-2.amazonaws.com/whatip.jpg'
+cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/whatip.jpg'
 +++
 
 

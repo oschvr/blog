@@ -3,7 +3,7 @@ path =  '/what-id-like-as-sre-devops'
 date = '2022-12-15'
 title =  'Things I want as SRE/DevOps from Devs'
 
-cover = 'https://oschvr.s3.us-west-2.amazonaws.com/oldstreet.jpeg'
+cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/oldstreet.jpeg'
 +++
 
 It has been a while since I've been working as **SRE/Platform/Cloud Engineer**, and lately and I realize I've been repeating some **questions** to developers that I rarely get an answer for straight away.

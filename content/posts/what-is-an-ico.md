@@ -2,7 +2,7 @@
 path = '/what-is-an-ico'
 date = '2017-08-24'
 title = 'What is an ICO'
-cover = 'https://oschvr.s3.us-west-2.amazonaws.com/eb0030fc316545d286dc699d2ecc4cdc.png'
+cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/eb0030fc316545d286dc699d2ecc4cdc.png'
 +++
 
 What the hell is an **ICO** ? And why the _f#ck_ does something like [Tezos](https://www.tezos.com/) fundraised more than _65,697_ BTC and _361,122_ ETH, which in total stands for around:

@@ -23,7 +23,7 @@ So I [did it](https://www.npmjs.com/package/oschvr), you can test it out in your
 1.  Open your **`Terminal`**
 2.  Type **`npx oschvr`** and hit enter
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/npm-card/card.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/npm-card/card.png)
 
 npx oschvr
 

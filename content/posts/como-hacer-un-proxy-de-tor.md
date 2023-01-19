@@ -3,10 +3,10 @@ path =  '/como-hacer-un-proxy-de-tor'
 date = '2017-08-29'
 title =  'Cómo hacer un Proxy de Tor'
 
-cover ='https://oschvr.s3.us-west-2.amazonaws.com/b3b964aa766c45ffad3eb29a6cded081.png'
+cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/b3b964aa766c45ffad3eb29a6cded081.png'
 +++
 
-## [Descarga el PDF](https://oschvr.s3.us-west-2.amazonaws.com/7edea024dade4920a9d361406ea09b73.pdf)
+## [Descarga el PDF](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/7edea024dade4920a9d361406ea09b73.pdf)
 
 +++
 
@@ -14,7 +14,7 @@ cover ='https://oschvr.s3.us-west-2.amazonaws.com/b3b964aa766c45ffad3eb29a6cded0
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Rl4kKxOOsgU/0.jpg)](https://www.youtube.com/watch?v=Rl4kKxOOsg)
 
-![rpi](https://oschvr.s3.us-west-2.amazonaws.com/3f7c3ea90e5345a48e2d68790f89c140.jpg)
+![rpi](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/3f7c3ea90e5345a48e2d68790f89c140.jpg)
 
 ### Requisitos
 
@@ -34,7 +34,7 @@ cover ='https://oschvr.s3.us-west-2.amazonaws.com/b3b964aa766c45ffad3eb29a6cded0
 4. Ir a `'Interfacing Options' > 'SSH'` y habilitar el server de SSH y salir.
 5. Escribir `ifconfig` y copiar la dirección IP que está a un lado de `inet` en la parte de `eth0`
 
-![ssh](https://oschvr.s3.us-west-2.amazonaws.com/e92e93d889f649b7a3e20c1efcced128.png)
+![ssh](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/e92e93d889f649b7a3e20c1efcced128.png)
 
 ## Tutorial
 
@@ -237,7 +237,7 @@ sudo service isc-dhcp-server status
 sudo service hostapd status
 ```
 
-![services](https://oschvr.s3.us-west-2.amazonaws.com/5961c8cda66d460db4304e6fb3fd3650.png)
+![services](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/5961c8cda66d460db4304e6fb3fd3650.png)
 
 #### TOR
 
@@ -297,7 +297,7 @@ sudo update-rc.d tor enable
 
 #### Prueba
 
-![ssid](https://oschvr.s3.us-west-2.amazonaws.com/1111796eca8a4a0591e01b612cc5c16a.png)
+![ssid](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/1111796eca8a4a0591e01b612cc5c16a.png)
 
 Nos conectamos a la red desde otra computadora o teléfono para probar, y visitamos [https://check.torproject.org/](https://check.torproject.org/) para comprobar conexión a internet y que en efecto nuestro tráfico esta siendo routeado por Tor.
 
@@ -305,4 +305,4 @@ Nos conectamos a la red desde otra computadora o teléfono para probar, y visita
 
 [¿Qué es y cómo usar Tor?](https://www.youtube.com/watch?v=wlP1JrfvUo0&t=45s)
 
-![hexagons](https://oschvr.s3.us-west-2.amazonaws.com/2e5e0996f7dc4ec180e9b0746e9221d1.png)
+![hexagons](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/2e5e0996f7dc4ec180e9b0746e9221d1.png)

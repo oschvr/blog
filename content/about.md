@@ -22,4 +22,4 @@ Also I love (to win) hackathons 🏆!
 
 ~~Interested in working with me? Hit me up ~~ Currently busy ! ⏰
 
-![oschvr](https://oschvr.s3.us-west-2.amazonaws.com/202593321_220367036681294_7432749683814182763_n.jpg)
+![oschvr](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/202593321_220367036681294_7432749683814182763_n.jpg)

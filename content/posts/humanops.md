@@ -3,7 +3,7 @@ path =  '/humanops-mantra'
 date = '2022-11-30'
 title =  'HumanOps Mantra'
 
-cover = 'https://oschvr.s3.us-west-2.amazonaws.com/iceland.jpeg'
+cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/iceland.jpeg'
 +++
 
 

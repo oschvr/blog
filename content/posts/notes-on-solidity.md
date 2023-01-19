@@ -3,7 +3,7 @@ path =  '/notes-on-solidity'
 date = '2017-08-15'
 title =  'Notes on Solidity'
 
-cover ='https://oschvr.s3.us-west-2.amazonaws.com/8893450eef344e8ea2ed3e0d413ee7f8.jpg'
+cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/8893450eef344e8ea2ed3e0d413ee7f8.jpg'
 +++
 
 # Notes on Solidity
@@ -12,7 +12,7 @@ cover ='https://oschvr.s3.us-west-2.amazonaws.com/8893450eef344e8ea2ed3e0d413ee7
 
 by [oschvr](http://twitter.com/oschvr)
 
-![soliditylogo](https://oschvr.s3.us-west-2.amazonaws.com/0116e2bcd20d4e93be1dde5c33928a7c.svg)
+![soliditylogo](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/0116e2bcd20d4e93be1dde5c33928a7c.svg)
 
 > Solidity is a contract-oriented, high-level language whose syntax is similar to that of JavaScript and it is designed to target the Ethereum Virtual Machine (EVM).
 
@@ -26,7 +26,7 @@ I will cover the following topics:
 
 I'm using [VS Code for MacOS](https://code.visualstudio.com/), here's an example of how it looks, with the [extension by Juan Blanco](http://juan.blanco.ws/solidity-contracts-in-visual-studio-code/):
 
-![solidityVS](https://oschvr.s3.us-west-2.amazonaws.com/4748e60ed25e445cb49a5d4f85a14424.png)
+![solidityVS](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/4748e60ed25e445cb49a5d4f85a14424.png)
 
 +++
 

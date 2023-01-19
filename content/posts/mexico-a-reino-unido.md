@@ -3,7 +3,7 @@ path =  '/mexico-a-reino-unido'
 date = '2020-03-02'
 title =  'De Mexico al Reino Unido'
 
-cover ='https://oschvr.s3.us-west-2.amazonaws.com/d490e756ee00495885a875d2982f21ec.jpg'
+cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/d490e756ee00495885a875d2982f21ec.jpg'
 +++
 
 Ya tiene mucho, _muchísimo_ (10 meses) que no escribo/tengo ganas de escribir acá.
@@ -26,7 +26,7 @@ Recientemente, y para ser precisos, hace prácticamente **6 meses**, dejé todo 
 
 A por lo menos 8,800km de distancia de mi familia, amigos, experiencias.
 
-![8800km](https://oschvr.s3.us-west-2.amazonaws.com/069808a19101471da19f02efbe372537.png)
+![8800km](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/069808a19101471da19f02efbe372537.png)
 
 Esta movida ha sido, y en gran medida para mi experiencia de vida, la _segunda_ más intensa, compleja y llena de sorpresas (más buenas que malas) a la que voluntariamente me he expuesto.
 
@@ -42,7 +42,7 @@ Afortunadamente yo lo hice con mi persona favorita. No que eso signifique que no
 
 La experiencia de salir de un país incansable, caluroso, culturalmente divertido, con una identidad irremplazable para llegar a un lugar en donde la noche cae a las 2pm, con un clima gélido y sin realmente poder salir a coincidir con alguien, además de convivir con el hecho de tener impuesto un limite de viaje a razón de una espera indefinida de varios trámites migratorios, es realmente estrujante al principio. En definitiva creo que no es para todos.
 
-![StPancras](https://oschvr.s3.us-west-2.amazonaws.com/d5e81a944c95435b9751f906bd9f32eb.jpg)
+![StPancras](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/d5e81a944c95435b9751f906bd9f32eb.jpg)
 
 **Pero se pone mejor**. Un poquito al día y cada vez más.
 
@@ -54,4 +54,4 @@ Ya que pasé por la experiencias de mudanza y de reubicación local e internacio
 
 El final de este brevísimo recuento es que personalmente pasé por un periodo intenso, con muchas nuevas situaciones, idiomas y personajes en mi vida. Pero que finalmente estoy contento, tranquilo y puedo venir a desempolvar el blog a comunicarlo.
 
-![London](https://oschvr.s3.us-west-2.amazonaws.com/437e0d2145ff4e8f94952f6b74bda67d.jpg)
+![London](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/437e0d2145ff4e8f94952f6b74bda67d.jpg)

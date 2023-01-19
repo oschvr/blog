@@ -12,7 +12,7 @@ I just received an email containing the badge from acclaim.com.
 
 It made me look back on how much things have changed for the better since I made this exam, so I thought of making a blog post on how things went for me.
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/aws-csaa/aws-acclaim.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/aws-csaa/aws-acclaim.png)
 
 _AWS Certified Solutions Architect – Associate was issued by Amazon Web Services Training and Certification to Oscar Chavez_
 
@@ -26,7 +26,7 @@ Here's my journey:
 
 I took the AWS CSAA exam almost **9 months ago** in **Mexico City** using Pearson's on site examination. It costed **150 USD  (~3,577.53 MXN)**
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/aws-csaa/cost.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/aws-csaa/cost.png)
 
 I have had at least **12 months** of prior experience using **AWS SDKs,** and the **AWS Console**. Mainly _EC2, VPC, RDS, S3, Cloudfront_, and some _DynamoDB_ work.
 
@@ -35,7 +35,7 @@ I have had at least **12 months** of prior experience using **AWS SDKs,** and th
 
 I booked it **60** **days** in advance and studied daily at least **1 hour** of at least **40** of those days. I passed with **804/1000**
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/aws-csaa/aws-date.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/aws-csaa/aws-date.png)
 
 804/1000
 
@@ -89,7 +89,7 @@ They have this thing called _The Orion Papers._ It's a bit tricky at first, but 
 
 But for me, the most important aspect of the time I invested in studying, were my personal notes. I wrote everything I deemed as important and as it was presented to me.
 
-[**AWS-CSAA-Notes-@oschvr**](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/aws-csaa/AWS-CSAA-Notes-%40oschvr.pdf)
+[**AWS-CSAA-Notes-@oschvr**](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/aws-csaa/AWS-CSAA-Notes-%40oschvr.pdf)
 
 They are obviously handwritten and probably some parts might be trick to read but this is the first effort to give them for free for anyone that is interested.
 

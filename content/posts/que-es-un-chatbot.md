@@ -3,7 +3,7 @@ path =  '/que-es-un-chatbot'
 date = '2017-11-17'
 title =  '¿Qué es un chatbot?'
 
-cover ='https://oschvr.s3.us-west-2.amazonaws.com/d07ef127d77349b9802527960739ab5b.png'
+cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/d07ef127d77349b9802527960739ab5b.png'
 +++
 
 ### ¿Qué es un chatbot?
@@ -40,7 +40,7 @@ Los chatbots son multicanal. Establecen un trato mucho más personalizado sobre 
 
 > 30% de la utilida de **Starbucks** fue a través de **WeChat**
 
-![PIRAMIDE](https://oschvr.s3.us-west-2.amazonaws.com/bd7c167287e64c15a50deccb33cef91f.jpg)
+![PIRAMIDE](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/bd7c167287e64c15a50deccb33cef91f.jpg)
 
 ### Conclusión
 

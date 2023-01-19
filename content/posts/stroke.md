@@ -3,7 +3,7 @@ path =  '/stroke'
 date = '2021-10-27'
 title =  'Stroke'
 
-cover = 'https://oschvr.s3.us-west-2.amazonaws.com/20210909_080333.jpg'
+cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/20210909_080333.jpg'
 +++
 
 I had a TIA (Transient Ischemic Attack) or as people know it, Brain Stroke on August 9. After 2 months of recovery, I'm back to normal and I feel great :)

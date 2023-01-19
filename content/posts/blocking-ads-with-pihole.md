@@ -13,7 +13,7 @@ Before going into the post carefully documenting my process in setting up everyt
 
 Here's how it looks before and after:
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/pihole-after-before.gif)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/pihole-after-before.gif)
 
 Now, for whomever wants to understand why and how to build this, carry on...
 
@@ -31,7 +31,7 @@ But let's not forget that for the rest of the cases, there are sites that over e
 
 Let's go halfway and  take for example [theverge.com]("https://www.theverge.com/") a very popular tech news site. They have a solid, full width banner, dedicated to online advertising, through what it seems Google AdSense.
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/verge-ad.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/verge-ad.png)
 
 A targeted Ad @ theverge.com
 
@@ -69,7 +69,7 @@ So, as per the official documentation and guides, you need your own hardware and
 This is just the base operative system that handles all the low level for us  
 Raspbian is based in Debian, which is a very popular Linux distribution.
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation3.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation3.png)
 
 ## 2\. Burn the .ISO on the SD Card
 
@@ -82,7 +82,7 @@ You have to:
 - Select Disk: Your SD Card
 - Restore: The downloaded Raspbian ISO
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation2.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation2.png)
 
 Wait for it to finish. You should see a mounted volume called `boot`
 
@@ -149,7 +149,7 @@ For the country code, refer to the [ISO/IEC alpha 2](https://en.wikipedia.org/wi
 
 ## 4\.  Insert SD card to Pi and power up
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/pi-zero.gif)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/pi-zero.gif)
 
 _Raspberry Pi Zero W_
 
@@ -175,7 +175,7 @@ To discover the IP address of your Raspberry Pi, there are several ways:
 
 I'm using [Fling - Network Tools]("https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en") on my Android phone to detect the hosts currently connected to the network,
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation1.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation1.png)
 
 [Fling - Network Tools]("https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en") (_Cropped phone screenshot_)
 
@@ -230,7 +230,7 @@ Default Authenticity prompt for SSH
 The default password is **raspberry**  
 Enter it and then after login, you should see a prompt at the end like this one:
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation4.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation4.png)
 
 _Raspberry Pi default SSH Session_
 
@@ -249,7 +249,7 @@ Lets follow the easiest one. Copy and paste that into the Raspberry Pi SSH Sessi
 sudo curl -sSL https://install.pi-hole.net | bash
 ```
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation5.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation5.png)
 
 _PiHole characteristic installation ascii art_
 
@@ -257,7 +257,7 @@ The installation scripts will start running and you will see your Raspberry Pi b
 
 Follow along with the installation wizard. For the most part, the defaults will work and all you have to do is keep pressing enter.
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation6.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation6.png)
 
 _The PiHole installation Wizard_
 
@@ -265,13 +265,13 @@ When you reach the Upstream DNS Provider, Google is the default one, and it will
 
 You should see your **Admin Panel password** at the end of the wizard and somewhere at the Terminal window. Make sure you store it and keep it safe.
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation0.gif)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation0.gif)
 
 ## 7. Open the Admin Console
 
 If you see something similar to the following, it means you're almost there.
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation8.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation8.png)
 
 _The Pi-Hole Admin Panel_
 
@@ -290,7 +290,7 @@ To test it your computer:
 
 Enter whatever IP address your router gave to your Raspberry Pi. In this case `192.168.0.21`, on the left side
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation7.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation7.png)
 
 DNS Settings at System Preferences > Network
 
@@ -300,7 +300,7 @@ DNS Settings at System Preferences > Network
 
 Let's go back to [theverge.com]("/posts/blocking-ads-with-pihole/theverge.com") and see if it worked.
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/verge-noad.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/verge-noad.png)
 
 _The Ads are being blocked at the Network Level_
 
@@ -314,12 +314,12 @@ I went ahead, redid the last step, this time restarting my browser,  to do anot
 
 This is before the DNS setting:
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/dailymail-before.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/dailymail-before.png)
 
 _Dailymail.co.uk with 3 Ad Banners, 1 Cookie Banner & 1 Notification Request_
 
 This is after.
 
-![](https://oschvr.s3-us-west-2.amazonaws.com/static/assets/img/pihole/dailymail-after.png)
+![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/dailymail-after.png)
 
 _Dailymail.co.uk without ads_
