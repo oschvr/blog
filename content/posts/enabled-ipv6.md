@@ -15,7 +15,7 @@ Thing that I been meaning to do for a while now as I've been wanting to show [my
 
 ### **So what did I do?**
 
-Given that I'm hosting the whole thing in AWS (Cloudfront, S3, Rote53), it really was trivial to do.
+Given that I'm hosting the whole thing in AWS (Cloudfront, S3, Route53), it really was trivial to do.
 
 1. Enable IPv6 in my Cloudfront distribution
 2. Set up AAAA record to the Cloudfront distribution
