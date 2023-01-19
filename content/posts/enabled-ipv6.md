@@ -1,6 +1,6 @@
 +++
 path =  '/ipv6'
-date = '2023-01-109
+date = '2023-01-19'
 title =  'IPv6 support'
 
 cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/ipv6-dig.png'
