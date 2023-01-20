@@ -2,4 +2,5 @@
 public
 .DS_Store
 themes/
-resources/
+resources/.hugo*
+.hugo*

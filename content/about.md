@@ -4,9 +4,9 @@ date = '2020-09-20'
 title = 'About'
 +++
 
-I'm **Oscar Chavez**.
+I'm **Oscar**.
 
-I'm a senior software engineer ⚙️ and cloud architect ☁️.
+I'm a Senior Software ⚙️ & Cloud ☁️ Engineer
 
 I'm currently working as a Founding Engineer, in the **DevOps/SRE/Platform Engineering** department at ⚙️ [Lean](https://leantech.me/).
 
@@ -20,6 +20,6 @@ Meetups, events and conferences are something I'm always looking to assist or pa
 
 Also I love (to win) hackathons 🏆!
 
-~~Interested in working with me? Hit me up ~~ Currently busy ! ⏰
+~~Interested in working with me? Hit me up~~ Currently busy ! ⏰
 
-![oschvr](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/202593321_220367036681294_7432749683814182763_n.jpg)
+![oschvr](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/os.jpg)
