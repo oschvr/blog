@@ -4,7 +4,7 @@ date =  '2020-22-20'
 title = 'Uses'
 +++
 
-#### **Here's a list of the main tools I use to work (2017):**
+#### **Here's a list of the main tools I use to work (2017-2022):**
 
 (_~~This~~ means I no longer use it_)
 
@@ -12,7 +12,7 @@ title = 'Uses'
 
 - More on UNIX Shell scripting
 - More on AWS (Amazon Web Services)
-- OCI (Oracle Cloud Infrastructure)
+- More on OCI (Oracle Cloud Infrastructure)
 
 ### UPDATE (2021-2022)
 
@@ -23,7 +23,7 @@ title = 'Uses'
 
 I've added more to the list:
 
-- **Figma**: UI/UX Development platform
+- ~~**Figma**: UI/UX Development platform~~
 - **IntelliJ IDEA**: JAVA IDE
 - **OCI**: Oracle Cloud Infrastructure
 - **Notion**: Collaborative documentation
@@ -47,7 +47,7 @@ I'm using these other tools now:
 - **React** DOM Management Frontend Library
 - ~~**Angular 5** Udpated: HTML enhanced for webapps~~
 - **VS Code** Favorite code editor
-- **Postman** API Explorer
+- ~~**Postman** API Explorer~~
 - **Slack** Project management
 - ~~**Robomongo** MongoDB Client~~
 - ~~**Sequel Pro** MySQL Client~~

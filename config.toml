@@ -15,7 +15,7 @@ paginate = 20
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 4
+  showMenuItems = 6
 
   # show selector to switch language
   showLanguageSelector = true
@@ -67,7 +67,7 @@ paginate = 20
     missingBackButtonLabel = "back to home page"
 
     [languages.en.params.logo]
-      logoText = "$ root@oschvr.com ~"
+      logoText = "root@oschvr.com:/#"
       logoHomeLink = "/"
 
     [languages.en.menu]
@@ -77,19 +77,19 @@ paginate = 20
         url = "/"
         weight = 1
       [[languages.en.menu.main]]
-        identifier = "problems"
-        name = "problems"
-        url = "/problems"
-        weight = 2
-      [[languages.en.menu.main]]
         identifier = "about"
         name = "about"
         url = "/about"
-        weight = 3
+        weight = 2
       [[languages.en.menu.main]]
         identifier = "snippets"
         name = "snippets"
         url = "/snippets"
+        weight = 3
+      [[languages.en.menu.main]]
+        identifier = "fails"
+        name = "fails"
+        url = "/fails"
         weight = 4
       [[languages.en.menu.main]]
         identifier = "uses"
@@ -97,32 +97,37 @@ paginate = 20
         url = "/uses"
         weight = 5
       [[languages.en.menu.main]]
+        identifier = "problems"
+        name = "problems"
+        url = "/problems"
+        weight = 6
+      [[languages.en.menu.main]]
         identifier = "github"
         name = "github"
         pre = "<i class='fa fa-heart'></i>"
         url = "https://github.com/oschvr"
-        weight = 6
+        weight = 7
       [[languages.en.menu.main]]
         identifier = "stackoverflow"
         name = "stackoverflow"
         pre = "<i class='fa fa-heart'></i>"
         url = "https://stackoverflow.com/users/3356769/oschvr"
-        weight = 7
+        weight = 8
       [[languages.en.menu.main]]
         identifier = "twitter"
         name = "twitter"
         pre = "<i class='fa fa-heart'></i>"
         url = "https://twitter.com/oschvr"
-        weight = 8
+        weight = 9
       [[languages.en.menu.main]]
         identifier = "mastodon"
         name = "mastodon"
         pre = "<i class='fa fa-heart'></i>"
         url = "https://mastodon.online/@oschvr"
-        weight = 9
+        weight = 10
       [[languages.en.menu.main]]
         identifier = "linkedin"
         name = "linkedin"
         pre = "<i class='fa fa-heart'></i>"
         url = "https://www.linkedin.com/in/oscarchavezromero/"
-        weight = 10
+        weight = 11
