@@ -49,7 +49,7 @@ _Easy peazy_ 👌 I can bear the badge now 🎉
 
 ---
 
-Thanks to Raul Tambre from[tambre.ee](https://tambre.ee) for the suggestion.
+Thanks to Raul Tambre from [tambre.ee](https://tambre.ee) for the suggestion.
 
 **References**
 
