@@ -367,3 +367,15 @@ docker inspect $(docker ps -q) | jq '.[]|.Config.Hostname,.Config.Labels."io.kub
 ```
 
 Credit to [rharshad.com](https://rharshad.com/eks-troubleshooting-disk-pressure/)
+
+
+---
+
+### Compress a large PDF with ghostscript
+
+_*Added: 22-03-2023*_
+
+```
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
+-dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+```
