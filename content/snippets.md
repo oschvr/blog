@@ -379,3 +379,13 @@ _*Added: 22-03-2023*_
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 ```
+
+---
+
+### Convert a SSL certificate/privatekey to a 1 line string
+
+_*Added: 16-06-2023*_
+
+```
+awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' ca.pem
+```
