@@ -389,3 +389,48 @@ _*Added: 16-06-2023*_
 ```
 awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' ca.pem
 ```
+
+---
+
+### Add linux user and add it sudo 
+
+_*Added: 37-07-2023*_
+
+```
+# Add user
+sudo useradd -m -d /home/<username> -s /bin/bash <username>
+
+# Change its password
+sudo passwd <username>
+
+# Add it to sudo access
+sudo usermod -a -G sudo <username>
+```
+
+##### EXTRA: Create ssh key and add it to the newly created user
+
+```
+# Switch user
+sudo su - <username>
+
+# Create .ssh dir (in case it's not there)
+mkdir ~/.ssh
+
+# Create ed25519 ssh key
+ssh-keygen -t ed25519 -C <username> -f ~/.ssh/<username> 
+
+## Make sure to save the private key ~/.ssh/<username> 
+
+# Make sure you can see public key
+cat ~/.ssh/<username>.pub
+
+# Add ssh key for user in authorized_keys
+echo $(cat ~/.ssh/<username>.pub) >> ~/.ssh/authorized_keys
+
+# Change mode for ssh
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+# Logout and try to login with private key you saved earlier
+ssh -i ~/.ssh/<username> <username>@<ip-address>
+``````
