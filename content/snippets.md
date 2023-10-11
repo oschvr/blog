@@ -63,11 +63,17 @@ kubectl get pods -A | grep Pending | awk '{print $1}' | xargs kubectl delete pod
 ### Find Large files in Linux
 
 _*Added: 12-02-2022*_
+_*Updated: 11-10-2023*_
 
 Find large files in Linux
 
 ```
 sudo find / -xdev -type f -size +100M
+```
+
+```
+# Go to a folder then get top 10 biggest files
+sudo du -hsx -- * | sort -rh | head -10
 ```
 
 ---
