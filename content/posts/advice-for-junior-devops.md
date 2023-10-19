@@ -1,7 +1,7 @@
 +++
 path =  '/advice-jr-devops'
 date = '2023-10-19'
-title =  'Some advice I'd give to a junior DevOps Engineer '
+title =  'Some advice I would give to a junior DevOps Engineer '
 
 cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/devops-advice.jpg'
 +++
