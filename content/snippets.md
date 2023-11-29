@@ -441,13 +441,13 @@ chmod 600 ~/.ssh/authorized_keys
 ssh -i ~/.ssh/<username> <username>@<ip-address>
 ```
 
-### Write a file in a machine where the folder doesn't belong to the ssh user 
-### (scp workaround)
+### Write a file in a machine where the folder doesn't belong to the ssh user (scp workaround)
 
 _*Added: 29-11-2023*_
 
 Suppose you have the ssh key for the `ubuntu` user, which can `sudo`, but inside the machine you want to put a file in the folder `/does/not/belong/to/ubuntu/` which belongs to user `oscar`
-Solution (only works if ssh user can use `sudo`) is to use `tee` and then reasing ownership
+
+Solution (only works if ssh user can use `sudo`) is to use `tee` and then reassign ownership
 
 ```
 cat <<EOF > secret
