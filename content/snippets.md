@@ -400,7 +400,7 @@ awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' ca.pem
 
 ### Add linux user and add it sudo 
 
-_*Added: 37-07-2023*_
+_*Added: 27-07-2023*_
 
 ```
 # Add user
@@ -439,4 +439,20 @@ chmod 600 ~/.ssh/authorized_keys
 
 # Logout and try to login with private key you saved earlier
 ssh -i ~/.ssh/<username> <username>@<ip-address>
-``````
+```
+
+### Write a file in a machine where the folder doesn't belong to the ssh user 
+### (scp workaround)
+
+_*Added: 29-11-2023*_
+
+Suppose you have the ssh key for the `ubuntu` user, which can `sudo`, but inside the machine you want to put a file in the folder `/does/not/belong/to/ubuntu/` which belongs to user `oscar`
+Solution (only works if ssh user can use `sudo`) is to use `tee` and then reasing ownership
+
+```
+cat <<EOF > secret
+RQNQKvlJIj8rvktFi7SjqnTx1hHwGxXgkKfwljowLUo= # dummy data
+EOF
+
+cat secret | ssh -i ~/.ssh/key ubuntu@<IP> "sudo tee /does/not/belong/to/ubuntu/secret; sudo chown -R oscar:oscar /does/not/belong/to/ubuntu/secret"
+```
