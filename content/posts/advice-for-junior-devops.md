@@ -14,12 +14,12 @@ I intend to post this in HackerNews, so if you're coming from there, hello 👋 
 
 Recently, someone approached to me in Reddit asking me if I had any general advice for an **_"first time | entry-level | junior DevOps Engineer"_**
 
-While I disagree on that request beacuse I believe that:
+While I disagree on that request because I believe that:
 
 1. DevOps is not a role, but a culture inside an organization
 2. If we're going to use it as a role, it's not an entry level role
 
-I also think that my opinions on what should or shouldn't be the correct nomeclature, are of of minimum importance for someone who is looking to enter the industry and the field. So I had to conciously put myself aside and think as if I was giving this advice for my younger self. 
+I also think that my opinions on what should or shouldn't be the correct nomeclature, are of minimum importance for someone who is looking to enter the industry and the field. So I had to consciously put myself aside and think as if I was giving this advice for my younger self. 
 
 > Please keep in mind that, while my title (as of today) is Sr. DevOps Engineer, and that I work in the tech industry, I am also a biased human, so take this advice with whatever quantity of grains of salt you require.
 
