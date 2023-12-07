@@ -456,3 +456,15 @@ EOF
 
 cat secret | ssh -i ~/.ssh/key ubuntu@<IP> "sudo tee /does/not/belong/to/ubuntu/secret; sudo chown -R oscar:oscar /does/not/belong/to/ubuntu/secret"
 ```
+
+### Check connectivity for TCP and UDP using netcat
+
+_*Added: 07-12-2023*_
+
+```
+# TCP
+nc -vz  <IP> <PORT>
+
+# UDP
+nc -vuzw 3  <IP> <PORT>
+```
