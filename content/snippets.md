@@ -468,3 +468,11 @@ nc -vz  <IP> <PORT>
 # UDP
 nc -vuzw 3  <IP> <PORT>
 ```
+
+### Kill process listening on specific port
+
+_*Added: 08-01-2024*_
+
+```
+PORT=8080; lsof -i TCP:${PORT} | grep LISTEN | awk '{print $2}' | xargs kill -9
+```
