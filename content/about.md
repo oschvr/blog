@@ -14,7 +14,7 @@ Before, I did some **Cybersecurity Research and Technical Sales** at 🔼 [Delta
 
 Before that, I was **CTO** at a software company I co-founded, 🔻[VR3.io](https://vr3.io/), where I did a lot of interesting work, met awesome people and had the chance to grow very quickly as an engineer, manager and entrepreneur.
 
-I've done a lot of _on-site_, _remote_ and _temporary contract_ jobs with clients (mainly) from Mexico 🇲🇽, but also from US 🇺🇸 and Europe 🇪🇺.
+I've done a lot of _on-site_, _remote_ and _temporary contract_ jobs with clients from UK 🇬🇧, Europe 🇪🇺, Mexico 🇲🇽, but also from US 🇺🇸
 
 Meetups, events and conferences are something I'm always looking to assist or participate in. I'm always up to help the industry grow, give some career advice and meet amazing people 😎.
 
