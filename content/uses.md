@@ -11,8 +11,13 @@ title = 'Uses'
 #### Currently learning:
 
 - More on UNIX Shell scripting
-- More on AWS (Amazon Web Services)
-- More on OCI (Oracle Cloud Infrastructure)
+- More on Kubernetes
+- More on GCP: Google Cloud Platform
+
+### UPDATE (2023-2024)
+
+- **FastAPI**: FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.8+ 
+- **Python**: High-level, general purpose programming language
 
 ### UPDATE (2021-2022)
 
@@ -62,6 +67,6 @@ I'm using these other tools now:
 - ~~**Sublime Text** Greatest text editor~~
 - **iTerm2** macOS Terminal Replacement
 - ~~**Transmit** Great FTP Manager~~
-- **Postico** Very easy-to-use PostgreSQL Manager
+- ~~**Postico** Very easy-to-use PostgreSQL Manager~~
 - ~~**ASANA** Project Management in the Cloud~~
-- **Adobe Creative Cloud** (Ps, Ai, Ae) Creative Suite
+- ~~**Adobe Creative Cloud** (Ps, Ai, Ae) Creative Suite~~
