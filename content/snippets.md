@@ -476,3 +476,18 @@ _*Added: 08-01-2024*_
 ```
 PORT=8080; lsof -i TCP:${PORT} | grep LISTEN | awk '{print $2}' | xargs kill -9
 ```
+
+### Delete k8s namespace stuck in Terminating
+
+https://stackoverflow.com/a/53661717
+_*Added: 20-02-2024*_
+
+
+```
+(
+    NAMESPACE=<NAMESPACE>
+    kubectl proxy &
+    kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' >temp.json
+    curl -k -H "Content-Type: application/json" -X PUT --data-binary @temp.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/finalize
+)
+```
