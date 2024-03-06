@@ -21,7 +21,7 @@ Now, for whomever wants to understand why and how to build this, carry on...
 
 ### Motivation
 
-I've been a consistent user of [AdBlock Plus]("https://adblockplus.org/") for the good part of the last 4 years, in part because I am a web developer and I am, statistically speaking, constantly and overly exposed to Internet advertisement.
+I've been a consistent user of [AdBlock Plus](https://adblockplus.org/) for the good part of the last 4 years, in part because I am a web developer and I am, statistically speaking, constantly and overly exposed to Internet advertisement.
 
 I've surfed the web for a while now (~15 years) and I've seen it turn into a massive advertisement landfill, thanks to big tech and media companies.
 
@@ -29,7 +29,7 @@ Don't get me wrong there, I understand some of it actually is of benefit to part
 
 But let's not forget that for the rest of the cases, there are sites that over exploit this business model to the point where the browsing experience becomes unbearable.
 
-Let's go halfway and  take for example [theverge.com]("https://www.theverge.com/") a very popular tech news site. They have a solid, full width banner, dedicated to online advertising, through what it seems Google AdSense.
+Let's go halfway and  take for example [theverge.com](https://www.theverge.com/) a very popular tech news site. They have a solid, full width banner, dedicated to online advertising, through what it seems Google AdSense.
 
 ![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/verge-ad.png)
 
@@ -41,9 +41,9 @@ Using AdBlock will most likely block it.
 - Or what if I navigate to this site in my phone where I also don't have AdBlock?
 - What if the ever growing list of devices at my house are not blocking these obnoxious ads ?
 
-Enter, [PiHole]("https://pi-hole.net/"):
+Enter, [PiHole](https://pi-hole.net/):
 
-> A network-wide ad blocking [DNS Sinkhole]("https://en.wikipedia.org/wiki/DNS_sinkhole") that doesn't require anyone to install anything
+> A network-wide ad blocking [DNS Sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole) that doesn't require anyone to install anything
 
 ## Setup
 
@@ -53,14 +53,14 @@ So, as per the official documentation and guides, you need your own hardware and
 
 ### Requirements
 
-- [Raspberry Pi Zero W]("https://www.amazon.co.uk/Raspberry-Pi-Zero-WH/dp/B07BHMRTTY/ref=sr_1_4?crid=14NYXD74Z5YI4&dchild=1&keywords=raspberry+pi+zero&qid=1587913200&sprefix=raspber%2Caps%2C150&sr=8-4") (~£28)
+- [Raspberry Pi Zero W](https://www.amazon.co.uk/Raspberry-Pi-Zero-WH/dp/B07BHMRTTY/ref=sr_1_4?crid=14NYXD74Z5YI4&dchild=1&keywords=raspberry+pi+zero&qid=1587913200&sprefix=raspber%2Caps%2C150&sr=8-4) (~£28)
 - Power supply\*
-- [32 Gb SD Card]("https://www.amazon.co.uk/SanDisk-microSDHC-Memory-Adapter-Performance/dp/B073JWXGNT/ref=sr_1_3?dchild=1&keywords=sd+card+32&qid=1587913257&sr=8-3") (~£5)\*\*
-- [Raspbian Buster Lite]("https://www.raspberrypi.org/downloads/raspbian/") \*\*\*
+- [32 Gb SD Card](https://www.amazon.co.uk/SanDisk-microSDHC-Memory-Adapter-Performance/dp/B073JWXGNT/ref=sr_1_3?dchild=1&keywords=sd+card+32&qid=1587913257&sr=8-3) (~£5)\*\*
+- [Raspbian Buster Lite](https://www.raspberrypi.org/downloads/raspbian/) \*\*\*
 
 > \*  Any micro usb cable + adapter will do  
 > \*\* Any SD card over 8 Gb will do, I had a 32Gb lying around  
-> \*\*\* Free from the [RPi Foundation]("https://www.raspberrypi.org/")
+> \*\*\* Free from the [RPi Foundation](https://www.raspberrypi.org/)
 
 ### Steps
 
@@ -73,9 +73,9 @@ Raspbian is based in Debian, which is a very popular Linux distribution.
 
 ## 2\. Burn the .ISO on the SD Card
 
-Insert the SD Card in your computer and try to make sure it is formatted to ExFAT, if you don't know how to do this, see [this guide]("https://osxdaily.com/2018/12/21/how-to-format-an-sd-card-on-mac/")
+Insert the SD Card in your computer and try to make sure it is formatted to ExFAT, if you don't know how to do this, see [this guide](https://osxdaily.com/2018/12/21/how-to-format-an-sd-card-on-mac/)
 
-The next step is to burn the previously downloaded .ISO image into the SD Card. [Apple-Pie Baker]("https://www.tweaking4all.com/hardware/raspberry-pi/applepi-baker-v2/") is a fantastic piece of software I keep using for this step when dealing with Raspberry Pis (Pies?), and it's free, but you can always donate !
+The next step is to burn the previously downloaded .ISO image into the SD Card. [Apple-Pie Baker](https://www.tweaking4all.com/hardware/raspberry-pi/applepi-baker-v2/) is a fantastic piece of software I keep using for this step when dealing with Raspberry Pis (Pies?), and it's free, but you can always donate !
 
 You have to:
 
@@ -159,7 +159,7 @@ Give it a while and if all went well:
 - Your Router assigned a IP address to it
 - Your Raspberry has SSH enabled at port 22
 
-[Here's a detailed guide]("https://www.raspberrypi.org/documentation/remote-access/ssh/") by the RPi Foundation on connecting via SSH to the Raspberry Pi.
+[Here's a detailed guide](https://www.raspberrypi.org/documentation/remote-access/ssh/) by the RPi Foundation on connecting via SSH to the Raspberry Pi.
 
 For now, all you need to know are the defaults:
 
@@ -173,15 +173,15 @@ To discover the IP address of your Raspberry Pi, there are several ways:
 
 ### Using a 3rd Party App
 
-I'm using [Fling - Network Tools]("https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en") on my Android phone to detect the hosts currently connected to the network,
+I'm using [Fling - Network Tools](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en) on my Android phone to detect the hosts currently connected to the network,
 
 ![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/piholeinstallation1.png)
 
-[Fling - Network Tools]("https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en") (_Cropped phone screenshot_)
+[Fling - Network Tools](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en) (_Cropped phone screenshot_)
 
 ### Using a Network Utility
 
-If you want to see the host name, IP and all of the Raspberry Pi information on your machine, you could either go to your router homepage (boring) or use [nmap]("https://nmap.org/") (Network Mapper) a fantastic CLI utility for network discovery:
+If you want to see the host name, IP and all of the Raspberry Pi information on your machine, you could either go to your router homepage (boring) or use [nmap](https://nmap.org/) (Network Mapper) a fantastic CLI utility for network discovery:
 
 ```
 nmap 192.168.0.1/24
@@ -241,7 +241,7 @@ If you read closely, there is a security warning that exhorts you to change the 
 
 ## 6\. Install PiHole
 
-From the official page of the PiHole project, we get redirected to the official [Github Repository]("https://github.com/pi-hole/pi-hole/#one-step-automated-install"), were there are several installation methods.
+From the official page of the PiHole project, we get redirected to the official [Github Repository](https://github.com/pi-hole/pi-hole/#one-step-automated-install), were there are several installation methods.
 
 Lets follow the easiest one. Copy and paste that into the Raspberry Pi SSH Session
 
@@ -261,7 +261,7 @@ Follow along with the installation wizard. For the most part, the defaults will 
 
 _The PiHole installation Wizard_
 
-When you reach the Upstream DNS Provider, Google is the default one, and it will  work, but I usually go with Cloudflare. There are [some reports]("https://www.theregister.co.uk/2020/03/31/cloudflare_dns/") that Cloudflare are seemingly the "good guys"
+When you reach the Upstream DNS Provider, Google is the default one, and it will  work, but I usually go with Cloudflare. There are [some reports](https://www.theregister.co.uk/2020/03/31/cloudflare_dns/) that Cloudflare are seemingly the "good guys"
 
 You should see your **Admin Panel password** at the end of the wizard and somewhere at the Terminal window. Make sure you store it and keep it safe.
 
@@ -298,7 +298,7 @@ DNS Settings at System Preferences > Network
 
 ## 9. Test
 
-Let's go back to [theverge.com]("/posts/blocking-ads-with-pihole/theverge.com") and see if it worked.
+Let's go back to [theverge.com]("/posts/blocking-ads-with-pihole/theverge.com) and see if it worked.
 
 ![](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/static/assets/img/pihole/verge-noad.png)
 

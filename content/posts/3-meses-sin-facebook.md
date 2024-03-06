@@ -1,7 +1,7 @@
 +++
+title = "3 Meses sin Facebook"
 path = "/3-meses-sin-facebook"
 date = "2018-06-08"
-title = "3 Meses sin Facebook"
 +++
 
 _Última Actualización: **09/Junio/2018**_

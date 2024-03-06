@@ -4,6 +4,19 @@ theme = "terminal"
 paginate = 20
 
 [params]
+
+  title = "oschvr.com"
+  subtitle = "a blog about software, cloud, security, money, business, travelling and life."
+  owner = "oschvr"
+  keywords = "software, cloud, security, money, business"
+  menuMore = "social"
+  readMore = "read more"
+  readOtherPosts = "read other posts"
+  newerPosts = "newer posts"
+  olderPosts = "older posts"
+  missingContentMessage = "page not found..."
+  missingBackButtonLabel = "back to home page"
+
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
@@ -18,7 +31,7 @@ paginate = 20
   showMenuItems = 6
 
   # show selector to switch language
-  showLanguageSelector = true
+  showLanguageSelector = false
 
   # set theme to full screen width
   fullWidthTheme = false
@@ -49,85 +62,151 @@ paginate = 20
   creator = "oschvr"
   site = "oschvr.com"
 
+[params.logo]
+  logoText = "root@oschvr.com:/#"
+  logoHomeLink = "/"
 
-[languages]
-  [languages.en]
-    languageName = "English"
-    title = "oschvr.com"
-    subtitle = "a blog about software, cloud, security, money, business, travelling and life."
-    owner = "oschvr"
-    keywords = "software, cloud, security, money, business"
-    copyright = ""
-    menuMore = "social"
-    readMore = "read more"
-    readOtherPosts = "read other posts"
-    newerPosts = "newer posts"
-    olderPosts = "older posts"
-    missingContentMessage = "page not found..."
-    missingBackButtonLabel = "back to home page"
+[menus]
+  [[menus.main]]
+    identifier = "posts"
+    name = "posts"
+    url = "/"
+    weight = 1
+  [[menus.main]]
+    identifier = "about"
+    name = "about"
+    url = "/about"
+    weight = 2
+  [[menus.main]]
+    identifier = "snippets"
+    name = "snippets"
+    url = "/snippets"
+    weight = 3
+  [[menus.main]]
+    identifier = "fails"
+    name = "fails"
+    url = "/fails"
+    weight = 4
+  [[menus.main]]
+    identifier = "uses"
+    name = "uses"
+    url = "/uses"
+    weight = 5
+  [[menus.main]]
+    identifier = "problems"
+    name = "problems"
+    url = "/problems"
+    weight = 6
+  [[menus.main]]
+    identifier = "github"
+    name = "github"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "https://github.com/oschvr"
+    weight = 7
+  [[menus.main]]
+    identifier = "stackoverflow"
+    name = "stackoverflow"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "https://stackoverflow.com/users/3356769/oschvr"
+    weight = 8
+  [[menus.main]]
+    identifier = "twitter"
+    name = "twitter"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "https://twitter.com/oschvr"
+    weight = 9
+  [[menus.main]]
+    identifier = "mastodon"
+    name = "mastodon"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "https://mastodon.online/@oschvr"
+    weight = 10
+  [[menus.main]]
+    identifier = "linkedin"
+    name = "linkedin"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "https://www.linkedin.com/in/oschvr/"
+    weight = 11
 
-    [languages.en.params.logo]
-      logoText = "root@oschvr.com:/#"
-      logoHomeLink = "/"
 
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "posts"
-        name = "posts"
-        url = "/"
-        weight = 1
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "about"
-        url = "/about"
-        weight = 2
-      [[languages.en.menu.main]]
-        identifier = "snippets"
-        name = "snippets"
-        url = "/snippets"
-        weight = 3
-      [[languages.en.menu.main]]
-        identifier = "fails"
-        name = "fails"
-        url = "/fails"
-        weight = 4
-      [[languages.en.menu.main]]
-        identifier = "uses"
-        name = "uses"
-        url = "/uses"
-        weight = 5
-      [[languages.en.menu.main]]
-        identifier = "problems"
-        name = "problems"
-        url = "/problems"
-        weight = 6
-      [[languages.en.menu.main]]
-        identifier = "github"
-        name = "github"
-        pre = "<i class='fa fa-heart'></i>"
-        url = "https://github.com/oschvr"
-        weight = 7
-      [[languages.en.menu.main]]
-        identifier = "stackoverflow"
-        name = "stackoverflow"
-        pre = "<i class='fa fa-heart'></i>"
-        url = "https://stackoverflow.com/users/3356769/oschvr"
-        weight = 8
-      [[languages.en.menu.main]]
-        identifier = "twitter"
-        name = "twitter"
-        pre = "<i class='fa fa-heart'></i>"
-        url = "https://twitter.com/oschvr"
-        weight = 9
-      [[languages.en.menu.main]]
-        identifier = "mastodon"
-        name = "mastodon"
-        pre = "<i class='fa fa-heart'></i>"
-        url = "https://mastodon.online/@oschvr"
-        weight = 10
-      [[languages.en.menu.main]]
-        identifier = "linkedin"
-        name = "linkedin"
-        pre = "<i class='fa fa-heart'></i>"
-        url = "https://www.linkedin.com/in/oscarchavezromero/"
-        weight = 11
+# [languages]
+#   [languages.en.params]
+#     languageName = "English"
+#     title = "oschvr.com"
+#     subtitle = "a blog about software, cloud, security, money, business, travelling and life."
+#     owner = "oschvr"
+#     keywords = "software, cloud, security, money, business"
+#     copyright = ""
+#     menuMore = "social"
+#     readMore = "read more"
+#     readOtherPosts = "read other posts"
+#     newerPosts = "newer posts"
+#     olderPosts = "older posts"
+#     missingContentMessage = "page not found..."
+#     missingBackButtonLabel = "back to home page"
+
+#     [languages.en.params.logo]
+#       logoText = "root@oschvr.com:/#"
+#       logoHomeLink = "/"
+
+#     [languages.en.menu]
+#       [[languages.en.menu.main]]
+#         identifier = "posts"
+#         name = "posts"
+#         url = "/"
+#         weight = 1
+#       [[languages.en.menu.main]]
+#         identifier = "about"
+#         name = "about"
+#         url = "/about"
+#         weight = 2
+#       [[languages.en.menu.main]]
+#         identifier = "snippets"
+#         name = "snippets"
+#         url = "/snippets"
+#         weight = 3
+#       [[languages.en.menu.main]]
+#         identifier = "fails"
+#         name = "fails"
+#         url = "/fails"
+#         weight = 4
+#       [[languages.en.menu.main]]
+#         identifier = "uses"
+#         name = "uses"
+#         url = "/uses"
+#         weight = 5
+#       [[languages.en.menu.main]]
+#         identifier = "problems"
+#         name = "problems"
+#         url = "/problems"
+#         weight = 6
+#       [[languages.en.menu.main]]
+#         identifier = "github"
+#         name = "github"
+#         pre = "<i class='fa fa-heart'></i>"
+#         url = "https://github.com/oschvr"
+#         weight = 7
+#       [[languages.en.menu.main]]
+#         identifier = "stackoverflow"
+#         name = "stackoverflow"
+#         pre = "<i class='fa fa-heart'></i>"
+#         url = "https://stackoverflow.com/users/3356769/oschvr"
+#         weight = 8
+#       [[languages.en.menu.main]]
+#         identifier = "twitter"
+#         name = "twitter"
+#         pre = "<i class='fa fa-heart'></i>"
+#         url = "https://twitter.com/oschvr"
+#         weight = 9
+#       [[languages.en.menu.main]]
+#         identifier = "mastodon"
+#         name = "mastodon"
+#         pre = "<i class='fa fa-heart'></i>"
+#         url = "https://mastodon.online/@oschvr"
+#         weight = 10
+#       [[languages.en.menu.main]]
+#         identifier = "linkedin"
+#         name = "linkedin"
+#         pre = "<i class='fa fa-heart'></i>"
+#         url = "https://www.linkedin.com/in/oscarchavezromero/"
+#         weight = 11

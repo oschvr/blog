@@ -109,8 +109,8 @@ _node binary_
 - Add the dependencies you installed earlier
 
 ```js
-const boxen = require("boxen");
-const chalk = require("chalk");
+const boxen = require("boxen);
+const chalk = require("chalk);
 ```
 
 _dependencies_
@@ -133,23 +133,23 @@ boxen options
 
 ```javascript
 const data = {
-  name: chalk.white.bold(" Oscar Chavez / oschvr"),
-  role: chalk.white.bold(" Cloud 🌥 & Software 🛠 Engineer"),
+  name: chalk.white.bold(" Oscar Chavez / oschvr),
+  role: chalk.white.bold(" Cloud 🌥 & Software 🛠 Engineer),
   twitter: {
-    label: chalk.white.bold("Twitter 🐦:"),
-    url: chalk.blue.underline("https://twitter.com/oschvr"),
+    label: chalk.white.bold("Twitter 🐦:),
+    url: chalk.blue.underline(https://twitter.com/oschvr),
   },
   github: {
-    label: chalk.white.bold("Github 🐙:"),
-    url: chalk.blue.underline("https://github.com/oschvr"),
+    label: chalk.white.bold("Github 🐙:),
+    url: chalk.blue.underline(https://github.com/oschvr),
   },
   email: {
-    label: chalk.white.bold("Email 📧:"),
-    url: chalk.blue.underline("oschvr@protonmail.com"),
+    label: chalk.white.bold("Email 📧:),
+    url: chalk.blue.underline("oschvr@protonmail.com),
   },
   web: {
-    label: chalk.white.bold("Web 💻:"),
-    url: chalk.blue.underline("https://oschvr.com"),
+    label: chalk.white.bold("Web 💻:),
+    url: chalk.blue.underline(https://oschvr.com),
   },
 };
 ```
@@ -194,8 +194,8 @@ All together
 
 ```javascript
 #!/usr/bin/env node
-const boxen = require("boxen");
-const chalk = require("chalk");
+const boxen = require("boxen);
+const chalk = require("chalk);
 
 const options = {
   padding: 1,
@@ -204,23 +204,23 @@ const options = {
 };
 
 const data = {
-  name: chalk.white.bold(" Oscar Chavez / oschvr"),
-  role: chalk.white.bold(" Cloud 🌥 & Software 🛠 Engineer"),
+  name: chalk.white.bold(" Oscar Chavez / oschvr),
+  role: chalk.white.bold(" Cloud 🌥 & Software 🛠 Engineer),
   twitter: {
-    label: chalk.white.bold("Twitter 🐦:"),
-    url: chalk.blue.underline("https://twitter.com/oschvr"),
+    label: chalk.white.bold("Twitter 🐦:),
+    url: chalk.blue.underline(https://twitter.com/oschvr),
   },
   github: {
-    label: chalk.white.bold("Github 🐙:"),
-    url: chalk.blue.underline("https://github.com/oschvr"),
+    label: chalk.white.bold("Github 🐙:),
+    url: chalk.blue.underline(https://github.com/oschvr),
   },
   email: {
-    label: chalk.white.bold("Email 📧:"),
-    url: chalk.blue.underline("oschvr@protonmail.com"),
+    label: chalk.white.bold("Email 📧:),
+    url: chalk.blue.underline("oschvr@protonmail.com),
   },
   web: {
-    label: chalk.white.bold("Web 💻:"),
-    url: chalk.blue.underline("https://oschvr.com"),
+    label: chalk.white.bold("Web 💻:),
+    url: chalk.blue.underline(https://oschvr.com),
   },
 };
 
@@ -272,11 +272,11 @@ Once you're happy with the result, it's time to publish it so people can use it 
 
 ### Publishing to NPM
 
-The `npm` utility has a the command `publish` that is pretty self explanatory. The only requirement is that you need an account at NPM. [Create your account here]("https://www.npmjs.com/signup")
+The `npm` utility has a the command `publish` that is pretty self explanatory. The only requirement is that you need an account at NPM. [Create your account here](https://www.npmjs.com/signup)
 
 There are a lot of things you can do when publishing to the NPM registry, but these are out of the scope of this tutorial.
 
-> Here's a great article of [how to publish to the npm]("https://zellwk.com/blog/publish-to-npm/")
+> Here's a great article of [how to publish to the npm](https://zellwk.com/blog/publish-to-npm/)
 
 - Run `npm publish` and wait for it to finish.
 
@@ -290,4 +290,4 @@ and that's it ! You should see your freshly created `npm` card that you can dist
 
 ### Repo
 
-I purposely used a [_free to use and distribute_]("https://unlicense.org/") license, so go and clone it or fork it and make yours  👉  [https://github.com/oschvr/card]("https://github.com/oschvr/card").
+I purposely used a [_free to use and distribute_](https://unlicense.org/) license, so go and clone it or fork it and make yours  👉  [https://github.com/oschvr/card](https://github.com/oschvr/card).

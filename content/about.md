@@ -8,7 +8,7 @@ I'm **Oscar**.
 
 I'm a Senior Software ⚙️ & Cloud ☁️ Engineer
 
-I'm currently working as a Founding Engineer, in the **DevOps/SRE/Platform Engineering** department at ⚙️ [Lean](https://leantech.me/).
+I'm was the 1st hire, worked as a Founding Engineer, and predominantely worked in the **DevOps/SRE/Platform Engineering** department at ⚙️ [Lean](https://leantech.me/).
 
 Before, I did some **Cybersecurity Research and Technical Sales** at 🔼 [Delta Protect](https://deltaprotect.co/).
 

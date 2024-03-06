@@ -49,7 +49,7 @@ If you haven't had experience with AWS, I'd start with these services
 
 > **EC2, S2, EBS, VPC, SQS, SNS, EFS, Autoscaling, ELB, Glacier, Kinesis, RDS, DynamoDB, Migration, CloudWatch, CloudTrail, Billing, ElastiCache, Aurora**
 
-[https://aws.amazon.com/whitepapers/]("https://aws.amazon.com/whitepapers/")
+[https://aws.amazon.com/whitepapers/](https://aws.amazon.com/whitepapers/)
 
 Check the FAQs too !
 
@@ -61,17 +61,17 @@ AWS Well-Architected - Build secure, efficient, cloud enabled applications
 
 The AWS Well-Architected Framework provides guidance to help developers build and deploy applications faster, lower risk, and make informed decisions following AWS best practices.
 
-[Well Architected Framework]("https://aws.amazon.com/architecture/well-architected")
+[Well Architected Framework](https://aws.amazon.com/architecture/well-architected)
 
 I went through this section FIRST and came back again at LAST in order to make sure I was grasping it since the beginning until after reviewing all the content
 
-Here's the [PDF of the Well-Architected Framework]("https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf")
+Here's the [PDF of the Well-Architected Framework](https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)
 
 ### Practice exams
 
 I could not recommend enough the ones by John Bonso, these are practice exams.
 
-[AWS Certified Solutions Architect Associate Practice Exams]("https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c02")
+[AWS Certified Solutions Architect Associate Practice Exams](https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c02)
 
 Make sure you allocate at least 120 minutes for every test and try to score above 80.
 
@@ -81,7 +81,7 @@ I highly recommend the one by Linux Academy.
 
 AWS Certified Solutions Architect - Associate
 
-[AWS Certified Solutions Architect - Associate Linux Academy]("https://www.udemy.com/course/linux-academy-aws-certified-solutions-architect-associate/")
+[AWS Certified Solutions Architect - Associate Linux Academy](https://www.udemy.com/course/linux-academy-aws-certified-solutions-architect-associate/)
 
 They have this thing called _The Orion Papers._ It's a bit tricky at first, but consistency in study hours will do the trick
 
@@ -101,11 +101,11 @@ They are obviously handwritten and probably some parts might be trick to read bu
 2.  Use the free tier. **You don't need to pay to learn** by experimenting. So start exploring.
 3.  Practice your patience. **There is a lot of content,** the best is to go one by one and cover them all.
 4.  Make notes. **Diagrams help a lot** as there are things that work in various dimensions, but never forget to make good old notes.
-5.  If stuck, join and ask people @ [reddit.com/r/AWSCertifications/]("https://www.reddit.com/r/AWSCertifications/"). **People are very supportive and helpful there**
+5.  If stuck, join and ask people @ [reddit.com/r/AWSCertifications/](https://www.reddit.com/r/AWSCertifications/). **People are very supportive and helpful there**
 6.  Make sure you are **fully focused** a couple days before the exam.
 
 +++
 
-[Let me know]("https://twitter.com/oschvr") if you have suggestions to improve this article or questions about it.
+[Let me know](https://twitter.com/oschvr) if you have suggestions to improve this article or questions about it.
 
 Happy studying and good luck !
