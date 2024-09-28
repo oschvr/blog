@@ -25,7 +25,7 @@ paginate = 20
   disqusShortname = 'oschvr-1'
 
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "green"
+  themeColor = "pink"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 6
