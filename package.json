@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "hugo-lunr": "^0.0.4"
-  },
-  "scripts": {
-    "index": "hugo-lunr"
-  }
-}
