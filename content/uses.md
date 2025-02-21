@@ -4,20 +4,20 @@ date =  '2020-12-20'
 title = 'Uses'
 +++
 
-#### **Here's a list of the main tools I use to work (2017-2022):**
+#### **Here's a list of the main tools I use to work (2017-{{< currentYear >}}):**
 
 (_~~This~~ means I no longer use it_)
 
-#### Currently learning:
+#### Currently learning ({{< currentYear >}}):
 
-- More on UNIX Shell scripting
-- More on Kubernetes
-- More on GCP: Google Cloud Platform
+- More on Python
+- More on React Native/Expo
 
 ### UPDATE (2023-2024)
 
-- **FastAPI**: FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.8+ 
+- **FastAPI**: FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.8+
 - **Python**: High-level, general purpose programming language
+- **Expo**: Open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
 
 ### UPDATE (2021-2022)
 
@@ -28,9 +28,9 @@ title = 'Uses'
 
 I've added more to the list:
 
-- ~~**Figma**: UI/UX Development platform~~
-- **IntelliJ IDEA**: JAVA IDE
-- **OCI**: Oracle Cloud Infrastructure
+- **Figma**: UI/UX Development platform
+- ~~**IntelliJ IDEA**: JAVA IDE~~
+- ~~**OCI**: Oracle Cloud Infrastructure~~
 - **Notion**: Collaborative documentation
 - **Linear**: Issue tracking & ticketing system
 
@@ -42,7 +42,7 @@ I've added a couple more to the list:
 - **AWS** Amazon Web Services for Cloud
 - **GCP** Google Cloud services
 - **Docker** Container platform
-- **Jenkins** CI/CD Server
+- ~~**Jenkins** CI/CD Server~~
 - **Kubernetes** Container Orchestration
 
 #### UPDATE (2018)
