@@ -1,0 +1,29 @@
+# Hugo build directory
+/public/
+
+# Hugo cache directory
+/resources/
+
+# Hugo configuration files
+config.toml
+config.yaml
+config.json
+
+# Local environment files
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+*.log
+
+# Backup files
+*~

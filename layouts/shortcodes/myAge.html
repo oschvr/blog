@@ -1,0 +1,5 @@
+{{ $birth := "1990-09-15" | time }} {{ $today := now }} {{ $age := sub
+$today.Year $birth.Year }} {{ $monthDiff := sub $today.Month $birth.Month }} {{
+$dayDiff := sub $today.Day $birth.Day }} {{ if (gt $monthDiff 0) }} {{ $age }}
+{{ else if (lt $monthDiff 0) }} {{ sub $age 1 }} {{ else }} {{ if (ge $dayDiff
+0) }} {{ $age }} {{ else }} {{ sub $age 1 }} {{ end }} {{ end }}

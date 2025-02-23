@@ -1,0 +1,130 @@
+baseURL = 'https://oschvr.com/'
+languageCode = 'en-us'
+title = 'oschvr.com'
+theme = "re-terminal"
+pagination.pagerSize = 5
+
+[params]
+  
+  mainSections = ["posts"]
+
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "green"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 6
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set theme to full screen width
+  fullWidthTheme = false
+
+  # center theme with default width
+  centerTheme = true
+
+  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  # then the file will be used as a cover automatically.
+  # With this option you don't have to put the `cover` param in a front-matter.
+  autoCover = true
+
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated = false
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
+  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  # updatedDatePrefix = "Updated"
+
+  # set all headings to their default size (depending on browser settings)
+  # oneHeadingSize = true # default
+
+  # whether to show a page's estimated reading time
+  readingTime = true # default
+
+  # whether to show a table of contents
+  # can be overridden in a page's front-matter
+  # Toc = false # default
+
+  # set title for the table of contents
+  # can be overridden in a page's front-matter
+  # TocTitle = "Table of Contents" # default
+
+
+  # you can set a banner on the top of the page with a call to action
+  # defaults: dismissible = false; URL is optional
+  # [params.banner]
+  # dismissible = false
+  # text = "Check it out on GitHub"
+  # url = "https://github.com/mirus-ua/hugo-theme-re-terminal"
+
+[permalinks]
+  posts = "posts/:slug"
+
+[languages]
+  [languages.en.params]
+    languageName = "English"
+    title = "oschvr.com"
+    subtitle = "a blog about software, cloud, security, money, business, travelling and life."
+    owner = "oschvr"
+    keywords = "software, cloud, security, money, business"
+    menuMore = "social"
+    readMore = "read more"
+    readOther = "read other "
+    newer = "newer "
+    older = "older "
+    missingContentMessage = "page not found..."
+    missingBackButtonLabel = "back to home page"
+
+
+    [languages.en.params.logo]
+      logoText = "root@oschvr.com:/#"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "posts"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "about"
+        url = "/about"
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = "snippets"
+        name = "snippets"
+        url = "/snippets"
+        weight = 3
+    #   [[languages.en.menu.main]]
+    #     identifier = "fails"
+    #     name = "fails"
+    #     url = "/fails"
+    #     weight = 4
+      [[languages.en.menu.main]]
+        identifier = "uses"
+        name = "uses"
+        url = "/uses"
+        weight = 5
+    #   [[languages.en.menu.main]]
+    #     identifier = "problems"
+    #     name = "problems"
+    #     url = "/problems"
+    #     weight = 6
+      [[languages.en.menu.main]]
+        identifier = "github"
+        name = "github"
+        url = "https://github.com/oschvr"
+        weight = 7
+      [[languages.en.menu.main]]
+        identifier = "linkedin"
+        name = "linkedin"
+        url = "https://www.linkedin.com/in/oschvr/"
+        weight = 8
