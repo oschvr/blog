@@ -1,13 +1,18 @@
-+++
-title = "Notes on Solidity"
-date = "2017-08-15"
-description = "A collection of notes on Solidity programming."
-slug = "notes-on-solidity"
-draft = false
-tags = ["solidity", "blockchain", "ethereum"]
-categories = ["technology"]
-cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/8893450eef344e8ea2ed3e0d413ee7f8.jpg'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/8893450eef344e8ea2ed3e0d413ee7f8.jpg
+date: "2017-08-15"
+description: A collection of notes on Solidity programming.
+draft: false
+slug: notes-on-solidity
+tags:
+  - solidity
+  - blockchain
+  - ethereum
+title: Notes on Solidity
+---
 
 # Notes on Solidity
 

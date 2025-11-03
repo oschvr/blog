@@ -1,13 +1,18 @@
-+++
-title = "Bash Prank"
-date = "2023-04-25"
-description = "A fun bash script prank using text-to-speech"
-slug = "bash-prank"
-draft = false
-cover = "https://oschvr.s3.dualstack.us-west-2.amazonaws.com/prank.jpg"
-tags = ["bash", "scripting", "fun"]
-categories = ["programming"]
-+++
+---
+categories:
+  - programming
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/prank.jpg
+date: "2023-04-25"
+description: A fun bash script prank using text-to-speech
+draft: false
+slug: bash-prank
+tags:
+  - bash
+  - scripting
+  - fun
+title: Bash Prank
+---
 
 I remember of coming up with a random joke prank, so when I stumbled upon [this](https://www.reddit.com/r/bash/comments/j2135u/comment/g735r3o/?utm_source=share&utm_medium=web2x&context=3) comment in the [`/r/bash`](https://www.reddit.com/r/bash) subreddit, I absolutely had to try it.
 

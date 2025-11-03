@@ -1,13 +1,17 @@
-+++
-title = "Understanding Recursion"
-date = "2019-05-17"
-description = "A deep dive into recursion in programming."
-slug = "understanding-recursion"
-draft = false
-tags = ["recursion", "programming"]
-categories = ["technology"]
-cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/89a0363f136c4d2aa692efd9d96f300c.png'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/89a0363f136c4d2aa692efd9d96f300c.png
+date: "2019-05-17"
+description: A deep dive into recursion in programming.
+draft: false
+slug: understanding-recursion
+tags:
+  - recursion
+  - programming
+title: Understanding Recursion
+---
 
 Rather than using the popular joke about **recursion** _(see bottom)_, I'll reference a very peculiar adage which makes use of this particular mental model:
 

@@ -1,13 +1,17 @@
-+++
-title = "¿Qué es un chatbot?"
-date = "2017-11-17"
-description = "Exploring the concept of chatbots."
-slug = "que-es-un-chatbot"
-draft = false
-tags = ["chatbot", "AI"]
-categories = ["technology"]
-cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/d07ef127d77349b9802527960739ab5b.png'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/d07ef127d77349b9802527960739ab5b.png
+date: "2017-11-17"
+description: Exploring the concept of chatbots.
+draft: false
+slug: que-es-un-chatbot
+tags:
+  - chatbot
+  - AI
+title: ¿Qué es un chatbot?
+---
 
 ### ¿Qué es un chatbot?
 

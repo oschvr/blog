@@ -1,12 +1,15 @@
-+++
-title = "Hola Mundo 👏"
-date = "2015-11-20"
-description = "Introducción a mi blog."
-slug = "hola-mundo"
-draft = false
-tags = ["introduction", "blog"]
-categories = ["personal"]
-+++
+---
+categories:
+- personal
+date: '2015-11-20'
+description: Introducción a mi blog.
+draft: false
+slug: hola-mundo
+tags:
+- introduction
+- blog
+title: Hola Mundo 👏
+---
 
 Hola ! Por primera vez voy a utilizar este **blog**
 

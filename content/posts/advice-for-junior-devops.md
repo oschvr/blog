@@ -1,13 +1,18 @@
-+++
-title = "Advice for Junior DevOps"
-date = "2023-04-25"
-description = "Some advice for junior DevOps engineers starting their careers"
-slug = "advice-for-junior-devops"
-cover = "https://oschvr.s3.dualstack.us-west-2.amazonaws.com/devops-advice.jpg"
-tags = ["devops", "career", "advice"]
-categories = ["career"]
-draft = false
-+++
+---
+categories:
+  - career
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/devops-advice.jpg
+date: "2023-04-25"
+description: Some advice for junior DevOps engineers starting their careers
+draft: false
+slug: advice-for-junior-devops
+tags:
+  - devops
+  - career
+  - advice
+title: Advice for Junior DevOps
+---
 
 Hey blog, long time no see. I've been incredibly busy these last couple months. Apologies to you for not updating your content as often as I'd like to.
 

@@ -1,12 +1,16 @@
-+++
-title = "How I got my AWS CSAA. Notes included"
-date = "2020-05-14"
-description = "My journey to obtaining the AWS Certified Solutions Architect Associate certification."
-slug = "how-i-got-my-aws-csaa"
-draft = false
-tags = ["AWS", "certification", "cloud"]
-categories = ["technology"]
-+++
+---
+categories:
+- technology
+date: '2020-05-14'
+description: My journey to obtaining the AWS Certified Solutions Architect Associate certification.
+draft: false
+slug: how-i-got-my-aws-csaa
+tags:
+- AWS
+- certification
+- cloud
+title: How I got my AWS CSAA. Notes included
+---
 
 > Disclaimer: I'm not being paid to promote anything here.
 

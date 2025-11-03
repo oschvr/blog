@@ -1,12 +1,15 @@
-+++
-title = "Profundizando Tensorflow Pt 1"
-date = "2017-07-24"
-description = "Deep dive into Tensorflow."
-slug = "profundizando-tensorflow-pt-1"
-draft = false
-tags = ["tensorflow", "machine learning"]
-categories = ["technology"]
-+++
+---
+categories:
+- technology
+date: '2017-07-24'
+description: Deep dive into Tensorflow.
+draft: false
+slug: profundizando-tensorflow-pt-1
+tags:
+- tensorflow
+- machine learning
+title: Profundizando Tensorflow Pt 1
+---
 
 ### Profundizando en [Tensorflow](https://www.tensorflow.org). Pt. 1
 

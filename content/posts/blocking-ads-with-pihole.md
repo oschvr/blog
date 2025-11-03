@@ -1,12 +1,17 @@
-+++
-title = "Blocking Ads with PiHole"
-date = "2020-04-27"
-description = "Setting up PiHole on a Raspberry Pi Zero W for network-level ad blocking"
-slug = "blocking-ads-with-pihole"
-tags = ["raspberry-pi", "networking", "pihole", "ads"]
-categories = ["tutorials"]
-draft = false
-+++
+---
+categories:
+- tutorials
+date: '2020-04-27'
+description: Setting up PiHole on a Raspberry Pi Zero W for network-level ad blocking
+draft: false
+slug: blocking-ads-with-pihole
+tags:
+- raspberry-pi
+- networking
+- pihole
+- ads
+title: Blocking Ads with PiHole
+---
 
 Before going into the post carefully documenting my process in setting up everything, here's what this post is about in short:
 

@@ -1,13 +1,19 @@
-+++
-title = "1000 days of Duolingo"
-date = "2024-01-10"
-description = "My journey of maintaining a 1000-day streak on Duolingo learning French"
-slug = "/1000-days-of-duolingo"
-draft = false
-cover = "https://oschvr.s3.dualstack.us-west-2.amazonaws.com/1000.jpg"
-tags = ["language-learning", "duolingo", "french", "personal"]
-categories = ["learning"]
-+++
+---
+categories:
+  - learning
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/1000.jpg
+date: "2024-01-10"
+description: My journey of maintaining a 1000-day streak on Duolingo learning French
+draft: false
+slug: /1000-days-of-duolingo
+tags:
+  - language-learning
+  - duolingo
+  - french
+  - personal
+title: 1000 days of Duolingo
+---
 
 I have just completed a 1000 days streak on Duolingo learning French (from English) and I wanted to make a blog post dedicating this achievement to Duolingo and all the language enthusiasts that are using it across the world.
 

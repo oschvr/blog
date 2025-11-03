@@ -1,13 +1,18 @@
-+++
-title = "Merge Sort in Go and Javascript"
-date = "2019-05-26"
-description = "Implementation of the Merge Sort algorithm in Go and Javascript."
-slug = "merge-sort-go-javascript"
-draft = false
-tags = ["sorting", "algorithms", "programming"]
-categories = ["technology"]
-cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/aab2b0d5852e49a188717d019a5da5e8.png'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/aab2b0d5852e49a188717d019a5da5e8.png
+date: "2019-05-26"
+description: Implementation of the Merge Sort algorithm in Go and Javascript.
+draft: false
+slug: merge-sort-go-javascript
+tags:
+  - sorting
+  - algorithms
+  - programming
+title: Merge Sort in Go and Javascript
+---
 
 Here's my implementation of the _Mergesort_ algorithm in **Golang**
 

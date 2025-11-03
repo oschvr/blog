@@ -1,13 +1,17 @@
-+++
-title = "What is an ICO"
-date = "2017-08-24"
-description = "Exploring the concept of ICOs."
-slug = "what-is-an-ico"
-draft = false
-tags = ["ICO", "cryptocurrency"]
-categories = ["finance"]
-cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/eb0030fc316545d286dc699d2ecc4cdc.png'
-+++
+---
+categories:
+  - finance
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/eb0030fc316545d286dc699d2ecc4cdc.png
+date: "2017-08-24"
+description: Exploring the concept of ICOs.
+draft: false
+slug: what-is-an-ico
+tags:
+  - ICO
+  - cryptocurrency
+title: What is an ICO
+---
 
 What the hell is an **ICO** ? And why the _f#ck_ does something like [Tezos](https://www.tezos.com/) fundraised more than _65,697_ BTC and _361,122_ ETH, which in total stands for around:
 

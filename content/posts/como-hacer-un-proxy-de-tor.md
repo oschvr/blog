@@ -1,13 +1,18 @@
-+++
-title = "Cómo hacer un Proxy de Tor"
-date = "2017-08-29"
-description = "Guía para crear un proxy utilizando Tor."
-slug = "como-hacer-un-proxy-de-tor"
-draft = false
-cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/b3b964aa766c45ffad3eb29a6cded081.png'
-tags = ["tor", "proxy", "networking"]
-categories = ["technology"]
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/b3b964aa766c45ffad3eb29a6cded081.png
+date: "2017-08-29"
+description: Guía para crear un proxy utilizando Tor.
+draft: false
+slug: como-hacer-un-proxy-de-tor
+tags:
+  - tor
+  - proxy
+  - networking
+title: Cómo hacer un Proxy de Tor
+---
 
 ## [Descarga el PDF](https://oschvr.s3.dualstack.us-west-2.amazonaws.com/7edea024dade4920a9d361406ea09b73.pdf)
 

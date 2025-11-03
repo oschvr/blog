@@ -1,13 +1,17 @@
-+++
-title = "Stroke"
-date = "2021-10-27"
-description = "Reflections on my experience with a TIA."
-slug = "stroke"
-draft = false
-tags = ["health", "personal"]
-categories = ["personal"]
-cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/20210909_080333.jpg'
-+++
+---
+categories:
+  - personal
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/20210909_080333.jpg
+date: "2021-10-27"
+description: Reflections on my experience with a TIA.
+draft: false
+slug: stroke
+tags:
+  - health
+  - personal
+title: Stroke
+---
 
 I had a TIA (Transient Ischemic Attack) or as people know it, Brain Stroke on August 9. After 2 months of recovery, I'm back to normal and I feel great :)
 It seems it had to do with an issue with my blood coagulation and my heart health...

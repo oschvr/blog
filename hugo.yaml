@@ -1,0 +1,101 @@
+baseURL: https://oschvr.com/
+languageCode: en-us
+title: oschvr.com
+theme: PaperMod
+pagination:
+  pagerSize: 5
+permalinks:
+  posts: posts/:slug
+ignoreLogs:
+  - "warning-goldmark-raw-html"
+outputs:
+  home:
+    - html
+    - rss
+    - json
+params:
+  mainSections:
+    - posts
+  contentTypeName: posts
+  themeColor: green
+  showMenuItems: 5
+  showLanguageSelector: false
+  fullWidthTheme: false
+  centerTheme: true
+  autoCover: true
+  showLastUpdated: false
+  readingTime: true
+  languageName: English
+  title: oschvr.com
+  description: a blog about software, cloud, security, money, business, travelling and life.
+  owner: oschvr
+  author: oschvr
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  comments: true
+  keywords:
+    - software
+    - cloud
+    - technology
+    - security
+    - money
+    - business
+  menuMore: social
+  readMore: read more
+  readOther: "read other "
+  newer: "newer "
+  older: "older "
+  missingContentMessage: page not found...
+  missingBackButtonLabel: back to home page
+  logo:
+    logoHomeLink: /
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "tags", "summary", "content"]
+
+menu:
+  main:
+    - identifier: search
+      name: search
+      url: /search
+      weight: 0
+    - identifier: posts
+      name: posts
+      url: /
+      weight: 1
+    - identifier: about
+      name: about
+      url: /about
+      weight: 2
+    - identifier: snippets
+      name: snippets
+      url: /snippets
+      weight: 3
+    - identifier: uses
+      name: uses
+      url: /uses
+      weight: 5
+    - identifier: problems
+      name: problems
+      url: /problems
+      weight: 6
+    - identifier: problems
+      name: fails
+      url: /fails
+      weight: 7
+    - identifier: github
+      name: github
+      url: https://github.com/oschvr
+      weight: 8
+    - identifier: linkedin
+      name: linkedin
+      url: https://www.linkedin.com/in/oschvr/
+      weight: 8

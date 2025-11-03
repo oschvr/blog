@@ -1,13 +1,17 @@
-+++
-title = "HumanOps Mantra"
-date = "2022-11-30"
-description = "Exploring the HumanOps mantra."
-slug = "humanops-mantra"
-draft = false
-tags = ["humanops", "devops"]
-categories = ["technology"]
-cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/iceland.jpeg'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/iceland.jpeg
+date: "2022-11-30"
+description: Exploring the HumanOps mantra.
+draft: false
+slug: humanops-mantra
+tags:
+  - humanops
+  - devops
+title: HumanOps Mantra
+---
 
 I just found this precious little jewel on the internet.
 

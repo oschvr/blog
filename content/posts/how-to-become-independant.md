@@ -1,12 +1,15 @@
-+++
-title = "How to become independant"
-date = "2017-08-15"
-description = "Reflections on becoming independent."
-slug = "how-to-become-independant"
-draft = false
-tags = ["independence", "personal growth"]
-categories = ["personal"]
-+++
+---
+categories:
+- personal
+date: '2017-08-15'
+description: Reflections on becoming independent.
+draft: false
+slug: how-to-become-independant
+tags:
+- independence
+- personal growth
+title: How to become independant
+---
 
 ### A 'short' post by [@oschvr](http://twitter.com/oschvr)
 

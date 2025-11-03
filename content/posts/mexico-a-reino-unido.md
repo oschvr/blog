@@ -1,14 +1,17 @@
-+++
-title = "De Mexico al Reino Unido"
-date = "2020-03-02"
-description = "Reflections on moving from Mexico to the UK."
-slug = "mexico-a-reino-unido"
-draft = false
-tags = ["migration", "personal"]
-categories = ["personal"]
-
-cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/d490e756ee00495885a875d2982f21ec.jpg'
-+++
+---
+categories:
+  - personal
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/d490e756ee00495885a875d2982f21ec.jpg
+date: "2020-03-02"
+description: Reflections on moving from Mexico to the UK.
+draft: false
+slug: mexico-a-reino-unido
+tags:
+  - migration
+  - personal
+title: De Mexico al Reino Unido
+---
 
 Ya tiene mucho, _muchísimo_ (10 meses) que no escribo/tengo ganas de escribir acá.
 

@@ -1,8 +1,8 @@
-+++
-path = '/about'
-date = '2020-09-20'
-title = 'About'
-+++
+---
+date: '2020-09-20'
+path: /about
+title: About
+---
 
 Hey 👋, I'm **Oscar**.
 

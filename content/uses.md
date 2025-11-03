@@ -1,8 +1,8 @@
-+++
-path =  '/uses'
-date =  '2020-12-20'
-title = 'Uses'
-+++
+---
+date: '2020-12-20'
+path: /uses
+title: Uses
+---
 
 #### **Here's a list of the main tools I use to work (2017-{{< currentYear >}}):**
 

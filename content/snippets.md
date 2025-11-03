@@ -1,8 +1,8 @@
-+++
-path =  '/snippets'
-date = '2022-01-30'
-title =  'Snippets'
-+++
+---
+date: '2022-01-30'
+path: /snippets
+title: Snippets
+---
 
 ### Kubernetes aliases
 

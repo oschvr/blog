@@ -1,13 +1,17 @@
-+++
-title = "Une autre démenagement"
-date = "2024-10-15"
-description = "Reflections on moving to Belgium."
-slug = "une-autre-demenage"
-draft = false
-tags = ["migration", "personal"]
-categories = ["personal"]
-cover = "https://oschvr.s3.dualstack.us-west-2.amazonaws.com/wolvendael.jpeg"
-+++
+---
+categories:
+  - personal
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/wolvendael.jpeg
+date: "2024-10-15"
+description: Reflections on moving to Belgium.
+draft: false
+slug: un-autre-demenage
+tags:
+  - migration
+  - personal
+title: Un autre démenagement
+---
 
 > Je voudrais commencer en dissant que ce-ci est mon premier post en francais (j'ai utilise [languagetool.org](https://languagetool.org/)), alors aies-moi patience.
 

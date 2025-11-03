@@ -1,13 +1,18 @@
-+++
-title = "Is Github Alive"
-date = "2023-05-11"
-description = "Reflections on Github outages and reliability."
-slug = "is-github-alive"
-draft = false
-tags = ["github", "outage", "SRE"]
-categories = ["technology"]
-cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/gitonfire.jpg'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/gitonfire.jpg
+date: "2023-05-11"
+description: Reflections on Github outages and reliability.
+draft: false
+slug: is-github-alive
+tags:
+  - github
+  - outage
+  - SRE
+title: Is Github Alive
+---
 
 It's been recently noticeable that me and my team have had to halt development or progress due to a Github outage. This has been much more visible since [Microsoft acquired Github](https://news.microsoft.com/announcement/microsoft-acquires-github/)
 

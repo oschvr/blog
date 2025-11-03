@@ -1,13 +1,18 @@
-+++
-title = "IPv6 support"
-date = "2023-01-19"
-description = "Update on enabling IPv6 support for my blog."
-slug = "ipv6-support"
-draft = false
-tags = ["ipv6", "networking", "cloud"]
-categories = ["technology"]
-cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/ipv6-dig.png'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/ipv6-dig.png
+date: "2023-01-19"
+description: Update on enabling IPv6 support for my blog.
+draft: false
+slug: ipv6-support
+tags:
+  - ipv6
+  - networking
+  - cloud
+title: IPv6 support
+---
 
 Quick update after what I believe was my [most popular post ever](https://oschvr.com/posts/what-id-like-as-sre/).
 

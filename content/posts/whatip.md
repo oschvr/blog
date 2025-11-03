@@ -1,15 +1,18 @@
-+++
-path =  '/whatip'
-date = '2022-05-10'
-title =  'whatip.info'
-description = "Introducing whatip.info, a simple Go program."
-slug = "whatip"
-draft = false
-tags = ["Go", "programming"]
-categories = ["technology"]
-
-cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/whatip.jpg'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/whatip.jpg
+date: "2022-05-10"
+description: Introducing whatip.info, a simple Go program.
+draft: false
+path: /whatip
+slug: whatip
+tags:
+  - Go
+  - programming
+title: whatip.info
+---
 
 Introducing [whatip.info](https://whatip.info). A very very simple Go program behind an NGINX server to resolve and return the remote IPv4 (and soon IPv6) address.
 

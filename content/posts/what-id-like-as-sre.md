@@ -1,13 +1,17 @@
-+++
-title = "Things I want as SRE/DevOps from Devs"
-date = "2022-12-15"
-description = "Questions I want answered by developers."
-slug = "what-id-like-as-sre"
-draft = false
-tags = ["SRE", "DevOps"]
-categories = ["technology"]
-cover = 'https://oschvr.s3.dualstack.us-west-2.amazonaws.com/oldstreet.jpeg'
-+++
+---
+categories:
+  - technology
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/oldstreet.jpeg
+date: "2022-12-15"
+description: Questions I want answered by developers.
+draft: false
+slug: what-id-like-as-sre
+tags:
+  - SRE
+  - DevOps
+title: Things I want as SRE/DevOps from Devs
+---
 
 It has been a while since I've been working as **SRE/Platform/Cloud Engineer**, and lately and I realize I've been repeating some **questions** to developers that I rarely get an answer for straight away.
 

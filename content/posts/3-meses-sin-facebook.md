@@ -1,12 +1,15 @@
-+++
-title = "3 Meses sin Facebook"
-date = "2018-06-08"
-description = "Mi experiencia después de tres meses sin usar Facebook"
-slug = "3-meses-sin-facebook"
-draft = false
-tags = ["social-media", "personal"]
-categories = ["lifestyle"]
-+++
+---
+categories:
+- lifestyle
+date: '2018-06-08'
+description: Mi experiencia después de tres meses sin usar Facebook
+draft: false
+slug: 3-meses-sin-facebook
+tags:
+- social-media
+- personal
+title: 3 Meses sin Facebook
+---
 
 _Última Actualización: **09/Junio/2018**_
 

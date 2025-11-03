@@ -1,12 +1,16 @@
-+++
-title = "How to create your npm card"
-date = "2020-07-05"
-description = "A guide to creating your own npm card."
-slug = "create-your-npm-card"
-draft = false
-tags = ["npm", "card", "development"]
-categories = ["technology"]
-+++
+---
+categories:
+- technology
+date: '2020-07-05'
+description: A guide to creating your own npm card.
+draft: false
+slug: create-your-npm-card
+tags:
+- npm
+- card
+- development
+title: How to create your npm card
+---
 
 Lately, our company started growing so I had to start interviewing frontend engineers, UI/UX designers and other developers who focus on the UI aspect of web development
 

@@ -1,13 +1,17 @@
-+++
-title = "Nuevas Direcciones"
-date = "2016-10-26"
-description = "Reflections on my travels in Europe."
-slug = "nuevas-direcciones"
-draft = false
-tags = ["travel", "europe"]
-categories = ["personal"]
-cover ='https://oschvr.s3.dualstack.us-west-2.amazonaws.com/bf2f0d388a9a478e889582fdd6dbc7f7.jpg'
-+++
+---
+categories:
+  - personal
+cover:
+  image: https://oschvr.s3.dualstack.us-west-2.amazonaws.com/bf2f0d388a9a478e889582fdd6dbc7f7.jpg
+date: "2016-10-26"
+description: Reflections on my travels in Europe.
+draft: false
+slug: nuevas-direcciones
+tags:
+  - travel
+  - europe
+title: Nuevas Direcciones
+---
 
 ### Europa 2016
 

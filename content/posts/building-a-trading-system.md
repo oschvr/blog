@@ -1,12 +1,16 @@
-+++
-title = "Building a Trading System"
-date = "2017-07-10"
-description = "My experience building a trading system."
-slug = "building-a-trading-system"
-draft = false
-tags = ["trading", "system", "finance"]
-categories = ["technology"]
-+++
+---
+categories:
+- technology
+date: '2017-07-10'
+description: My experience building a trading system.
+draft: false
+slug: building-a-trading-system
+tags:
+- trading
+- system
+- finance
+title: Building a Trading System
+---
 
 So, for the next and most ambitious project we've ever had at [VR3](http://vr3.io), I self-assigned to me the tremendous task of building a **Trading System** that includes some sort of **Trading Model** or **Trading Bot**, that can, but is not limited to do HFT(High Frecuency Trading).
 
